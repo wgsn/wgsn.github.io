@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/distribution_heat.css"/>
+			<link rel="stylesheet" type="text/css" href="../css/top-footer.css"/>
+		<style type="text/css">
+			body{
+				position: relative;
+				
+			}
+			.ok{
+				 position: absolute;
+				 left:-64px;
+				 top:20px;
+				 transition: all 1s; 
+			}
+			.ok:hover{
+				position: absolute;
+				 left:-20px;
+				 top:20px;
+			}
+			.shuoming{
+				text-align: center;
+				width:100%;
+				color:#efeeee;
+				font-size:20px;
+			}
+			.eluosi{
+				position: absolute;
+				font-size: 30px;
+				left:63%;
+				top:25%;
+				pointer-events:none;
+				color:transparent;
+				
+			}
+			.meiguo{
+				position: absolute;
+				font-size: 25px;
+	            color:transparent;
+				left:32%;
+				top:37%;
+				pointer-events:none;
+				
+			}
+			.faguo{
+				color:transparent;
+				position: absolute;
+				font-size: 14px;
+				left:49%;
+				top:34%;
+				pointer-events:none;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top" style="color:#efeeee;">
+			<p class="left">
+				<span class="span1"></span>
+				<span class="span2"></span>
+				<span class="span3"></span>
+			</p>
+			<p class="mid">北方跨境电商大数据中心</p>
+			<p class="right">系统通知：服务器维护，时间08/01 00:00-03:00</p>
+		</div>
+		<div id="main">
+
+		</div>
+		 <div class="ok"><a href="../index.html"><img src="../img/yy.png"/></a></div>
+		 
+		<div class="shuoming">2017年全球交易量分布热度图</div>
+	   <div class="footer" style="margin-top: 19px;" >
+			<span>鲁公网安备 11000002000088号</span>|
+			<span>鲁ICP证070359号|互联网药品信息服务资格证编号（鲁）-经营性-2014-0008</span>|
+			<span>新出发鲁零字第大120007号</span>
+		</div>
+     <div class="eluosi">23.7%</div>
+     <div class="meiguo">7.5%</div>
+     <div class="faguo">3.4%</div>
+
+    </body>
+    <script src="../js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+   <script src="js/world.js" type="text/javascript" charset="utf-8"></script>
+<!--    <script src="js/w/world.js" type="text/javascript" charset="utf-8"></script>-->
+    <script src="../js/distribution_heat.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery-2.1.0.js"></script>
+
+<script src="../js/top.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://api.map.baidu.com/telematics/v3/weather?location=上海&output=json&ak=KdhEeXIswBzw5fOPwTbg4huHXSFQ34pR&callback=getD"></script>
+
+
+</html>

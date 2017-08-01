@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		body{
+				position: relative;
+				
+			}
+			.ok{
+				 position: absolute;
+				 left:-64px;
+				 top:20px;
+				 transition: all 1s; 
+			}
+			.ok:hover{
+				position: absolute;
+				 left:-20px;
+				 top:20px;
+			}
+			* {
+				margin: 0px;
+				padding: 0px;
+				border: 0px;
+			}
+			
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+			}
+			/*#top {
+				width: 100%;
+				height: 6%;
+				background: red;position: relative;
+			}
+			*/
+			
+			.top {
+				text-align: center;
+				/*padding-top: 2%;*/
+			}
+			
+			.top p {
+				display: inline-block;
+			}
+			
+			.top .left,
+			.top .right {
+				font-size: 14px;
+				color: white;
+			}
+			
+			.top .mid {
+				padding: 0 8%;
+				font-size: 23px;
+				color: white;
+			}
+			
+			#world {
+				width: 100%;
+				height: 90%;
+				/*background-image: url(img/beijing.png);*/
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: relative;
+			}
+			
+			#map-wrap {
+				width: 65%;
+				height: 100%;
+				float: left;
+			}
+			
+			.world-you {
+				width: 35%;
+				height: 100%;
+				float: left;
+			}
+			
+			.big1 {
+				width: 90%;
+				height: 23%;
+				margin-top: 2%;
+				background: #434141;
+			}
+			
+			.big2 {
+				width: 90%;
+				height: 23%;
+				margin-top: 2%;
+				background: #454e57;
+			}
+			
+			.big3 {
+				width: 90%;
+				height: 23%;
+				margin-top: 2%;
+				background: #515e6d;
+			}
+			
+			.big4 {
+				width: 90%;
+				height: 23%;
+				margin-top: 2%;
+				background: #6a7889;
+			}
+			
+			.fangda1 {
+				float: left;
+				margin-top: 1%;
+			}
+			
+			.fangda1:hover {
+				cursor: pointer;
+			}
+			
+			.fangda2 {
+				float: left;
+				margin-top: 1%;
+			}
+			
+			.fangda2:hover {
+				cursor: pointer;
+			}
+			
+			.fangda3 {
+				float: left;
+				margin-top: 1%;
+			}
+			
+			.fangda3:hover {
+				cursor: pointer;
+			}
+			
+			.fangda4 {
+				float: left;
+				margin-top: 1%;
+			}
+			
+			.fangda4:hover {
+				cursor: pointer;
+			}
+			
+			.world-he1 {
+				width: 90%;
+				height: 100%;
+				float: left;
+			}
+			
+			.world-he2 {
+				width: 90%;
+				height: 100%;
+				float: left;
+			}
+			
+			.world-he3 {
+				width: 90%;
+				height: 100%;
+				float: left;
+			}
+			
+			.world-he4 {
+				width: 90%;
+				height: 100%;
+				float: left;
+			}
+			
+			#bottom {
+				width: 100%;
+				height: 4%;
+				/*background: red;*/
+				position: relative;
+			}
+			
+			.ling1 {
+				width: 0%;
+				height: 0%;
+				background: #3e61aa;
+				position: absolute;
+				top: 10%;
+				right: 10%;
+				/*display: none;*/
+				z-index: 100;
+			}
+			
+			.div-he1 {
+				width: 770px;
+				height: 390px;
+				display: none;
+				float: left;
+			}
+			
+			.fangxiao1 {
+				float: right;
+				margin-top: 1%;
+				display: none;
+			}
+			
+			.fangxiao1:hover {
+				cursor: pointer;
+			}
+			
+			.ling2 {
+				width: 0%;
+				height: 0%;
+				background: #3e61aa;
+				right: 20%;
+				position: absolute;
+				top: 30%;
+				/*display: none;*/
+				z-index: 100;
+			}
+			
+			.div-he2 {
+				width: 770px;
+				height: 390px;
+				float: left;
+				display: none;
+			}
+			
+			.fangxiao2 {
+				float: right;
+				margin-top: 1%;
+				display: none;
+			}
+			
+			.fangxiao2:hover {
+				cursor: pointer;
+			}
+			
+			.ling3 {
+				width: 0%;
+				height: 0%;
+				background: #3e61aa;
+				right: 20%;
+				position: absolute;
+				top: 55%;
+				/*display: none;*/
+				z-index: 100;
+			}
+			
+			.div-he3 {
+				;
+				width: 770px;
+				height: 390px;
+				float: left;
+				display: none;
+			}
+			
+			.fangxiao3 {
+				float: right;
+				margin-top: 1%;
+				display: none;
+			}
+			
+			.fangxiao3:hover {
+				cursor: pointer;
+			}
+			
+			.ling4 {
+				width: 0%;
+				height: 0%;
+				background: #3e61aa;
+				right: 20%;
+				position: absolute;
+				top: 75%;
+				/*display: none;*/
+				z-index: 100;
+			}
+			
+			.div-he4 {
+				width: 790px;
+				height: 390px;
+				float: left;
+				display: none;
+			}
+			
+			.fangxiao4 {
+				float: right;
+				margin-top: 1%;
+				display: none;
+			}
+			
+			.fangxiao4:hover {
+				cursor: pointer;
+			}
+			
+			.gai {
+				height: 100%;
+				width: 100%;
+				background: white;
+				position: absolute;
+				opacity: 0.3;
+				display: none;
+				top: 0;
+			}
+			
+			.aaa {
+				width: 100%;
+				height: 100%;
+				background-image: url(../img/2.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			
+			.footer {
+				font-size: 13px;
+				text-align: center;
+				/*margin-top: 4%;*/
+				color: white;
+			}
+			
+			.footer span {
+				display: inline-block;
+				margin-left: 2%;
+				margin-right: 3%;
+				color: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="aaa">
+			<div class="top">
+				<p class="left">
+					<span class="span1"></span>
+					<span class="span2"></span>
+					<span class="span3"></span>
+				</p>
+				<p class="mid">北方跨境电商大数据中心</p>
+				<p class="right">系统通知：服务器维护，时间 08/01 00:00-03:00</p>
+			</div>
+			<div id="world">
+				<div id="map-wrap"></div>
+				<div class="world-you">
+					<div class="big1">
+						<div class="world-he1"></div>
+						<img src="../img/enlarge.png" class="fangda1" title="放大" />
+					</div>
+					<div class="big2">
+						<div class="world-he2"></div>
+						<img src="../img/enlarge.png" class="fangda2" title="放大" />
+					</div>
+					<div class="big3">
+						<div class="world-he3"></div>
+						<img src="../img/enlarge.png" class="fangda3" title="放大" />
+					</div>
+					<div class="big4">
+						<div class="world-he4"></div>
+						<img src="../img/enlarge.png" class="fangda4" title="放大" />
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<span>鲁公安网备 11000002000088号</span>|
+				<span>鲁ICP证070359号|互联网药品信息服务资格证编号（鲁）-经营性-2014-0008</span>|
+				<span>新出发鲁零字第大120007号</span>
+			</div>
+			<div class="ling1">
+				<div class="div-he1"></div>
+				<img src="../img/reduce.png" class="fangxiao1" title="放小" />
+			</div>
+			<div class="ling2">
+				<div class="div-he2"></div>
+				<img src="../img/reduce.png" class="fangxiao2" title="放小" />
+			</div>
+			<div class="ling3">
+				<div class="div-he3"></div>
+				<img src="../img/reduce.png" class="fangxiao3" title="放小" />
+			</div>
+			<div class="ling4">
+				<div class="div-he4"></div>
+				<img src="../img/reduce.png" class="fangxiao4" title="放小" />
+			</div>
+			<div class="gai"></div>
+		</div>
+		 <div class="ok"><a href="../index.html"><img src="../img/yy.png"/></a></div>
+	</body>
+	<script type="text/javascript" src="../js/echarts.min.js"></script>
+	<script type="text/javascript" src="../js/world.js"></script>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src='../js/jquery-2.1.0.js'></script>
+	<script src="../js/top.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="../js/web_bestsell_goods.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://api.map.baidu.com/telematics/v3/weather?location=上海&output=json&ak=KdhEeXIswBzw5fOPwTbg4huHXSFQ34pR&callback=getD"></script>
+</html>

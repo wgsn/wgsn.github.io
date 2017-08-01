@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../css/country_of_buyer.min.css" />
+		<style type="text/css">
+			body{
+				position: relative;
+				
+			}
+			.ok{
+				 position: absolute;
+				 left:-64px;
+				 top:20px;
+				 transition: all 1s; 
+			}
+			.ok:hover{
+				position: absolute;
+				 left:-20px;
+				 top:20px;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js" ></script>
+		<script type="text/javascript" src="../js/echarts.min.js" ></script>
+		<script type="text/javascript" src="../js/world.js" ></script>
+		<script type="text/javascript" src="../js/country_of_buyer.js" ></script>
+		
+	</head>
+	<body>
+		<div class="bg">
+			<div class="menban"></div>
+			
+			<div class="top">
+			<p class="left">
+				<span class="span1"></span>
+				<span class="span2"></span>
+				<span class="span3"></span>
+			</p>
+			<p class="mid">北方跨境电商大数据中心</p>
+			<p class="right">系统通知：服务器维护，时间08/01 00:00-03:00</p>
+		</div>
+			<div class="box">
+				<div id="main"></div>
+				<span class="map_title">2017年采购商主要国家走势图</span>
+				<div class="box_big"><div id="box1"></div><img src="../img/enlarge.png" class="fangda fangda1"> </div>
+				<div class="box_big"><div id="box2"></div><img src="../img/enlarge.png" class="fangda fangda2"></div>
+				<div class="box_big"><div id="box3"></div><img src="../img/enlarge.png" class="fangda fangda3"></div>
+				<div class="box_big"><div id="box4"></div><img src="../img/enlarge.png" class="fangda fangda4"></div>
+			</div>
+			<div class="footer">
+			<span>鲁公网安备 11000002000088号</span>|
+			<span>鲁ICP证070359号|互联网药品信息服务资格证编号（鲁）-经营性-2014-0008</span>|
+			<span>新出发鲁零字第大120007号</span>
+		</div>
+			
+		</div>
+		<div class="box_small box_small1"><div class="box_motai" id='box1_big'></div><img src='../img/reduce.png'></div>
+			<div class="box_small box_small2"><div class="box_motai" id='box2_big'></div><img src='../img/reduce.png'></div>
+			<div class="box_small box_small3"><div class="box_motai" id='box3_big'></div><img src='../img/reduce.png'></div>
+			<div class="box_small box_small4"><div class="box_motai" id='box4_big'></div><img src='../img/reduce.png'></div>
+			<div class="ok"><a href="../index.html"><img src="../img/yy.png"/></a></div>
+	</body>
+	<script src="../js/jquery-2.1.0.js"></script>
+<script src="../js/top.js" type="text/javascript" charset="utf-8"></script>
+<script src="http://api.map.baidu.com/telematics/v3/weather?location=上海&output=json&ak=KdhEeXIswBzw5fOPwTbg4huHXSFQ34pR&callback=getD"></script>
+
+
+</html>

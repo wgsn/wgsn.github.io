@@ -1,0 +1,24 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	background:#33386f;
+	
+}
+html,body{
+	width:100%;
+	height:96%;
+}
+#main{
+		width:100%;
+		height:86%;
+		margin: 0 auto;
+		
+			}
+/*canvas{
+	width:1409px;
+	height:1462px;
+	left:-70px;
+	top:-382px;
+}*/
