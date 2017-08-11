@@ -7,7 +7,7 @@ var t=a.getTime()-24*60*60*1000;
 	  	 var y=aa.getFullYear();
 	  	 var m=aa.getMonth()+1;
 	  	 var tian=aa.getDate();
-			$.getJSON('continent_geo.json', function(data){
+			$.getJSON('../js/continent_geo.json', function(data){
 			     echarts.registerMap('continent',data)	;
 			     
 			option = {
@@ -70,7 +70,7 @@ title: {
 					fontSize: 16,
 				},
 						},
-						areaColor: 'yellow'
+						areaColor: 'lightgreen'
 					}
 				},
 //				
