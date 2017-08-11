@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="../css/base.css" />
+		<link rel="stylesheet" type="text/css" href="../css/buyer_of_China.css" />
+		<style type="text/css">
+			body{
+				position: relative;
+				
+			}
+			.ok{
+				 position: absolute;
+				 left:-64px;
+				 top:20px;
+				 transition: all 1s; 
+			}
+			.ok:hover{
+				position: absolute;
+				 left:-20px;
+				 top:20px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="top">
+			<p class="left">
+				<span class="span1"></span>
+				<span class="span2"></span>
+				<span class="span3"></span>
+			</p>
+			<p class="mid">北方跨境电商大数据中心</p>
+			<p class="right">系统通知：服务器维护，时间08/01 00:00-03:00</p>
+		</div> 
+
+		<div class="China_map"></div>
+		<div class="right">
+			<section class="chart_a"></section>
+			<section class="chart_b"></section>
+			<section class="chart_c"></section>
+			<section class="chart_d"></section>
+			<div class="enlarge">
+				<img src="../img/enlarge.png" />
+				<img src="../img/enlarge.png" />
+				<img src="../img/enlarge.png" />
+				<img src="../img/enlarge.png" />
+			</div>
+		</div>
+		<div class="footer">
+			<span>鲁公安网备 11000002000088号</span>|
+			<span>鲁ICP证070359号|互联网药品信息服务资格证编号（鲁）-经营性-2017-0008</span>|
+			<span>新出发鲁零字第120007号</span>
+		</div>
+		<div class="shade hide">
+			<div class="shade_inner"></div>
+			<img id="redu" class="reduce hidden" src="../img/reduce.png" />
+		</div>
+		 <div class="ok"><a href="../index.html"><img src="../img/yy.png"/></a></div>
+		<script type="text/javascript" src="../js/echarts.min.js"></script>
+		<script type="text/javascript" src="../js/china.js"></script>
+		<script type="text/javascript" src="../js/china-contour.js" ></script>
+		<script src="../js/top.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/buyer_of_China.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://api.map.baidu.com/telematics/v3/weather?location=上海&output=json&ak=KdhEeXIswBzw5fOPwTbg4huHXSFQ34pR&callback=getD"></script>
+	</body>
+</html>
