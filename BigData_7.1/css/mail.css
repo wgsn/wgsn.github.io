@@ -89,10 +89,10 @@ table .t3,table .t5{
 .biaoge .right{
 	float: right;
 }
-.biaoge tr:hover{
+/*.biaoge tr:hover{
 	transform: scale(1.05,1.5);
 
-}
+}*/
 a:hover{
 	cursor:pointer;
 }

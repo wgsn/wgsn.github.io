@@ -319,22 +319,22 @@
 				margin-right: 3%;
 				color: white;
 			}.yazhou{
-				color: white;position: absolute;top: 48%;left: 45%;z-index: 99;
+				color: white;position: absolute;top: 48%;left: 45%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.ouzhou{
-				color: white;position: absolute;top: 40%;left: 38%;z-index: 99;
+				color: white;position: absolute;top: 40%;left: 38%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.dayangzhou{
-				color: white;position: absolute;top: 73%;left: 50%;z-index: 99;
+				color: white;position: absolute;top: 70%;left: 50%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.feizhou{
-				color: white;position: absolute;top: 60%;left: 34%;z-index: 99;
+				color: white;position: absolute;top: 60%;left: 34%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.beimeizhou{
-				color: white;position: absolute;top: 44%;left: 16%;z-index: 99;color:#f60
+				color: white;position: absolute;top: 44%;left: 16%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.nanmeizhou{
-				color: white;position: absolute;top: 65%;left: 23%;z-index: 99;
+				color: white;position: absolute;top: 65%;left: 23%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 		</style>
 	</head>
@@ -411,7 +411,7 @@
     <script src="http://api.map.baidu.com/telematics/v3/weather?location=上海&output=json&ak=KdhEeXIswBzw5fOPwTbg4huHXSFQ34pR&callback=getD"></script>
      <script>
 
-			$.getJSON('continent_geo.json', function(data){
+			$.getJSON('../js/continent_geo.json', function(data){
 			     echarts.registerMap('continent',data)	;
 			     
 			option = {

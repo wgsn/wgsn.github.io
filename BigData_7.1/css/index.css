@@ -422,7 +422,7 @@ tbody{
 
 .right_trade>div p:nth-child(1) {
 	font-size: 0.18rem;
-	width: 65%;
+	width: 85%;
 	text-indent: 8%;
 	border-bottom: 1px solid white;
 	margin-bottom: 3%;
@@ -445,7 +445,14 @@ tbody{
 .more img{
 	height: 15px;
 }
-
+.jinriwaihui{
+	overflow: hidden;
+	height: 70%;
+	width:100%;
+}
+.jinriwaihui ul{
+	margin-top: 10px;
+}
 /***********************footer*********************************/
 
 footer {
@@ -892,7 +899,7 @@ tbody{
 
 .right_trade>div p:nth-child(1) {
 	font-size: 0.14rem;
-	width: 65%;
+	width: 85%;
 	text-indent: 8%;
 	border-bottom: 1px solid white;
 	margin-bottom: 3%;
@@ -914,6 +921,16 @@ tbody{
 
 .more img{
 	height: 15px;
+}
+
+
+.jinriwaihui{
+	overflow: hidden;
+	height: 70%;
+	width:100%;
+}
+.jinriwaihui ul{
+	margin-top: 10px;
 }
 /***********************footer*********************************/
 
@@ -1354,7 +1371,7 @@ tbody{
 
 .right_trade>div p:nth-child(1) {
 	font-size: 0.14rem;
-	width: 75%;
+	width: 85%;
 	text-indent: 8%;
 	border-bottom: 1px solid white;
 	margin-bottom: 3%;
@@ -1377,7 +1394,14 @@ tbody{
 .more img{
 	height: 15px;
 }
-
+.jinriwaihui{
+	overflow: hidden;
+	height: 70%;
+	width:100%;
+}
+.jinriwaihui ul{
+	margin-top: 10px;
+}
 /***********************footer*********************************/
 
 footer {
@@ -1809,7 +1833,7 @@ tbody{
 }
 .right_trade>div p:nth-child(1) {
 	font-size: 0.14rem;
-	width: 75%;
+	width: 85%;
 	text-indent: 8%;
 	border-bottom: 1px solid white;
 	margin-bottom: 5%;
@@ -1832,7 +1856,14 @@ tbody{
 .more img{
 	height: 15px;
 }
-
+.jinriwaihui{
+	overflow: hidden;
+	height: 70%;
+	width:100%;
+}
+.jinriwaihui ul{
+	margin-top: 10px;
+}
 /***********************footer*********************************/
 
 footer {

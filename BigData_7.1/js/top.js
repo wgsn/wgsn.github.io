@@ -1,6 +1,6 @@
 
 	 var str1="";
-
+ 
 //
 //	function getD(data){
 //			 console.log(data)
@@ -23,11 +23,13 @@
 //	}
 //	
 //	
-	
-	
-	setInterval(function(){
 
-	  	 var a=new Date;
+	
+	setInterval(fn,1000)
+	
+
+function fn (){
+       var a=new Date;
 
           var yy=a.getFullYear();
 	  	  var mm=a.getMonth()+1;
@@ -48,18 +50,27 @@
 		  }
 
 	  str1=yy+"-"+mm+"-"+tiant+" "+b+":"+c+":"+dd+" "+week;
+	 
+
+	  
 	    $('.span1').html(str1);
+	    
+	     $(".tbody .Si-Yi td:nth-child(3)").html(b+":"+c+":"+dd);
+	    
  //获取询盘邮件即时信息时间
-var t=a.getTime()-24*60*60*1000;
-	  	var aa=new Date(t);
-	  	
-	  	 var y=aa.getFullYear();
-	  	 var m=aa.getMonth()+1;
-	  	 var tian=aa.getDate();
-		
-		 
-          bb=y+"年"+m+"月"+tian+"日";
-		   $('.riqi').html(bb);
-		  		
+//var t=a.getTime()-24*60*60*1000;
+//	  	var aa=new Date(t);
+//	  	
+//	  	 var y=aa.getFullYear();
+//	  	 var m=aa.getMonth()+1;
+//	  	 var tian=aa.getDate();
+//		
+//		 
+//        bb=y+"年"+m+"月"+tian+"日";
+//		   $('.riqi').html(bb);
+             var arrq=[b,mm];
+		  		return arrq;
 	
-},1000)
+}
+var fn1=fn();
+

@@ -123,74 +123,8 @@ var BJData = [
 	];
 	//value  可控制光点大小	
 
-	var convertData = function(data) {
-		var res = [];
-		for(var i = 0; i < data.length; i++) {
-			var dataItem = data[i];
-			var fromCoord = geoCoordMap[dataItem[0].name];
-			var toCoord = geoCoordMap[dataItem[1].name];
-			if(fromCoord && toCoord) {
-				res.push({
-					fromName: dataItem[0].name,
-					toName: dataItem[1].name,
-					coords: [fromCoord, toCoord]
-				});
-			}
-		}
-		return res;
-	};
-	//var color = ['#fdd442', '#ffa022', '#46bee9'];
-	var series = [];
-	[
-		['中国', BJData]
-	].forEach(function(item, i) {
-		series.push({
-			name: '贸易' + ' Top15',
-			type: 'effectScatter',
-			coordinateSystem: 'geo',
-			zlevel: 2,
-			rippleEffect: {
-				brushType: 'stroke',
-				scale:6,
-				color:'red'
-			},
-			label: {
-				//地名
-				normal: {
-					show: false,
-					position: 'right',
-					formatter: '{b}',
-					shadowBlur: 2,
-					shadowColor: 'rgba(255, 255, 255, 0.8)',
-				}
-			},
-			symbolSize: function(val) {
-				return val[2] / 10;
-			},
-			itemStyle: {
-				normal: {
-					color: 'yellow',
-					shadowBlur: 100,
-					shadowColor: 'rgba(255, 255, 255, 0.8)',
-				}
-			},
-			data: item[1].map(function(dataItem) {
-				return {
-					name: dataItem[1].name,
-					value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
-					//value:geoCoordMap[dataItem[1].name]
-				};
-				
-			})
-		},
-		
-		///
-		{
-			type: 'map',
-            mapType: 'world',
-            tooltip:{show:false},
-            label: {emphasis:{show:false}},
-			data:[
+
+	var mapData=[
                 {name : 'Afghanistan', value : 283.812},
                 {name : 'Angola', value : 195.124},
                 {name : 'Albania', value : 315.143},
@@ -368,7 +302,82 @@ var BJData = [
                 {name : 'South Africa', value : 51452.352},
                 {name : 'Zambia', value : 216.985},
                 {name : 'Zimbabwe', value : 3076.978}
-            ]
+            ];
+
+
+	var convertData = function(data) {
+		var res = [];
+		for(var i = 0; i < data.length; i++) {
+			var dataItem = data[i];
+			var fromCoord = geoCoordMap[dataItem[0].name];
+			var toCoord = geoCoordMap[dataItem[1].name];
+			if(fromCoord && toCoord) {
+				res.push({
+					fromName: dataItem[0].name,
+					toName: dataItem[1].name,
+					coords: [fromCoord, toCoord]
+				});
+			}
+		}
+		return res;
+	};
+	//var color = ['#fdd442', '#ffa022', '#46bee9'];
+	var series = [];
+	[
+		['中国', BJData]
+	].forEach(function(item, i) {
+		series.push({
+			name: '贸易' + ' Top15',
+			type: 'effectScatter',
+			coordinateSystem: 'geo',
+			zlevel: 2,
+			rippleEffect: {
+				brushType: 'stroke',
+				scale:6,
+				color:'red'
+			},
+			tooltip:{show:false},
+			label: {
+				//地名
+				normal: {
+					show: false,
+					position: 'right',
+					formatter: '{b}',
+					shadowBlur: 2,
+					shadowColor: 'rgba(255, 255, 255, 0.8)',
+				}
+			},
+			symbolSize: function(val) {
+				return val[2] / 10;
+			},
+			itemStyle: {
+				normal: {
+					color: 'yellow',
+					shadowBlur: 100,
+					shadowColor: 'rgba(255, 255, 255, 0.8)',
+				}
+			},
+			data: item[1].map(function(dataItem) {
+				return {
+					name: dataItem[1].name,
+					value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
+					//value:geoCoordMap[dataItem[1].name]
+					
+				};
+				
+			})
+		},
+		
+		///
+		{
+			type: 'map',
+            mapType: 'world',
+            roam:false,
+            tooltip:{
+            	show:true,
+            },
+            label: {emphasis:{show:false}},
+			data:mapData
 		}
 		///
 		);
@@ -388,21 +397,19 @@ var BJData = [
 		},
 		tooltip: {
 				trigger: 'item',
-				height:200,
-				width:200,
 				fontSize:12,
 				formatter: function(params){
-					return params.name+'<br/>'+'交易量'+':'+params.value[2]
+					return params.name+'<br/>'+'采购商上线数量'+':'+params.data.value
 				},
+				
 		},
 		visualMap: {
-        type: 'continuous',
+        //type: 'continuous',
        show:false,
-//   min: 0,
-//    max: 1200,
         realtime: false,
         calculable : false,
-        color: ['orange','pink','yellow','lightskyblue','teal','#999']
+        color: ['orange','pink','yellow','lightskyblue','teal','#999'],
+        
     },
 		//地图样式
 		geo: {
@@ -414,7 +421,7 @@ var BJData = [
 				}
 			},
 			//地图可否拖动
-			roam: true,
+			roam: false,
 			scaleLimit:{max:3, min:1},
 			itemStyle: {
 				normal: {
@@ -434,43 +441,144 @@ var BJData = [
 //点击地图跳转
 	chart.on('click',function(params){
  	var country=params.name;
- 	if(country=='马来西亚'){
- 		window.location.href='contury_detail/contury_detail_013.html';
- 	}else if(country=='中国'){
- 		window.location.href='contury_detail/contury_detail_010.html';
- 	}else if(country=='印度 '){
- 		window.location.href='contury_detail/contury_detail_009.html';
- 	}else if(country=='俄罗斯'){
+ 	console.log(country);
+ 	if(country=='Russia'){
  		window.location.href='contury_detail/contury_detail_001.html';
- 	}else if(country=='以色列'){
- 		window.location.href='contury_detail/contury_detail_004.html';
- 	}else if(country=='斯里兰卡'){
- 		window.location.href='contury_detail/contury_detail_003.html';
- 	}else if(country=='哈萨克斯坦'){
+ 	}else if(country=='Kazakhstan'){
  		window.location.href='contury_detail/contury_detail_002.html';
- 	}else if(country=='乌克兰'){
+ 	}else if(country=='Sri Lanka '){
+ 		window.location.href='contury_detail/contury_detail_003.html';
+ 	}else if(country=='Israel'){
+ 		window.location.href='contury_detail/contury_detail_004.html';
+ 	}else if(country=='Ukraine'){
  		window.location.href='contury_detail/contury_detail_005.html';
- 	}else if(country=='也门'){
+ 	}else if(country=='Yemen'){
  		window.location.href='contury_detail/contury_detail_006.html';
- 	}else if(country=='土耳其'){
+ 	}else if(country=='Turkey'){
  		window.location.href='contury_detail/contury_detail_007.html';
- 	}else if(country=='希腊'){
+ 	}else if(country=='Greece'){
  		window.location.href='contury_detail/contury_detail_008.html';
- 	}else if(country=='叙利亚'){
+ 	}else if(country=='India'){
+ 		window.location.href='contury_detail/contury_detail_009.html';
+ 	}else if(country=='China'){
+ 		window.location.href='contury_detail/contury_detail_010.html';
+ 	}else if(country=='Syria'){
  		window.location.href='contury_detail/contury_detail_011.html';
- 	}else if(country=='波兰'){
+ 	}else if(country=='poland'){
  		window.location.href='contury_detail/contury_detail_012.html';
- 	}else if(country=='新加坡'){
- 		window.location.href='contury_detail/contury_detail_015.html';
- 	}else if(country=='罗马尼亚'){
+ 	}else if(country=='Malaysia'){
+ 		window.location.href='contury_detail/contury_detail_013.html';
+ 	}else if(country=='Romania'){
  		window.location.href='contury_detail/contury_detail_014.html';
+ 	}else if(country=='Singapore'){
+ 		window.location.href='contury_detail/contury_detail_015.html';
+ 	}else if(country=='Indonesia'){
+ 		window.location.href='contury_detail/contury_detail_016.html';
+ 	}else if(country=='Myanmar'){
+ 		window.location.href='contury_detail/contury_detail_017.html';
+ 	}else if(country=='Thailand '){
+ 		window.location.href='contury_detail/contury_detail_018.html';
+ 	}else if(country=='Laos'){
+ 		window.location.href='contury_detail/contury_detail_019.html';
+ 	}else if(country=='Cambodia'){
+ 		window.location.href='contury_detail/contury_detail_020.html';
+ 	}else if(country=='Vietnam'){
+ 		window.location.href='contury_detail/contury_detail_021.html';
+ 	}else if(country=='Macedonia'){
+ 		window.location.href='contury_detail/contury_detail_022.html';
+ 	}else if(country=='菲律宾'){
+ 		window.location.href='contury_detail/contury_detail_023.html';
+ 	}else if(country=='Iran'){
+ 		window.location.href='contury_detail/contury_detail_024.html';
+ 	}else if(country=='Iraq'){
+ 		window.location.href='contury_detail/contury_detail_025.html';
+ 	}else if(country=='Mongolia'){
+ 		window.location.href='contury_detail/contury_detail_026.html';
+ 	}else if(country=='Jordan'){
+ 		window.location.href='contury_detail/contury_detail_027.html';
+ 	}else if(country=='Lebanon'){
+ 		window.location.href='contury_detail/contury_detail_028.html';
+ 	}else if(country=='Palestine'){
+ 		window.location.href='contury_detail/contury_detail_029.html';
+ 	}else if(country=='Saudi Arabia'){
+ 		window.location.href='contury_detail/contury_detail_030.html';
+ 	}else if(country=='Oman'){
+ 		window.location.href='contury_detail/contury_detail_031.html';
+ 	}else if(country=='The United Arab Emirates'){
+ 		window.location.href='contury_detail/contury_detail_032.html';
+ 	}else if(country=='Qatar'){
+ 		window.location.href='contury_detail/contury_detail_033.html';
+ 	}else if(country=='Kuwait'){
+ 		window.location.href='contury_detail/contury_detail_034.html';
+ 	}else if(country=='Bahrain'){
+ 		window.location.href='contury_detail/contury_detail_035.html';
+ 	}else if(country=='Egypt'){
+ 		window.location.href='contury_detail/contury_detail_036.html';
+ 	}else if(country=='Belarus'){
+ 		window.location.href='contury_detail/contury_detail_037.html';
+ 	}else if(country=='Cyprus'){
+ 		window.location.href='contury_detail/contury_detail_038.html';
+ 	}else if(country=='Pakistan'){
+ 		window.location.href='contury_detail/contury_detail_039.html';
+ 	}else if(country=='Bengal'){
+ 		window.location.href='contury_detail/contury_detail_040.html';
+ 	}else if(country=='Afghanistan'){
+ 		window.location.href='contury_detail/contury_detail_041.html';
+ 	}else if(country=='Maldives'){
+ 		window.location.href='contury_detail/contury_detail_042.html';
+ 	}else if(country=='Nepal'){
+ 		window.location.href='contury_detail/contury_detail_043.html';
+ 	}else if(country=='Bhutan'){
+ 		window.location.href='contury_detail/contury_detail_044.html';
+ 	}else if(country=='Uzbekistan'){
+ 		window.location.href='contury_detail/contury_detail_045.html';
+ 	}else if(country=='Turkmenistan'){
+ 		window.location.href='contury_detail/contury_detail_046.html';
+ 	}else if(country=='Tajikistan'){
+ 		window.location.href='contury_detail/contury_detail_047.html';
+ 	}else if(country=='Kyrgyzstan'){
+ 		window.location.href='contury_detail/contury_detail_048.html';
+ 	}else if(country=='Georgia'){
+ 		window.location.href='contury_detail/contury_detail_049.html';
+ 	}else if(country=='Azerbaijan'){
+ 		window.location.href='contury_detail/contury_detail_050.html';
+ 	}else if(country=='Armenia'){
+ 		window.location.href='contury_detail/contury_detail_051.html';
+ 	}else if(country=='Moldova'){
+ 		window.location.href='contury_detail/contury_detail_052.html';
+ 	}else if(country=='Lithuania'){
+ 		window.location.href='contury_detail/contury_detail_053.html';
+ 	}else if(country=='Estonia'){
+ 		window.location.href='contury_detail/contury_detail_054.html';
+ 	}else if(country=='Latvia'){
+ 		window.location.href='contury_detail/contury_detail_055.html';
+ 	}else if(country=='Czech'){
+ 		window.location.href='contury_detail/contury_detail_056.html';
+ 	}else if(country=='Slovakia'){
+ 		window.location.href='contury_detail/contury_detail_057.html';
+ 	}else if(country=='Hungary'){
+ 		window.location.href='contury_detail/contury_detail_058.html';
+ 	}else if(country=='Slovenia'){
+ 		window.location.href='contury_detail/contury_detail_059.html';
+ 	}else if(country=='Serbia'){
+ 		window.location.href='contury_detail/contury_detail_060.html';
+ 	}else if(country=='Albania'){
+ 		window.location.href='contury_detail/contury_detail_061.html';
+ 	}else if(country=='Bulgaria'){
+ 		window.location.href='contury_detail/contury_detail_062.html';
+ 	}else if(country=='Brunei'){
+ 		window.location.href='contury_detail/contury_detail_063.html';
+ 	}else if(country=='Croatia'){
+ 		window.location.href='contury_detail/contury_detail_064.html';
+ 	}else if(country=='Bosnia and Herzegovina'){
+ 		window.location.href='contury_detail/contury_detail_065.html';
  	}
  })
 
 /***************************************柱状图***********************************************************/
 	var topbar = echarts.init(document.querySelector('.top_bar'));
 	topbar.setOption({
-		color: ["white", "red", "tan"],
+		color: ["white"],
 		height:'100%',
 		title: [{
 			text: '询盘邮件趋势图（单位：万封）',
@@ -484,26 +592,38 @@ var BJData = [
 			}
 		}],
 		tooltip: {
+			//title:'当月询盘前3名国家名以及同期环比内容',
 			trigger: 'axis',
 			axisPointer: { // 坐标轴指示器，坐标轴触发有效
 				type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-			}
+			},
+			  formatter: function (params,ticket,callback) {
+            var res = '当月询盘前3名国家名以及同期环比内容 : <br/>' + params[0].name;
+            for (var i = 0, l = params.length; i < l; i++) {
+                res += '<br/>' + params[i].seriesName + ' : ' + params[i].value;
+            }
+            setTimeout(function (){
+                // 仅为了模拟异步回调
+                callback(ticket, res);
+            }, 100)
+            return 'loading';
+        }
 		},
-		legend: [{
-			orient: 'vertical',
-			right: 'right',
-			data: ['8:00~20:00', '20:00~8:00', '峰值IP', '同期环比', ],
-			itemWidth: 20,
-			itemHeight: 10,
-			align: "right",
-			itemGap: 4,
-			padding: [5, 10, 0, 0],
-			textStyle: {
-				color: "white",
-				fontSize: 12,
-				fontFamily:'宋体'
-			}
-		}],
+//		legend: [{
+//			orient: 'vertical',
+//			right: 'right',
+//			data: [ '同期环比', ],
+//			itemWidth: 20,
+//			itemHeight: 10,
+//			align: "right",
+//			itemGap: 4,
+//			padding: [5, 10, 0, 0],
+//			textStyle: {
+//				color: "white",
+//				fontSize: 12,
+//				fontFamily:'宋体'
+//			}
+//		}],
 		grid: {
 			left: '2%',
 			bottom: '5%',
@@ -513,7 +633,7 @@ var BJData = [
 		},
 		xAxis: [{
 			type: 'category',
-			data: ['俄罗斯', '印度', '马来西亚', '以色列', '斯里兰卡', '也门', '土耳其','希腊', '波兰', '罗马尼亚' ],
+			data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月', '9月', '10月' ,'11月','12月'],
 			axisLabel: {
 				interval:0,//显示所有标签
 				textStyle: {
@@ -540,31 +660,31 @@ var BJData = [
 				type: 'bar',
 				stack: '总量',
 				barWidth: '30%',
-				data: [520, 502, 501, 534, 590, 530, 520,190, 230, 210]
+				data: [520, 502, 501, 534, 590, 530, 520,190, 230, 210,111,123]
 			}, {
 				name: '20:00~8:00',
 				type: 'bar',
 				stack: '总量',
 				barWidth: '30%',
-				data: [520, 432, 301, 234, 190, 230, 210,590, 530, 520]
+				data: [520, 432, 301, 234, 190, 230, 210,590, 530, 520, 230, 210]
 			}, {
 				name: '峰值IP',
 				type: 'bar',
 				stack: '总量',
 				barWidth: '30%',
-				data: [420, 482, 491, 434, 490, 470, 410,590, 530, 520]
+				data: [420, 482, 491, 434, 490, 470, 410,590, 530, 520, 230, 210]
 			}, {
 				name: '同期环比',
 				type: 'line',
 				stack: '总量',
-				data: [550, 412, 501, 354, 290, 330, 210,590, 530, 520],
+				data: [550, 412, 501, 354, 290, 330, 210,590, 530, 520,233,344,349,588],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
 					normal: {
 						lineStyle: {
 							width: 1, //折线宽度
-							color: "#8F8E8E" //折线颜色
+							color: "orange" //折线颜色
 						}
 					}
 				},
@@ -576,7 +696,7 @@ var BJData = [
 	var bottomline = echarts.init(document.querySelector('.bottom_line'));
 	bottomline.setOption({
 		title:{
-			text:'IP访问量趋势图（单位：万封）',
+			text:'IP访问量趋势图（单位：万次）',
 			x:'12%',
 			y:'1%',
 			textStyle:{
@@ -590,7 +710,8 @@ var BJData = [
 			trigger: 'axis',
 			axisPointer: { // 坐标轴指示器，坐标轴触发有效
 				type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-			}
+			},
+			formatter: '{a}'+':'+'{c}'+'(万次)'
 		},
 		grid: {
 			left: '10%',
@@ -625,64 +746,74 @@ var BJData = [
 			{
 				name: 'xxx',
 				type: 'line',
-				data: [220, 232, 101, 234, 190, 230,
-				110,118,155,322,144,355,
-				133,234,156,155,177,199,
-				156,166,155,144,123,190],
+				data: [20, 32, 10, 34, 19, 23,
+				11,18,15,22,44,35,
+				33,34,15,15,17,19,
+				16,16,15,14,23,19],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
 					normal: {
 						lineStyle: {
 							width: 1, //折线宽度
-							color: "#84BCC4" //折线颜色
+							color: "orange" //折线颜色
 						}
 					}
 				},
-			}, {
-				name: 'xxx',
-				type: 'line',
-				data: [20, 32, 101, 134, 190, 130,
-				210,118,255,222,144,155,
-				133,234,156,155,177,199,
-				156,166,355,144,123,190],
-				symbol: 'none', //拐点样式
-				//symbolSize: 10,//拐点大小
-				itemStyle: {
-					normal: {
-						lineStyle: {
-							width: 1, //折线宽度
-							color: "white" //折线颜色
-						}
-					}
-				},
-			}, {
-				name: 'xxx',
-				type: 'line',
-				data: [120, 232, 101, 234, 90, 230,
-				210,118,255,122,144,255,
-				133,234,156,155,177,199,
-				156,166,255,144,223,190],
-				symbol: 'none', //拐点样式
-				//symbolSize: 10,//拐点大小
-				itemStyle: {
-					normal: {
-						lineStyle: {
-							width: 1, //折线宽度
-							color: "#ED6F0E" //折线颜色
-						}
-					}
-				},
-			},
+			}, 
+//{
+//				name: 'xxx',
+//				type: 'line',
+//				data: [20, 32, 101, 134, 190, 130,
+//				210,118,255,222,144,155,
+//				133,234,156,155,177,199,
+//				156,166,355,144,123,190],
+//				symbol: 'none', //拐点样式
+//				//symbolSize: 10,//拐点大小
+//				itemStyle: {
+//					normal: {
+//						lineStyle: {
+//							width: 1, //折线宽度
+//							color: "white" //折线颜色
+//						}
+//					}
+//				},
+//			}, {
+//				name: 'xxx',
+//				type: 'line',
+//				data: [120, 232, 101, 234, 90, 230,
+//				210,118,255,122,144,255,
+//				133,234,156,155,177,199,
+//				156,166,255,144,223,190],
+//				symbol: 'none', //拐点样式
+//				//symbolSize: 10,//拐点大小
+//				itemStyle: {
+//					normal: {
+//						lineStyle: {
+//							width: 1, //折线宽度
+//							color: "#ED6F0E" //折线颜色
+//						}
+//					}
+//				},
+//			},
 
 		]
 	});
 
 	//IP访问量2
 	var bottomline1 = echarts.init(document.querySelector('.bottom_line1'));
-
+	var linedata = [];
+	var linedata1 = [];
+	var linedata2 = [];
+	var linedata3 = [];
+	var date = new Date();
+	var m = date.getMonth();
+	var y = date.getYear();
+	var curMonthDays = new Date(y, (m + 1), 0).getDate();
+	for(var i = 0; i <= curMonthDays; i++) {
+		linedata.push(i);
+	}
 	bottomline1.setOption({
-		color: ["white", "red", "tan"],
 		title:{
 			text:'IP访问量趋势图（单位：万封）',
 			x:'12%',
@@ -698,10 +829,11 @@ var BJData = [
 			trigger: 'axis',
 			axisPointer: { // 坐标轴指示器，坐标轴触发有效
 				type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-			}
+			},
+			formatter: '{a}'+':'+'{c}'+'(万次)'
 		},
 		grid: {
-			left: '4%',
+			left: '3%',
 			top: '16%',
 			containLabel: true,
 			width:'100%',
@@ -709,7 +841,7 @@ var BJData = [
 		},
 		xAxis: [{
 			type: 'category',
-			data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+			data: linedata,
 			axisLabel: {
 				textStyle: {
 					color: 'white', //坐标值得具体的颜色
@@ -719,6 +851,8 @@ var BJData = [
 		yAxis: [{
 			type: 'value',
 			boundaryGap: ['20%', '10%'],
+			min:0,
+			max:1200,
 			splitLine: {
 				show: false
 			},
@@ -732,7 +866,9 @@ var BJData = [
 		series: [{
 				name: 'xxx',
 				type: 'line',
-				data: [520, 432, 301, 234, 190, 230, 210],
+				data: [122,111,123,145,322,127,137,120,129,132,
+				        145,136,156,128,829,123,146,134,135,136,
+						156,124,145,167,378,143,167,134,156,122],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
@@ -743,58 +879,44 @@ var BJData = [
 						}
 					}
 				},
-			}, {
-				name: 'xxx',
-				type: 'line',
-				data: [520, 432, 301, 234, 190, 530, 710],
-				symbol: 'none', //拐点样式
-				//symbolSize: 10,//拐点大小
-				itemStyle: {
-					normal: {
-						lineStyle: {
-							width: 1, //折线宽度
-							color: "white" //折线颜色
-						}
-					}
-				},
-			}, {
-				name: 'xxx',
-				type: 'line',
-				data: [220, 232, 201, 234, 390, 530, 610],
-				symbol: 'none', //拐点样式
-				//symbolSize: 10,//拐点大小
-				itemStyle: {
-					normal: {
-						lineStyle: {
-							width: 1, //折线宽度
-							color: "#ED6F0E" //折线颜色
-						}
-					}
-				},
 			},
+// {
+//				name: 'xxx',
+//				type: 'line',
+//				data: [520, 432, 301, 234, 190, 530, 710],
+//				symbol: 'none', //拐点样式
+//				//symbolSize: 10,//拐点大小
+//				itemStyle: {
+//					normal: {
+//						lineStyle: {
+//							width: 1, //折线宽度
+//							color: "white" //折线颜色
+//						}
+//					}
+//				},
+//			}, {
+//				name: 'xxx',
+//				type: 'line',
+//				data: [220, 232, 201, 234, 390, 530, 610],
+//				symbol: 'none', //拐点样式
+//				//symbolSize: 10,//拐点大小
+//				itemStyle: {
+//					normal: {
+//						lineStyle: {
+//							width: 1, //折线宽度
+//							color: "#ED6F0E" //折线颜色
+//						}
+//					}
+//				},
+//			},
 
 		]
 	});
 
 	//IP访问量3
 	var bottomline2 = echarts.init(document.querySelector('.bottom_line2'));
-	var linedata = [];
-	var linedata1 = [];
-	var linedata2 = [];
-	var linedata3 = [];
-	var date = new Date();
-	var m = date.getMonth();
-	var y = date.getYear();
-	var curMonthDays = new Date(y, (m + 1), 0).getDate();
-	for(var i = 0; i <= curMonthDays; i++) {
-		linedata.push(i);
-		linedata1.push(i * Math.random() * 15);
-		linedata2.push(i * Math.random() * 33);
-		linedata3.push(i * Math.random() * 12);
-	}
-
+	
 	bottomline2.setOption({
-		color: ["white", "red", "tan"],
 		title:{
 			text:'IP访问量趋势图（单位：万封）',
 			x:'12%',
@@ -810,7 +932,8 @@ var BJData = [
 			trigger: 'axis',
 			axisPointer: { // 坐标轴指示器，坐标轴触发有效
 				type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-			}
+			},
+			formatter: '{a}'+':'+'{c}'+'(万次)'
 		},
 		grid: {
 			left: '2%',
@@ -821,7 +944,7 @@ var BJData = [
 		},
 		xAxis: [{
 			type: 'category',
-			data: linedata,
+			data: ['2010','2011','2012','2013','2014','2015','2016','2017'],
 			axisLabel: {
 				textStyle: {
 					color: 'white', //坐标值得具体的颜色
@@ -845,21 +968,7 @@ var BJData = [
 			{
 				name: 'xxx',
 				type: 'line',
-				data: linedata1,
-				symbol: 'none', //拐点样式
-				//symbolSize: 10,//拐点大小
-				itemStyle: {
-					normal: {
-						lineStyle: {
-							width: 1, //折线宽度
-							color: "#84BCC4" //折线颜色
-						}
-					}
-				},
-			}, {
-				name: 'xxx',
-				type: 'line',
-				data: linedata2,
+				data: [210,118,255,222,144,234,156,155,],
 				symbol: 'none', //拐点样式
 				//symbolSize: 10,//拐点大小
 				itemStyle: {
@@ -870,21 +979,36 @@ var BJData = [
 						}
 					}
 				},
-			}, {
-				name: 'xxx',
-				type: 'line',
-				data: linedata3,
-				symbol: 'none', //拐点样式
-				//symbolSize: 10,//拐点大小
-				itemStyle: {
-					normal: {
-						lineStyle: {
-							width: 1, //折线宽度
-							color: "#ED6F0E" //折线颜色
-						}
-					}
-				},
-			},
+			}, 
+//			{
+//				name: 'xxx',
+//				type: 'line',
+//				data: linedata2,
+//				symbol: 'none', //拐点样式
+//				//symbolSize: 10,//拐点大小
+//				itemStyle: {
+//					normal: {
+//						lineStyle: {
+//							width: 1, //折线宽度
+//							color: "white" //折线颜色
+//						}
+//					}
+//				},
+//			}, {
+//				name: 'xxx',
+//				type: 'line',
+//				data: linedata3,
+//				symbol: 'none', //拐点样式
+//				//symbolSize: 10,//拐点大小
+//				itemStyle: {
+//					normal: {
+//						lineStyle: {
+//							width: 1, //折线宽度
+//							color: "#ED6F0E" //折线颜色
+//						}
+//					}
+//				},
+//			},
 
 		]
 	});
@@ -900,7 +1024,7 @@ var BJData = [
 	var lpie = echarts.init(document.querySelector('.lpie'));
 	lpie.setOption({
 		title: [{
-			text: '10大热销产品',
+			text: '5大热销产品',
 			x: '10%',
 			y: "80%",
 			textStyle: {
@@ -912,7 +1036,7 @@ var BJData = [
 		}],
 		legend: [{
 			orient: 'vertical',
-			data: ['1.建筑', '2.能源', '3.有色金属', '4.食品', '5.核能', '6.航空航天', '7.交通', '8.IT', '9.医药', '10.机械电子'],
+			data: ['1.建筑', '2.能源', '3.有色金属', '4.食品', '5.核能'],
 			itemWidth: 10,
 			itemHeight: 10,
 			itemGap: 4,
@@ -930,7 +1054,7 @@ var BJData = [
 			formatter: "{a} <br/>{b} : {c} ({d}%)"
 		}],
 		series: [{
-			name: '10大热销产品',
+			name: '5大热销产品',
 			type: 'pie',
 			radius: '45%',
 			center: ['33%', '45%'],
@@ -948,7 +1072,7 @@ var BJData = [
 				}
 			},
 			data: [{
-				value: 99,
+				value: 199,
 				name: '1.建筑',
 				itemStyle: {
 					normal: {
@@ -956,7 +1080,7 @@ var BJData = [
 					}
 				}
 			}, {
-				value: 80,
+				value: 180,
 				name: '2.能源',
 				itemStyle: {
 					normal: {
@@ -964,7 +1088,7 @@ var BJData = [
 					}
 				}
 			}, {
-				value: 95,
+				value: 175,
 				name: '3.有色金属',
 				itemStyle: {
 					normal: {
@@ -972,7 +1096,7 @@ var BJData = [
 					}
 				}
 			}, {
-				value: 80,
+				value: 160,
 				name: '4.食品',
 				itemStyle: {
 					normal: {
@@ -980,53 +1104,15 @@ var BJData = [
 					}
 				}
 			}, {
-				value: 55,
+				value: 135,
 				name: '5.核能',
 				itemStyle: {
 					normal: {
 						color: '#E46606'
 					}
 				}
-			}, {
-				value: 60,
-				name: '6.航空航天',
-				itemStyle: {
-					normal: {
-						color: '#E38F18'
-					}
-				}
-			}, {
-				value: 75,
-				name: '7.交通',
-				itemStyle: {
-					normal: {
-						color: '#E38F18'
-					}
-				}
-			}, {
-				value: 83,
-				name: '8.IT',
-				itemStyle: {
-					normal: {
-						color: '#7DB927'
-					}
-				}
-			}, {
-				value: 80,
-				name: '9.医药',
-				itemStyle: {
-					normal: {
-						color: '#C39C69'
-					}
-				}
-			}, {
-				value: 88,
-				name: '10.机械电子',
-				itemStyle: {
-					normal: {
-						color: '#94592E'
-					}
-				}
+			
+				
 			}],
 			roseType: 'angle',
 			 itemStyle: {
@@ -1103,3 +1189,28 @@ var BJData = [
 	
 	
 }
+
+
+//json
+
+
+function jh(data){
+	//console.log(data.result)
+	var jinri=document.querySelectorAll('.jinriwaihui ul');
+	
+	for (var i = 0; i < data.result.length; i++) {
+		jinri[0].innerHTML='<li>'+data.result[i].lat+'</li>';
+	}
+}
+
+
+
+//
+var atop=0;
+	setInterval(function(){
+		if(atop<-100){atop=0}
+		atop-=5;
+		$('.jinriwaihui ul:nth-child(1)').css('margin-top',atop)
+		
+	},1000)
+

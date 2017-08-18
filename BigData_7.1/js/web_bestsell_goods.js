@@ -1,6 +1,25 @@
 var mC = echarts.init(box);
 var a=new Date;
 
+
+var xx=fn1[1]+1; 
+
+var xx2=(xx+1)>12?(xx+1)%12:(xx+1);    
+var xx3=(xx+2)>12?(xx+2)%12:(xx+2);
+var xx4=(xx+3)>12?(xx+3)%12:(xx+3);
+var xx5=(xx+4)>12?(xx+4)%12:(xx+4); 
+var xx6=(xx+5)>12?(xx+5)%12:(xx+5);
+var xx7=(xx+6)>12?(xx+6)%12:(xx+6);
+var xx8=(xx+7)>12?(xx+7)%12:(xx+7);
+var xx9=(xx+8)>12?(xx+8)%12:(xx+8);
+var xx10=(xx+9)>12?(xx+9)%12:(xx+9); 
+var xx11=(xx+10)>12?(xx+10)%12:(xx+10);
+var xx12=(xx+11)>12?(xx+11)%12:(xx+11);
+
+
+
+
+
 var t=a.getTime()-24*60*60*1000;
 	  	var aa=new Date(t);
 	  	
@@ -13,7 +32,7 @@ var t=a.getTime()-24*60*60*1000;
 			option = {
 			
 title: {
-				text: y+'年'+m+'月'+tian+'日网络热销产品走势图', 
+				text: '全球热销产品走势图', 
 				left: 'center',
 				top: '15%',
 				textStyle: {
@@ -26,7 +45,7 @@ title: {
 				tooltip: {
 					trigger: 'item',
 					formatter: function(params) {
-						var value = params.value + '万吨 ' ;
+						var value = params.value + '万单 ' ;
 						return params.seriesName + '<br/>' + params.name + ' : ' + value;
 					}
 				},
@@ -70,7 +89,7 @@ title: {
 					fontSize: 16,
 				},
 						},
-						areaColor: 'lightgreen'
+						areaColor: 'yellow'
 					}
 				},
 //				
@@ -131,7 +150,7 @@ title: {
 			width: '90%',
 			height: '65%',
 			title: {
-				text: '热销产品销量走势图(单位:万吨)',
+				text: 'Mr-World平台采购总量趋势图(单位:万单)',
 				textStyle: {
 					fontWeight: 'normal',
 					fontFamily: '宋体',
@@ -186,7 +205,7 @@ title: {
 						fontWeight: 'normal'
 					}
 				},
-				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
 			}],
 			yAxis: [{
 				min: 0,
@@ -366,7 +385,7 @@ title: {
 				//			width: '90%',
 				//			height: '65%',
 				title: {
-					text: '热销产品销量走势图(单位:万吨)',
+					text: 'Mr-World平台采购总量趋势图(单位:万单)',
 					textStyle: {
 						fontWeight: 'normal',
 						fontFamily: '宋体',
@@ -425,8 +444,8 @@ title: {
 							fontWeight: 'normal'
 						}
 					},
-					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-				}],
+					data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
+			}],
 				yAxis: [{
 					min: 0,
 					max: 1600,
@@ -610,7 +629,7 @@ title: {
 			width: '90%',
 			height: '65%',
 			title: {
-				text: '热销产品价格走势图(加权指数)',
+				text: '平台热销产品销量走势图(单位：万单)',
 				textStyle: {
 					fontWeight: 'normal',
 					fontFamily: '宋体',
@@ -666,7 +685,7 @@ title: {
 						fontWeight: 'normal'
 					}
 				},
-				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
 			}],
 			yAxis: [{
 				min: 0,
@@ -847,7 +866,7 @@ title: {
 				width: '90%',
 				height: '65%',
 				title: {
-					text: '热销产品价格走势图(加权指数)',
+					text: '平台热销产品销量走势图(单位：万单)',
 					textStyle: {
 						fontWeight: 'normal',
 						fontFamily: '宋体',
@@ -906,8 +925,8 @@ title: {
 							fontWeight: 'normal'
 						}
 					},
-					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-				}],
+					data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
+			}],
 				yAxis: [{
 					min: 0,
 					max: 1600,
@@ -1151,7 +1170,7 @@ title: {
 						fontWeight: 'normal'
 					}
 				},
-				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+				data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
 			}],
 			yAxis: [{
 				min: 0,
@@ -1429,8 +1448,8 @@ title: {
 							fontWeight: 'normal'
 						}
 					},
-					data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-				}],
+					data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
+			}],
 				yAxis: [{
 					min: 0,
 					max: 2000,
