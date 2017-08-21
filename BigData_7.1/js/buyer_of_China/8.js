@@ -742,7 +742,7 @@ option[0] = {
 		    calculable : true,
 		    series : 
 		        {
-		            name:'面积模式',
+		            name:'偏好度',
 		            type:'pie',
 		            radius : '70%',
 		            center : ['35%', '60%'],
