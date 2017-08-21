@@ -63,5 +63,7 @@ function fn (){
 }
 var fn1=fn();
 
-
-	
+//footer部分文字的修改
+$(".footer span").eq(0).html("鲁公网安备 11000002000088号");
+$(".footer span").eq(1).html("鲁ICP证070359号|互联网信息服务资格证编号（鲁）-经营性-2014-0008");
+$(".footer span").eq(2).html("新出发鲁零字第大120007号");
