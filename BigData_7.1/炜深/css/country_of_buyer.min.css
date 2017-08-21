@@ -1,0 +1,169 @@
+*{
+	padding: 0;
+	border: 0;
+	margin: 0
+}
+
+ul,
+li {
+	list-style: none
+}
+
+a {
+	text-decoration: none
+}
+
+body,
+html {
+	height: 100%;
+	width: 100%
+}
+
+.menban {
+	height: 100%;
+	width: 100%;
+	background: black;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+	opacity: 0;
+}
+
+.bg {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: #030c15;
+	box-sizing: border-box;
+	border: 5px black solid
+}
+
+.top{
+	text-align: center;
+	padding-top: 1%;
+	color: white;
+}
+.top p{
+	display: inline-block;
+}
+.top  .left,.top .right{
+	font-size: 14px;
+}
+.top .mid{
+	padding: 0 8%;
+	font-size: 23px;
+}
+
+.footer{
+	font-size:13px;
+	text-align: center;
+	color: white;
+}
+.footer span{
+	display: inline-block;
+	margin-left: 2%;
+	margin-right: 3%;
+}
+.box {
+	height: 90%;
+	width: 100%;
+	position: relative
+}
+#main {
+	height: 100%;
+	width: 65%;
+	float: left
+}
+
+.map_title {
+	font-size: 35px;
+	position: absolute;
+	bottom: 5%;
+	display: block;
+	left: 15%;
+	color: white
+}
+
+.box_big {
+	width: 33%;
+	height: 23.5%;
+	background: #3d3734;
+	float: left;
+	margin-top: 0.5%;
+	position: relative
+}
+
+#box1 {
+	height: 100%;
+	width: 95%
+}
+
+#box2 {
+	height: 100%;
+	width: 95%
+}
+
+#box3 {
+	height: 100%;
+	width: 95%
+}
+
+#box4 {
+	height: 100%;
+	width: 95%
+}
+
+.box_big img {
+	position: absolute;
+	top: 0.5%;
+	right: 0.5%
+}
+
+.box_small {
+	height: 0;
+	width: 0;
+	position: fixed;
+	z-index: 20;
+	left: 50%;
+	top: 50%;
+	background: #3e61aa;
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	opacity: 0;
+	display: none;
+}
+.box_small1{
+	left: 97%;
+	top: 9%;
+}
+.box_small2{
+	left: 97%;
+	top: 31%;
+}
+.box_small3{
+	left: 97%;
+	top: 53%;
+}
+.box_small4{
+	left: 97%;
+	top: 75%;
+}
+.box_motai {
+	height: 100%;
+	width: 98%;
+	float: left
+}
+
+.box_small img {
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor:pointer;
+}
+.fangda{
+	cursor:pointer;
+}

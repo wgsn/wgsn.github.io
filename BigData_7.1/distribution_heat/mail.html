@@ -48,7 +48,7 @@
 				</tr>
 
 				<tr class="Si-Yi">
-					<td>admin</td>
+					<td>wds5****</td>
 					<td>建筑</td>
 					<td></td>
 					<!--<td>归档</td>-->
@@ -270,19 +270,44 @@
 	<script src="../js/jquery-2.1.0.js"></script>
 	<script src="../js/top.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">	
-	    
-	
-	
-//	    $("td").html(b+":"+c+":"+dd)
-	
+
 
 		$(function() {
+				//询盘时间获取
+	
+//	  lol=setInterval(xn,1000);
+//		function xn (){
+//	       var a=new Date;
+//	        var _x=a.getTime()-5000;
+//	        var _xx=new Date(_x);
+//	         var _xh=_xx.getHours();
+//			  var _xm=_xx.getMinutes();
+//			  var _xs=_xx.getSeconds();
+//	           if(_xh<10){
+//				  	_xh="0"+_xh;
+//				  }
+//				  if(_xm<10){
+//			      
+//				  	_xm="0"+_xm;
+//				  } 
+//				  if(_xs<10){
+//			      
+//				  	_xs="0"+_xs;
+//				  } 
+//		
+//			     $(".tbody .Si-Yi td:nth-child(3)").html(_xh+":"+_xm+":"+_xs);
+//			    }
+//			
+			
+			
 			var _wrap = $('.tbody').eq(0); //定义滚动区域
 			var _wrapp = $('.tbody').eq(1);
 		
 			var _interval = ""; //定义滚动间隙时间
 			var _moving; //需要清除的动画
 			var _movingg; 
+			var lol;
+			var loll;
 			var ttd=$(".tbody");
 			
 			var trtd=document.querySelectorAll(".tbody .Si-Yi td:nth-child(1)");
@@ -319,7 +344,12 @@
 
 //			
 			_wrap.hover(function() {
+
+				
 				clearInterval(_moving); //当鼠标在滚动区域中时,停止滚动
+			
+			    clearInterval(lol);
+				
 			}, function() {
 				_moving = setInterval(function() {
 					var _field = _wrap.find('.Si-Yi:first'); //此变量不可放置于函数起始处,li:first取值是变化的
@@ -330,31 +360,81 @@
 						_field.css('marginTop', '6px').appendTo(_wrap); //隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
 					})
 
-				}, _interval) //滚动间隔时间取决于_interval
+				}, _interval); //滚动间隔时间取决于_interval
+				
+				lol = setInterval(xn,1000);
+				console.log(lol)
+		function xn (){
+			
+	        var a=new Date;
+	        var _x=a.getTime()-5000;
+	        var _xx=new Date(_x);
+	         var _xh=_xx.getHours();
+			  var _xm=_xx.getMinutes();
+			  var _xs=_xx.getSeconds();
+	           if(_xh<10){
+				  	_xh="0"+_xh;
+				  }
+				  if(_xm<10){
+			      
+				  	_xm="0"+_xm;
+				  } 
+				  if(_xs<10){
+			      
+				  	_xs="0"+_xs;
+				  } 
+		
+			     $(".tbody:eq(0) .Si-Yi td:nth-child(3)").html(_xh+":"+_xm+":"+_xs);
+			    }
+			
 			}).trigger('mouseleave'); //函数载入时,模拟执行mouseleave,即自动滚动
 			
 			
+
 			
 			
 			_wrapp.hover(function() {
 				clearInterval(_movingg); //当鼠标在滚动区域中时,停止滚动
+				clearInterval(loll);
 			}, function() {
+				
 			_movingg = setInterval(function() {
-			var _fieldd = _wrapp.find('.Si-Yi:first'); //此变量不可放置于函数起始处,li:first取值是变化的
+		        	var _fieldd = _wrapp.find('.Si-Yi:first'); //此变量不可放置于函数起始处,li:first取值是变化的
 					var _h = _fieldd.height(); //取得每次滚动高度
 					_fieldd.animate({
 						marginTop: -_h + 'px'
 					}, 200, function() { //通过取负margin值,隐藏第一行
+						
 						_fieldd.css('marginTop', '6px').appendTo(_wrapp); //隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
 					})
-					}, _interval) //滚动间隔时间取决于_interval
+					}, _interval); //滚动间隔时间取决于_interval
+					
+					loll=setInterval(xn,1000);
+		function xn (){
+	          var a=new Date;
+	          var _x=a.getTime()-5000;
+	          var _xx=new Date(_x);
+	          var _xh=_xx.getHours();
+			  var _xm=_xx.getMinutes();
+			  var _xs=_xx.getSeconds();
+	           if(_xh<10){
+				  	_xh="0"+_xh;
+				  }
+				  if(_xm<10){
+			      
+				  	_xm="0"+_xm;
+				  } 
+				  if(_xs<10){
+			      
+				  	_xs="0"+_xs;
+				  } 
+		
+			     $(".tbody:eq(1) .Si-Yi td:nth-child(3)").html(_xh+":"+_xm+":"+_xs);
+			    }
+			
 			}).trigger('mouseleave'); //函数载入时,模拟执行mouseleave,即自动滚动	
 			
-		});
-
-       
-       
-       
+})
 	</script>
 	<!--<script src="http://api.map.baidu.com/telematics/v3/weather?location=上海&output=json&ak=KdhEeXIswBzw5fOPwTbg4huHXSFQ34pR&callback=getD"></script>-->
 </html>

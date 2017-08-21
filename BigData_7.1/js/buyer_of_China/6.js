@@ -198,7 +198,7 @@ var series = [];
         zlevel: 4,
         rippleEffect: {
             brushType: 'fill',
-            scale:5,
+            scale:8,
         },
         label: {
             normal: {
@@ -213,7 +213,7 @@ var series = [];
         },
         symbolSize: function (val) {
         
-            return val[2] / 8;
+            return val[2] / 16;
         },
         data: BJData.map(function (dataItem) {
             return {
@@ -330,23 +330,124 @@ option[0] = {
     series: series
 };
 
-
-		var chart0 = echarts.init(document.querySelector(".China_map"));
-		chart0.setOption(option[0]);
+		 var oDetail_a = document.querySelector(".China_map_detail_a"); 
+		 var oDetail_b = document.querySelector(".China_map_detail_b"); 
+		 var chart0 = echarts.init(document.querySelector(".China_map"));
+		 chart0.setOption(option[0]);
 		
-		var city = ['广州','深圳','佛山','中山','湛江','赣州','东莞','茂名','珠海','南昌'];
-		// info1_0 = [400, 290, 300, 232, 256, 767, 1356, 622, 326, 200, 640, 330];
+		 var province = ['广东','江西'];
+//		 info1_0 = [400, 290, 300, 232, 256, 767, 1356, 622, 326, 200, 640, 330];
 		
-		chart0.on('click',function(params){
-			for(var i=0;i<city.length;i++){
-	            if( params.name == city[i]){
-					window.location.href=i+1+'.html';
+		 chart0.on('click',function(params){
+		 	for(var i=0;i<province.length;i++){
+	             if( params.name == '广东'){
+		 			$(".China_map").addClass("China_map_change");
+		 			$(".China_map_detail_a").addClass("China_map_detail_change");
+		 			$(".map_reduce").addClass("map_reduce_change");
+		 			
+	            };
+	            if( params.name == '江西'){
+		 			$(".China_map").addClass("China_map_change");
+		 			$(".China_map_detail_b").addClass("China_map_detail_change");
+		 			$(".map_reduce").addClass("map_reduce_change");
 	            }
 				
-			}
+		 	}
 			
-       });
+     	 });
+     	 $(".map_reduce").on("click",function(){
+     	 	$(".China_map").removeClass("China_map_change");
+		 	$(".China_map_detail_a").removeClass("China_map_detail_change");
+		 	$(".China_map_detail_b").removeClass("China_map_detail_change");
+		 	$(".map_reduce").removeClass("map_reduce_change");
+     	 })
 		
+
+        //*************地图具体省份图
+        var city = ['广州市','深圳市','佛山市','中山市','湛江市','赣州市','东莞市','茂名市','珠海市','南昌市'];
+        $.getJSON('../js/guangdong.json', function (data) {
+            echarts.registerMap('guangdong', data);
+            var chart_detail = echarts.init(oDetail_a);
+            chart_detail.setOption({
+                series: [{
+                    type: 'map',
+                    map: 'guangdong',
+//                  zoom:10,
+                    label: {
+			            emphasis: {
+			                show: true,
+			                textStyle:{
+			                	color:'#345F93',
+			                	fontWeight:'bold',
+			                	fontSize:16
+			                }
+			            }
+			        },
+                    itemStyle: {
+			            normal: {
+			                areaColor: '#0E345A',
+			                borderColor: '#ccc',
+			                borderWidth: '1',
+			                
+			            },
+			            emphasis: {
+			            	areaColor:'#fff',
+			            }
+			        }
+                }]
+            });
+            chart_detail.on('click',function(params){
+		 	for(var i=0;i<city.length;i++){
+	             if( params.name == city[i]){
+		 			window.location.href=i+1+'.html';
+	            }
+				
+		 	}
+			
+      });
+        });
+        
+        $.getJSON('../js/jiangxi.json', function (data) {
+            echarts.registerMap('jiangxi', data);
+            var chart_detail = echarts.init(oDetail_b);
+            chart_detail.setOption({
+                series: [{
+                    type: 'map',
+                    map: 'jiangxi',
+                    label: {
+			            emphasis: {
+			                show: true,
+			                textStyle:{
+			                	color:'#345F93',
+			                	fontWeight:'bold',
+			                	fontSize:16
+			                }
+			            }
+			        },
+                    itemStyle: {
+			            normal: {
+			                areaColor: '#0E345A',
+			                borderColor: '#ccc',
+			                borderWidth: '1',
+			                
+			            },
+			            emphasis: {
+			            	areaColor:'#fff',
+			            }
+			        }
+                }]
+            });
+            chart_detail.on('click',function(params){
+		 	for(var i=0;i<city.length;i++){
+		 		console.log(params.name)
+	             if( params.name == city[i]){
+		 			window.location.href=i+1+'.html';
+	            }
+				
+		 	}
+			
+      });
+        });
 		
 		//****************************************右图1
 		
@@ -354,7 +455,7 @@ option[0] = {
 			option[1] = {
     backgroundColor: '#3d3734',
 //  width:'100%',
-    height:'30%',
+    height:'40%',
     title: {
         text: 'top10供应商上线走势图(单位:家)',
         textStyle: {
@@ -421,7 +522,10 @@ option[0] = {
             }
         },
         axisLabel:{
-            interval:0,   //强制显示所有坐标                          
+            interval:0,   //强制显示所有坐标 
+            textStyle:{
+                         	fontSize:'50%',
+                         }
          },
          labelLine: {
                         normal: {
@@ -574,7 +678,7 @@ option[0] = {
 								}
 							},
                             barWidth:'26%',
-                            data:[1233, 2145, 5162, 9544, 8145, 7866, 5463, 5212, 6783, 9869, 9733, 6547]
+                            data:[587, 794, 1563, 3005, 3125, 2586, 2133, 1236, 1032, 3354, 3162, 652]
                         },
                         {
                             name:'同期环比曲线',
@@ -625,7 +729,7 @@ option[0] = {
 		        right:'1%',
 		        top:'20%',
 		        orient:'vertical',
-		        data:['食品类产品','电子及家电','纺织服装、鞋','机械','家居装饰品','建材','日用消费品','休闲用品'],
+		        data:['机械','家居装饰品','食品类产品','机械','日用消费品','纺织服装、鞋','建材','电子及家电'],
 		        textStyle:{
 		        	color:'#fff',
 		        },
@@ -769,14 +873,14 @@ option[0] = {
                                },
                             },
 		            data:[
-		                {value:90, name:'食品类产品'},
-		                {value:80, name:'电子及家电'},
-		                {value:80, name:'纺织服装、鞋'},
-		                {value:85, name:'机械'},
+		                {value:90, name:'机械'},
 		                {value:80, name:'家居装饰品'},
-		                {value:85, name:'建材'},
-		                {value:90, name:'日用消费品'},
-		                {value:80, name:'休闲用品'}
+		                {value:85, name:'食品类产品'},
+		                {value:80, name:'机械'},
+		                {value:85, name:'日用消费品'},
+		                {value:90, name:'纺织服装、鞋'},
+		                {value:90, name:'建材'},
+		                {value:90, name:'电子及家电'}
 		            ]
 		        }
 		    
@@ -788,7 +892,7 @@ option[0] = {
             //*******************右图4
             
             option[4] = {
-            	height:'40%',
+            	height:'30%',
 					title : {
 				    text: '主要省份产品满意度（%）',
 				    left: '1%',
@@ -818,6 +922,7 @@ option[0] = {
 							},
                         	axisLabel:{
                         		interval:0,   //强制显示所有坐标
+//                      		rotate:15,
                         		textStyle:{
                         			fontWeight:'lighter'
                         		}
@@ -829,8 +934,9 @@ option[0] = {
 								}
 							},
                             type: 'category',
-                            data:['食品类产品','电子及家电','纺织服装、鞋','机械','家居装饰品','建材','日用消费品','休闲用品'],
-                        }
+		        			data:['机械','家居装饰品','食品类产品','机械','日用消费品','纺织服装、鞋','建材','电子及家电'],
+                            
+                            }
                     ],
                     yAxis: [
                         {
@@ -978,7 +1084,7 @@ option[0] = {
                             },
                             
                             barWidth:'28%',
-                            data:[85, 90, 85, 85, 80, 85, 90, 85]
+                            data:[85, 85, 85, 80, 85, 80, 85, 85]
                         },
                         {
                             name:'同期环比曲线',
@@ -997,7 +1103,7 @@ option[0] = {
 					            }
 					        },
                             yAxisIndex: 1,
-                            data:[0.5,0.6,0.4,0.5,0.3,0.5,0.6,0.5]
+                            data:[0.5,0.6,0.3,0.6,0.5,0.7,0.6,0.5]
                         }
                     ]
            };
@@ -1039,8 +1145,9 @@ option[0] = {
 					op.title.textStyle.fontSize=24;
 					op.legend.textStyle.fontSize=16;
 					op.title.left='10%';
-					op.title.top='10%';
+					op.title.top='3%';
 					op.legend.right='8%';
+					op.legend.top='8%';
 					op.legend.itemWidth=50;
 					op.legend.itemHeight=20;
 					op.backgroundColor='#2f79be';

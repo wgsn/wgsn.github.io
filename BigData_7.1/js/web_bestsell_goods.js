@@ -144,239 +144,239 @@ title: {
 			});
 
 
-		var mapzhexian1 = echarts.init(document.querySelector('.world-he1'));
-		option = {
-			backgroundColor: '#434141',
-			width: '90%',
-			height: '65%',
-			title: {
-				text: 'Mr-World平台采购总量趋势图(单位:万单)',
-				textStyle: {
-					fontWeight: 'normal',
-					fontFamily: '宋体',
-					fontSize: 8,
-					color: 'white',
-				},
-				left: '2%',
-				top: '3%'
-			},
-			tooltip: {
-				trigger: 'axis',
-				axisPointer: {
-					lineStyle: {
-						color: '#57617B'
-					}
-				}
-			},
-			legend: {
-				icon: 'rect',
-				itemWidth: 20,
-				itemHeight: 1,
-				itemGap: 3,
-				data: ['建筑', '能源', '有色金属', '', '食品', '核能'],
-				right: '6%',
-				top: '3%',
-				textStyle: {
-					fontSize: 8,
-					color: '#F1F1F3',
-					fontFamily: '宋体'
-				}
-			},
-			grid: {
-				left: '3%',
-				right: '4%',
-				top: '25%',
-				containLabel: true
-			},
-			xAxis: [{
-				type: 'category',
-				boundaryGap: true,
-				axisLabel: {
-					interval: 0
-				},
-				axisTick: {
-					show: false,
-				},
-				axisLine: {
-					lineStyle: {
-						color: 'white',
-						fontSize: 8,
-						fontFamily: '宋体',
-						fontWeight: 'normal'
-					}
-				},
-				data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
-			}],
-			yAxis: [{
-				min: 0,
-				max: 1600,
-				interval: 400,
-				type: 'value',
-				axisTick: {
-					show: true,
-					inside: true,
-					length: 2
-				},
-				axisLine: {
-					lineStyle: {
-						color: 'white',
-						fontSize: 8,
-						fontFamily: '宋体',
-						fontWeight: 'normal',
-
-					}
-				},
-				axisLabel: {
-					margin: 10,
-					textStyle: {
-						fontSize: 8
-					}
-				},
-				splitLine: {
-					show: false
-				},
-			}],
-			series: [{
-				name: '建筑',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(137,189,27)'
-					}
-				},
-				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
-			}, {
-				name: '能源',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(0,136,212)'
-					}
-				},
-				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
-			}, {
-				name: '有色金属',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(219,50,251)'
-					}
-				},
-				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
-			}, {
-				name: '食品',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(243,140,61)'
-					}
-				},
-				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
-			}, {
-				name: '核能',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(128,171,204)'
-					}
-				},
-				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
-			}, ]
-		};
-		mapzhexian1.setOption(option);
+//		var mapzhexian1 = echarts.init(document.querySelector('.world-he1'));
+//		option = {
+//			backgroundColor: '#434141',
+//			width: '90%',
+//			height: '65%',
+//			title: {
+//				text: 'Mr-World平台采购总量趋势图(单位:万单)',
+//				textStyle: {
+//					fontWeight: 'normal',
+//					fontFamily: '宋体',
+//					fontSize: 8,
+//					color: 'white',
+//				},
+//				left: '2%',
+//				top: '3%'
+//			},
+//			tooltip: {
+//				trigger: 'axis',
+//				axisPointer: {
+//					lineStyle: {
+//						color: '#57617B'
+//					}
+//				}
+//			},
+//			legend: {
+//				icon: 'rect',
+//				itemWidth: 20,
+//				itemHeight: 1,
+//				itemGap: 3,
+//				data: ['建材', '大型机械', '家电', '', '轻工业', '纺织服装'],
+//				right: '6%',
+//				top: '3%',
+//				textStyle: {
+//					fontSize: 8,
+//					color: '#F1F1F3',
+//					fontFamily: '宋体'
+//				}
+//			},
+//			grid: {
+//				left: '3%',
+//				right: '4%',
+//				top: '25%',
+//				containLabel: true
+//			},
+//			xAxis: [{
+//				type: 'category',
+//				boundaryGap: true,
+//				axisLabel: {
+//					interval: 0
+//				},
+//				axisTick: {
+//					show: false,
+//				},
+//				axisLine: {
+//					lineStyle: {
+//						color: 'white',
+//						fontSize: 8,
+//						fontFamily: '宋体',
+//						fontWeight: 'normal'
+//					}
+//				},
+//				data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
+//			}],
+//			yAxis: [{
+//				min: 0,
+//				max: 1.5,
+//				interval: 0.3,
+//				type: 'value',
+//				axisTick: {
+//					show: true,
+//					inside: true,
+//					length: 2
+//				},
+//				axisLine: {
+//					lineStyle: {
+//						color: 'white',
+//						fontSize: 8,
+//						fontFamily: '宋体',
+//						fontWeight: 'normal',
+//
+//					}
+//				},
+//				axisLabel: {
+//					margin: 10,
+//					textStyle: {
+//						fontSize: 8
+//					}
+//				},
+//				splitLine: {
+//					show: false
+//				},
+//			}],
+//			series: [{
+//				name: '建材',
+//				type: 'line',
+//				symbol: 'none',
+//				lineStyle: {
+//					normal: {
+//						width: 1
+//					}
+//				},
+//				areaStyle: {
+//					normal: {
+//						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+//							offset: 0,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}, {
+//							offset: 0.8,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}], false),
+//					}
+//				},
+//				itemStyle: {
+//					normal: {
+//						color: 'rgb(137,189,27)'
+//					}
+//				},
+//				data: [0.85, 0.83,1.1,1.3,0.47,0.48,1.1,1.3,1.13,0.47,0.88,0.83]
+//			}, {
+//				name: '大型机械',
+//				type: 'line',
+//				symbol: 'none',
+//				lineStyle: {
+//					normal: {
+//						width: 1
+//					}
+//				},
+//				areaStyle: {
+//					normal: {
+//						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+//							offset: 0,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}, {
+//							offset: 0.8,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}], false),
+//						shadowColor: 'rgba(0, 0, 0, 0.1)',
+//						shadowBlur: 10
+//					}
+//				},
+//				itemStyle: {
+//					normal: {
+//						color: 'rgb(0,136,212)'
+//					}
+//				},
+//				data: [0.6,0.62,0.69,0.7,0.88,0.58,0.59,0.7,0.97,0.88,0.7,0.55]
+//			}, {
+//				name: '家电',
+//				type: 'line',
+//				symbol: 'none',
+//				lineStyle: {
+//					normal: {
+//						width: 1
+//					}
+//				},
+//				areaStyle: {
+//					normal: {
+//						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+//							offset: 0,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}, {
+//							offset: 0.8,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}], false),
+//						shadowColor: 'rgba(0, 0, 0, 0.1)',
+//						shadowBlur: 10
+//					}
+//				},
+//				itemStyle: {
+//					normal: {
+//						color: 'rgb(219,50,251)'
+//					}
+//				},
+//				data: [1.4,1.32,0.95,0.4,1.14,1.14, 0.95,0.4,0.4,1.14, 1.4,1.32]
+//			}, {
+//				name: '轻工业',
+//				type: 'line',
+//				symbol: 'none',
+//				lineStyle: {
+//					normal: {
+//						width: 1
+//					}
+//				},
+//				areaStyle: {
+//					normal: {
+//						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+//							offset: 0,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}, {
+//							offset: 0.8,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}], false),
+//						shadowColor: 'rgba(0, 0, 0, 0.1)',
+//						shadowBlur: 10
+//					}
+//				},
+//				itemStyle: {
+//					normal: {
+//						color: 'rgb(243,140,61)'
+//					}
+//				},
+//				data: [0.88,1.3,1.3,0.6,1.23,0.6,1.33,1.3,1.3,0.6,0.6,1.23	]
+//			}, {
+//				name: '纺织服装',
+//				type: 'line',
+//				symbol: 'none',
+//				lineStyle: {
+//					normal: {
+//						width: 1
+//					}
+//				},
+//				areaStyle: {
+//					normal: {
+//						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+//							offset: 0,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}, {
+//							offset: 0.8,
+//							color: 'rgba(0, 0, 0, 0)'
+//						}], false),
+//						shadowColor: 'rgba(0, 0, 0, 0.1)',
+//						shadowBlur: 10
+//					}
+//				},
+//				itemStyle: {
+//					normal: {
+//						color: 'rgb(128,171,204)'
+//					}
+//				},
+//				data: [0.56,0.53, 1.5,1.24,1.4,1.4,1.5,1.24,1.25,1.4,0.56, 0.43]
+//			}, ]
+//		};
+//		mapzhexian1.setOption(option);
 
 		function box1() {
 			mapdivhe1 = echarts.init(document.querySelector('.div-he1'));
@@ -408,8 +408,8 @@ title: {
 					itemWidth: 20,
 					itemHeight: 1,
 					itemGap: 3,
-					data: ['建筑', '能源', '有色金属', '', '食品', '核能'],
-					right: '6%',
+                    data: ['建材', '大型机械', '家电', '', '轻工业', '纺织服装'],
+                    right: '6%',
 					top: '3%',
 					textStyle: {
 						fontSize: 20,
@@ -446,659 +446,185 @@ title: {
 					},
 					data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
 			}],
-				yAxis: [{
-					min: 0,
-					max: 1600,
-					interval: 400,
-					type: 'value',
-					axisTick: {
-						show: true,
-						inside: true,
-						length: 2
-					},
-					axisLine: {
-						lineStyle: {
-							color: 'white',
-							fontSize: 8,
-							fontFamily: '宋体',
-							fontWeight: 'normal',
+                yAxis: [{
+                    min: 0,
+                    max: 1.5,
+                    interval: 0.3,
+                    type: 'value',
+                    axisTick: {
+                        show: true,
+                        inside: true,
+                        length: 2
+                    },
+                    axisLine: {
+                        lineStyle: {
+                            color: 'white',
+                            fontSize: 8,
+                            fontFamily: '宋体',
+                            fontWeight: 'normal',
 
-						}
-					},
-					axisLabel: {
-						margin: 10,
-						textStyle: {
-							fontSize: 16
-						}
-					},
-					splitLine: {
-						show: false
-					},
-
-					//      data: ['400','','800','','1200','','1600']
-
-				}],
-				series: [{
-					name: '建筑',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(137,189,27)'
-						}
-					},
-					data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
-				}, {
-					name: '能源',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(0,136,212)'
-						}
-					},
-					data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
-				}, {
-					name: '有色金属',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(219,50,251)'
-						}
-					},
-					data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
-				}, {
-					name: '食品',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(243,140,61)'
-						}
-					},
-					data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
-				}, {
-					name: '核能',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(128,171,204)'
-						}
-					},
-					data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
-				}, ]
+                        }
+                    },
+                    axisLabel: {
+                        margin: 10,
+                        textStyle: {
+                            fontSize: 8
+                        }
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                }],
+                series: [{
+                    name: '建材',
+                    type: 'line',
+                    symbol: 'none',
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }], false),
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: 'rgb(137,189,27)'
+                        }
+                    },
+                    data: [0.85, 0.83,1.1,1.3,0.47,0.48,1.1,1.3,1.13,0.47,0.88,0.83]
+                }, {
+                    name: '大型机械',
+                    type: 'line',
+                    symbol: 'none',
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: 'rgb(0,136,212)'
+                        }
+                    },
+                    data: [0.6,0.62,0.69,0.7,0.88,0.58,0.59,0.7,0.97,0.88,0.7,0.55]
+                }, {
+                    name: '家电',
+                    type: 'line',
+                    symbol: 'none',
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: 'rgb(219,50,251)'
+                        }
+                    },
+                    data: [1.4,1.32,0.95,0.4,1.14,1.14, 0.95,0.4,0.4,1.14, 1.4,1.32]
+                }, {
+                    name: '轻工业',
+                    type: 'line',
+                    symbol: 'none',
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: 'rgb(243,140,61)'
+                        }
+                    },
+                    data: [0.88,1.3,1.3,0.6,1.23,0.6,1.33,1.3,1.3,0.6,0.6,1.23	]
+                }, {
+                    name: '纺织服装',
+                    type: 'line',
+                    symbol: 'none',
+                    lineStyle: {
+                        normal: {
+                            width: 1
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }, {
+                                offset: 0.8,
+                                color: 'rgba(0, 0, 0, 0)'
+                            }], false),
+                            shadowColor: 'rgba(0, 0, 0, 0.1)',
+                            shadowBlur: 10
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: 'rgb(128,171,204)'
+                        }
+                    },
+                    data: [0.56,0.53, 1.5,1.24,1.4,1.4,1.5,1.24,1.25,1.4,0.56, 0.43]
+                }, ]
 			};
 			mapdivhe1.setOption(option);
 		}
 
-		var mapzhexian2 = echarts.init(document.querySelector('.world-he2'));
-		option = {
-			backgroundColor: '#454e57',
-			width: '90%',
-			height: '65%',
-			title: {
-				text: '平台热销产品销量走势图(单位：万单)',
-				textStyle: {
-					fontWeight: 'normal',
-					fontFamily: '宋体',
-					fontSize: 8,
-					color: 'white',
-				},
-				left: '2%',
-				top: "3%"
-			},
-			tooltip: {
-				trigger: 'axis',
-				axisPointer: {
-					lineStyle: {
-						color: '#57617B'
-					}
-				}
-			},
-			legend: {
-				icon: 'rect',
-				itemWidth: 20,
-				itemHeight: 1,
-				itemGap: 3,
-				data: ['建筑', '能源', '有色金属', '', '食品', '核能'],
-				right: '6%',
-				top: '3%',
-				textStyle: {
-					fontSize: 8,
-					color: '#F1F1F3',
-					fontFamily: '宋体'
-				}
-			},
-			grid: {
-				left: '3%',
-				right: '4%',
-				top: '25%',
-				containLabel: true
-			},
-			xAxis: [{
-				type: 'category',
-				boundaryGap: true,
-				axisLabel: {
-					interval: 0
 
-				},
-				axisTick: {
-					show: false
-				},
-				axisLine: {
-					lineStyle: {
-						color: 'white',
-						fontSize: 8,
-						fontFamily: '宋体',
-						fontWeight: 'normal'
-					}
-				},
-				data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
-			}],
-			yAxis: [{
-				min: 0,
-				max: 1600,
-				interval: 400,
-				type: 'value',
-				axisTick: {
-					show: true,
-					inside: true,
-					length: 2
-				},
-				axisLine: {
-					lineStyle: {
-						color: 'white',
-						fontSize: 8
-					}
-				},
-				axisLabel: {
-					margin: 10,
-					textStyle: {
-						fontSize: 8
-					}
-				},
-				splitLine: {
-					show: false
-				},
-				//      data: ['400','','800','','1200','','1600']
 
-			}],
-			series: [{
-				name: '建筑',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(137,189,27)'
-					}
-				},
-				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
-			}, {
-				name: '能源',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(0,136,212)'
-					}
-				},
-				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
-			}, {
-				name: '有色金属',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(219,50,251)'
-					}
-				},
-				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
-			}, {
-				name: '食品',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(243,140,61)'
-					}
-				},
-				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
-			}, {
-				name: '核能',
-				type: 'line',
-				symbol: 'none',
-				lineStyle: {
-					normal: {
-						width: 1
-					}
-				},
-				areaStyle: {
-					normal: {
-						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-							offset: 0,
-							color: 'rgba(0, 0, 0, 0)'
-						}, {
-							offset: 0.8,
-							color: 'rgba(0, 0, 0, 0)'
-						}], false),
-						shadowColor: 'rgba(0, 0, 0, 0.1)',
-						shadowBlur: 10
-					}
-				},
-				itemStyle: {
-					normal: {
-						color: 'rgb(128,171,204)'
-					}
-				},
-				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
-			}, ]
-		};
-		mapzhexian2.setOption(option);
 
-		function box2() {
-			mapdivhe2 = echarts.init(document.querySelector('.div-he2'));
-			option = {
-				backgroundColor: '#3e61aa',
-				width: '90%',
-				height: '65%',
-				title: {
-					text: '平台热销产品销量走势图(单位：万单)',
-					textStyle: {
-						fontWeight: 'normal',
-						fontFamily: '宋体',
-						fontSize: 25,
-						color: 'white',
-					},
-					left: '2%',
-					top: "3%"
-				},
-				tooltip: {
-					trigger: 'axis',
-					axisPointer: {
-						lineStyle: {
-							color: '#57617B'
-						}
-					}
-				},
-				legend: {
-					icon: 'rect',
-					itemWidth: 20,
-					itemHeight: 1,
-					itemGap: 3,
-					data: ['建筑', '能源', '有色金属', '', '食品', '核能'],
-					right: '6%',
-					top: '3%',
-					textStyle: {
-						fontSize: 20,
-						color: '#F1F1F3',
-						fontFamily: '宋体'
-					}
-				},
-				grid: {
-					left: '3%',
-					right: '4%',
-					top: '25%',
-					containLabel: true
-				},
-				xAxis: [{
-					type: 'category',
-					boundaryGap: true,
-					axisLabel: {
-						interval: 0,
-						textStyle: {
-							fontSize: 16
-						}
 
-					},
-					axisTick: {
-						show: false
-					},
-					axisLine: {
-						lineStyle: {
-							color: 'white',
-							fontSize: 8,
-							fontFamily: '宋体',
-							fontWeight: 'normal'
-						}
-					},
-					data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
-			}],
-				yAxis: [{
-					min: 0,
-					max: 1600,
-					interval: 400,
-					type: 'value',
-					axisTick: {
-						show: true,
-						inside: true,
-						length: 2
-					},
-					axisLine: {
-						lineStyle: {
-							color: 'white',
-							fontSize: 8
-						}
-					},
-					axisLabel: {
-						margin: 10,
-						textStyle: {
-							fontSize: 16
-						}
-					},
-					splitLine: {
-						show: false
-					},
-					//      data: ['400','','800','','1200','','1600']
 
-				}],
-				series: [{
-					name: '建筑',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(137,189,27)'
-						}
-					},
-					data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
-				}, {
-					name: '能源',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(0,136,212)'
-						}
-					},
-					data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
-				}, {
-					name: '有色金属',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(219,50,251)'
-						}
-					},
-					data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
-				}, {
-					name: '食品',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(243,140,61)'
-						}
-					},
-					data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
-				}, {
-					name: '核能',
-					type: 'line',
-					symbol: 'none',
-					lineStyle: {
-						normal: {
-							width: 1
-						}
-					},
-					areaStyle: {
-						normal: {
-							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-								offset: 0,
-								color: 'rgba(0, 0, 0, 0)'
-							}, {
-								offset: 0.8,
-								color: 'rgba(0, 0, 0, 0)'
-							}], false),
-							shadowColor: 'rgba(0, 0, 0, 0.1)',
-							shadowBlur: 10
-						}
-					},
-					itemStyle: {
-						normal: {
-							color: 'rgb(128,171,204)'
-						}
-					},
-					data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
-				}, ]
-			};
-			mapdivhe2.setOption(option);
-		}
+
+
 
 		var mapzhexian3 = echarts.init(document.querySelector('.world-he3'));
 		option = {
@@ -1137,8 +663,8 @@ title: {
 				itemWidth: 20,
 				itemHeight: 1,
 				itemGap: 3,
-				data: ['建筑', '能源', '有色金属', '', '食品', '核能'],
-				right: '6%',
+				data: ['建材', '大型机械', '家电', '', '轻工业', '纺织服装'],
+                right: '6%',
 				top: '3%',
 				textStyle: {
 					fontSize: 8,
@@ -1173,9 +699,9 @@ title: {
 				data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
 			}],
 			yAxis: [{
-				min: 0,
-				max: 2000,
-				interval: 500,
+				min: -5,
+				max: 15,
+				interval: 5,
 				type: 'value',
 				axisTick: {
 					show: true,
@@ -1231,7 +757,7 @@ title: {
 			}],
 
 			series: [{
-				name: '建筑',
+				name: '建材',
 				type: 'line',
 				symbol: 'none',
 				lineStyle: {
@@ -1257,9 +783,9 @@ title: {
 						color: 'rgb(137,189,27)'
 					}
 				},
-				data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
+				data: [3.2, 3.67, 3.88, 5.38, 3.08,2.99, 3.75,4.08,5.45,3.08,3.23,3.77]
 			}, {
-				name: '能源',
+				name: '大型机械',
 				type: 'line',
 				symbol: 'none',
 				lineStyle: {
@@ -1285,9 +811,9 @@ title: {
 						color: 'rgb(0,136,212)'
 					}
 				},
-				data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
+				data: [3.25, 3.6 ,2.8, 3.04, 4.15, 3.65 ,2.6, 2.84, 3.33 ,4.15, 3.23]
 			}, {
-				name: '有色金属',
+				name: '家电',
 				type: 'line',
 				symbol: 'none',
 				lineStyle: {
@@ -1313,9 +839,9 @@ title: {
 						color: 'rgb(219,50,251)'
 					}
 				},
-				data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
+				data: [4.98, 4.49, 3.06, 3.26, 4.98, 4.08, 4.23, 4.96,4.43]
 			}, {
-				name: '食品',
+				name: '轻工业',
 				type: 'line',
 				symbol: 'none',
 				lineStyle: {
@@ -1341,9 +867,9 @@ title: {
 						color: 'rgb(243,140,61)'
 					}
 				},
-				data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
+				data: [4.31,5.12, 5.05, 4.16,4.81, 6.11, 5.05, 4.69, 4.59, 4.81, 4.29, 5.01]
 			}, {
-				name: '核能',
+				name: '纺织服装',
 				type: 'line',
 				symbol: 'none',
 				lineStyle: {
@@ -1369,7 +895,7 @@ title: {
 						color: 'rgb(128,171,204)'
 					}
 				},
-				data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
+				data: [3.62, 4.69, 4.89, 5.13, 5.06, 5.36, 4.89, 5.28, 5.29, 5.06, 3.62, 4.59]
 			}, ]
 		};
 		mapzhexian3.setOption(option);
@@ -1412,7 +938,7 @@ title: {
 					itemWidth: 20,
 					itemHeight: 1,
 					itemGap: 3,
-					data: ['建筑', '能源', '有色金属', '', '食品', '核能'],
+					data: ['建材', '大型机械', '家电', '', '轻工业', '纺织服装'],
 					right: '6%',
 					top: '3%',
 					textStyle: {
@@ -1506,7 +1032,7 @@ title: {
 				}],
 
 				series: [{
-					name: '建筑',
+					name: '建材',
 					type: 'line',
 					symbol: 'none',
 					lineStyle: {
@@ -1534,7 +1060,7 @@ title: {
 					},
 					data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
 				}, {
-					name: '能源',
+					name: '大型机械',
 					type: 'line',
 					symbol: 'none',
 					lineStyle: {
@@ -1562,7 +1088,7 @@ title: {
 					},
 					data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
 				}, {
-					name: '有色金属',
+					name: '家电',
 					type: 'line',
 					symbol: 'none',
 					lineStyle: {
@@ -1590,7 +1116,7 @@ title: {
 					},
 					data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
 				}, {
-					name: '食品',
+					name: '轻工业',
 					type: 'line',
 					symbol: 'none',
 					lineStyle: {
@@ -1618,7 +1144,7 @@ title: {
 					},
 					data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
 				}, {
-					name: '核能',
+					name: '纺织服装',
 					type: 'line',
 					symbol: 'none',
 					lineStyle: {
@@ -2090,42 +1616,6 @@ title: {
 
 		});
 
-		$(".fangda2").click(function() {
-			$(".ling2").css("display", "block")
-			$(".ling2").animate({
-				'height': '60%',
-				'width': '70%',
-				'top': '25%',
-				'right': '15%'
-			}, 300, function() {
-				box2();
-			})
-			$('.div-he2').css({
-				'width': '92%',
-				'height': '100%',
-				'float': 'left',
-				'display': 'block'
-			})
-			//			
-			$('.fangxiao2 ').css({
-				'float': 'right',
-				'margin-top': '1%',
-				'display': 'block'
-			})
-			$(".gai").css("display", "block")
-			//		
-		});
-		$(".fangxiao2").click(function() {
-			$(".ling2").animate({}, 300, function() {
-				$(".ling2").css({
-					"display": "none",
-					'height': '0',
-					'width': '0',
-				})
-			})
-			$(".gai").css("display", "none")
-
-		});
 
 		$(".fangda3").click(function() {
 			$(".ling3").css("display", "block")

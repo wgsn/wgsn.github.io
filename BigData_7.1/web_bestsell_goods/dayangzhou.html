@@ -5,60 +5,55 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style type="text/css">
-		body{
+			body{
 				position: relative;
-				
+
 			}
 			.ok{
-				 position: absolute;
-				 left:-64px;
-				 top:20px;
-				 transition: all 1s; 
+				position: absolute;
+				left:-64px;
+				top:20px;
+				transition: all 1s;
 			}
 			.ok:hover{
 				position: absolute;
-				 left:-20px;
-				 top:20px;
+				left:-20px;
+				top:20px;
 			}
 			* {
 				margin: 0px;
 				padding: 0px;
 				border: 0px;
 			}
-			
+
 			body,
 			html {
 				width: 100%;
 				height: 100%;
 			}
-			/*#top {
-				width: 100%;
-				height: 6%;
-				background: red;position: relative;
-			}
-			*/
-			
+
+
 			.top {
 				text-align: center;
 				/*padding-top: 2%;*/
 			}
-			
+
 			.top p {
 				display: inline-block;
 			}
-			
+
 			.top .left,
 			.top .right {
 				font-size: 14px;
 				color: white;
 			}
-			
+
 			.top .mid {
 				padding: 0 8%;
 				font-size: 23px;
 				color: white;
 			}
-			
+
 			#world {
 				width: 100%;
 				height: 90%;
@@ -67,114 +62,127 @@
 				background-size: cover;
 				position: relative;
 			}
-			
+
 			#box {
 				width: 65%;
 				height: 100%;
 				float: left;
 			}
-			
+
 			.world-you {
 				width: 35%;
 				height: 100%;
 				float: left;
 			}
-			
+
 			.big1 {
 				width: 90%;
 				height: 23%;
 				margin-top: 2%;
 				background: #434141;
 			}
-			
+
 			.big2 {
 				width: 90%;
 				height: 23%;
 				margin-top: 2%;
 				background: #454e57;
 			}
-			
+
 			.big3 {
 				width: 90%;
 				height: 23%;
 				margin-top: 2%;
 				background: #515e6d;
 			}
-			
+
 			.big4 {
 				width: 90%;
 				height: 23%;
 				margin-top: 2%;
 				background: #6a7889;
 			}
-			
+
 			.fangda1 {
 				float: left;
 				margin-top: 1%;
 			}
-			
+
 			.fangda1:hover {
 				cursor: pointer;
 			}
-			
-			.fangda2 {
-				float: left;
-				margin-top: 1%;
-			}
-			
-			.fangda2:hover {
-				cursor: pointer;
-			}
-			
+
+
 			.fangda3 {
 				float: left;
 				margin-top: 1%;
 			}
-			
+
 			.fangda3:hover {
 				cursor: pointer;
 			}
-			
+
 			.fangda4 {
 				float: left;
 				margin-top: 1%;
 			}
-			
+
 			.fangda4:hover {
 				cursor: pointer;
 			}
-			
+
 			.world-he1 {
 				width: 90%;
 				height: 100%;
 				float: left;
 			}
-			
+
 			.world-he2 {
-				width: 90%;
+				width: 100%;
 				height: 100%;
-				float: left;
 			}
-			
+			.world-he2 p{
+				color: white;
+				padding-left:15px;
+				padding-top:12px;
+				padding-bottom: 15px;
+			}
+			.world-he2 ul{
+				margin:20px auto;
+			}
+			.world-he2 li{
+				list-style: none;
+				width:16%;
+				height:25px;
+				color:white;
+				float:left;
+				font-size: 14px;
+				cursor:pointer;
+				text-align: center;
+				line-height:25px;
+			}
+			.world-he2 li:hover{
+				color: yellow;
+			}
 			.world-he3 {
 				width: 90%;
 				height: 100%;
 				float: left;
 			}
-			
+
 			.world-he4 {
 				width: 90%;
 				height: 100%;
 				float: left;
 			}
-			
+
 			#bottom {
 				width: 100%;
 				height: 4%;
 				/*background: red;*/
 				position: relative;
 			}
-			
+
 			.ling1 {
 				width: 0%;
 				height: 0%;
@@ -185,52 +193,26 @@
 				/*display: none;*/
 				z-index: 100;
 			}
-			
+
 			.div-he1 {
 				width: 770px;
 				height: 390px;
 				display: none;
 				float: left;
 			}
-			
+
 			.fangxiao1 {
 				float: right;
 				margin-top: 1%;
 				display: none;
 			}
-			
+
 			.fangxiao1:hover {
 				cursor: pointer;
 			}
-			
-			.ling2 {
-				width: 0%;
-				height: 0%;
-				background: #3e61aa;
-				right: 20%;
-				position: absolute;
-				top: 30%;
-				/*display: none;*/
-				z-index: 100;
-			}
-			
-			.div-he2 {
-				width: 770px;
-				height: 390px;
-				float: left;
-				display: none;
-			}
-			
-			.fangxiao2 {
-				float: right;
-				margin-top: 1%;
-				display: none;
-			}
-			
-			.fangxiao2:hover {
-				cursor: pointer;
-			}
-			
+
+
+
 			.ling3 {
 				width: 0%;
 				height: 0%;
@@ -241,25 +223,25 @@
 				/*display: none;*/
 				z-index: 100;
 			}
-			
+
 			.div-he3 {
-				;
+			;
 				width: 770px;
 				height: 390px;
 				float: left;
 				display: none;
 			}
-			
+
 			.fangxiao3 {
 				float: right;
 				margin-top: 1%;
 				display: none;
 			}
-			
+
 			.fangxiao3:hover {
 				cursor: pointer;
 			}
-			
+
 			.ling4 {
 				width: 0%;
 				height: 0%;
@@ -270,24 +252,24 @@
 				/*display: none;*/
 				z-index: 100;
 			}
-			
+
 			.div-he4 {
 				width: 790px;
 				height: 390px;
 				float: left;
 				display: none;
 			}
-			
+
 			.fangxiao4 {
 				float: right;
 				margin-top: 1%;
 				display: none;
 			}
-			
+
 			.fangxiao4:hover {
 				cursor: pointer;
 			}
-			
+
 			.gai {
 				height: 100%;
 				width: 100%;
@@ -297,7 +279,7 @@
 				display: none;
 				top: 0;
 			}
-			
+
 			.aaa {
 				width: 100%;
 				height: 100%;
@@ -305,36 +287,36 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 			}
-			
+
 			.footer {
 				font-size: 13px;
 				text-align: center;
 				/*margin-top: 4%;*/
 				color: white;
 			}
-			
+
 			.footer span {
 				display: inline-block;
 				margin-left: 2%;
 				margin-right: 3%;
 				color: white;
 			}.yazhou{
-				color: white;position: absolute;top: 48%;left: 45%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
-			}
+				 color: black;position: absolute;top: 48%;left: 45%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
+			 }
 			.ouzhou{
-				color: white;position: absolute;top: 40%;left: 38%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
+				color: black;position: absolute;top: 40%;left: 38%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.dayangzhou{
-				color: white;position: absolute;top: 70%;left: 50%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
+				color: black;position: absolute;top: 70%;left: 50%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.feizhou{
-				color: white;position: absolute;top: 60%;left: 34%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
+				color: black;position: absolute;top: 60%;left: 34%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.beimeizhou{
-				color: white;position: absolute;top: 44%;left: 16%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
+				color: black;position: absolute;top: 44%;left: 16%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 			.nanmeizhou{
-				color: white;position: absolute;top: 65%;left: 23%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
+				color: black;position: absolute;top: 65%;left: 23%;z-index: 99;pointer-events:none;font-weight: bold;font-size:20px;
 			}
 		</style>
 	</head>
@@ -364,8 +346,38 @@
 						<img src="../img/enlarge.png" class="fangda1" title="放大" />
 					</div>
 					<div class="big2">
-						<div class="world-he2"></div>
-						<img src="../img/enlarge.png" class="fangda2" title="放大" />
+						<div class="world-he2">
+							<p>大洋洲五大产品采购前三名(国家)</p>
+							<ul>
+								<li>排名</li>
+								<li>建材</li>
+								<li>大型机械</li>
+								<li>家电</li>
+								<li>日用轻工业</li>
+								<li>纺织服装</li>
+
+								<li>第一名</li>
+								<li>澳大利亚</li>
+								<li>萨摩亚</li>
+								<li>瑙鲁</li>
+								<li>新西兰</li>
+								<li>达尔文</li>
+
+								<li>第二名</li>
+								<li>美属萨摩亚</li>
+								<li>瓦努阿图</li>
+								<li>汤加</li>
+								<li>达尔文</li>
+								<li>瑙鲁</li>
+
+								<li>第三名</li>
+								<li>基里巴斯</li>
+								<li>澳大利亚</li>
+								<li>汤加</li>
+								<li>基里巴斯</li>
+								<li>澳大利亚</li>
+							</ul>
+						</div>
 					</div>
 					<div class="big3">
 						<div class="world-he3"></div>
@@ -386,10 +398,7 @@
 				<div class="div-he1"></div>
 				<img src="../img/reduce.png" class="fangxiao1" title="放小" />
 			</div>
-			<div class="ling2">
-				<div class="div-he2"></div>
-				<img src="../img/reduce.png" class="fangxiao2" title="放小" />
-			</div>
+
 			<div class="ling3">
 				<div class="div-he3"></div>
 				<img src="../img/reduce.png" class="fangxiao3" title="放小" />
@@ -410,6 +419,263 @@
 	<script src="../js/web_bestsell_goods.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://api.map.baidu.com/telematics/v3/weather?location=上海&output=json&ak=KdhEeXIswBzw5fOPwTbg4huHXSFQ34pR&callback=getD"></script>
     <script>
+
+		var mapzhexian1 = echarts.init(document.querySelector('.world-he1'));
+		option = {
+			backgroundColor: '#434141',
+			width: '90%',
+			height: '65%',
+			title: {
+				text: 'Mr-World平台采购总量趋势图(单位:万单)',
+				textStyle: {
+					fontWeight: 'normal',
+					fontFamily: '宋体',
+					fontSize: 8,
+					color: 'white',
+				},
+				left: '2%',
+				top: '3%'
+			},
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					lineStyle: {
+						color: '#57617B'
+					}
+				}
+			},
+			legend: {
+				icon: 'rect',
+				itemWidth: 20,
+				itemHeight: 1,
+				itemGap: 3,
+				data: ['建材', '大型机械', '家电', '', '轻工业', '纺织服装'],
+				right: '6%',
+				top: '3%',
+				textStyle: {
+					fontSize: 8,
+					color: '#F1F1F3',
+					fontFamily: '宋体'
+				}
+			},
+			grid: {
+				left: '3%',
+				right: '4%',
+				top: '25%',
+				containLabel: true
+			},
+			xAxis: [{
+				type: 'category',
+				boundaryGap: true,
+				axisLabel: {
+					interval: 0
+				},
+				axisTick: {
+					show: false,
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal'
+					}
+				},
+				data: [xx+'月', xx2+'月', xx3+'月', xx4+'月', xx5+'月', xx6+'月', xx7+'月', xx8+'月', xx9+'月',xx10+'月', xx11+'月', xx12+'月']
+			}],
+			yAxis: [{
+				min: 0,
+				max: 1.5,
+				interval: 0.3,
+				type: 'value',
+				axisTick: {
+					show: true,
+					inside: true,
+					length: 2
+				},
+				axisLine: {
+					lineStyle: {
+						color: 'white',
+						fontSize: 8,
+						fontFamily: '宋体',
+						fontWeight: 'normal',
+
+					}
+				},
+				axisLabel: {
+					margin: 10,
+					textStyle: {
+						fontSize: 8
+					}
+				},
+				splitLine: {
+					show: false
+				},
+			}],
+			series: [{
+				name: '建材',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(137,189,27)'
+					}
+				},
+		
+		
+				data: [0.35,0.22,0.56,0.25,0.35,0.22,0.46,0.96,0.25,0.2,0.45,0.55]
+
+
+				
+
+
+			}, {
+				name: '大型机械',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(0,136,212)'
+					}
+				},
+				
+			
+					data: [0.26,0.45,0.43,0.49,0.49,0.45,0.43,0.43,0.49,0.15,0.26,0.49]
+
+
+			}, {
+				name: '家电',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(219,50,251)'
+					}
+				},
+
+			
+					data: [0.14,0.51,0.78,0.55,0.65,0.51,0.68,0.78,0.55,0.3,0.14,0.55]
+
+
+			}, {
+				name: '轻工业',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(243,140,61)'
+					}
+				},
+			
+		
+				data: [0.57,0.48,1.1,0.49,0.49,0.48,1.1,1.1,0.49,0.75,0.47,0.89]
+
+
+			}, {
+				name: '纺织服装',
+				type: 'line',
+				symbol: 'none',
+				lineStyle: {
+					normal: {
+						width: 1
+					}
+				},
+				areaStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: 'rgba(0, 0, 0, 0)'
+						}, {
+							offset: 0.8,
+							color: 'rgba(0, 0, 0, 0)'
+						}], false),
+						shadowColor: 'rgba(0, 0, 0, 0.1)',
+						shadowBlur: 10
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: 'rgb(128,171,204)'
+					}
+				},
+			
+
+				data: [0.43,1.02,0.64,0.78,0.78,1.02,0.64,0.64,0.78,0.44,0.43,0.98]
+
+
+			}, ]
+		};
+		mapzhexian1.setOption(option);
 
 			$.getJSON('../js/continent_geo.json', function(data){
 			     echarts.registerMap('continent',data)	;

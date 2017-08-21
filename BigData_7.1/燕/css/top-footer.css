@@ -1,0 +1,29 @@
+
+.top{
+	text-align: center;
+	padding-top: 2%;
+	font-family: "微软雅黑";
+}
+.top p{
+	display: inline-block;
+}
+.top  .left,.top .right{
+	font-size: 14px;
+}
+.top .mid{
+	padding: 0 8%;
+	font-size: 23px;
+}
+
+.footer{
+	font-size:13px;
+	text-align: center;
+	margin-bottom: 1%;
+	color:#efeeee;
+	font-family: "微软雅黑";
+}
+.footer span{
+	display: inline-block;
+	margin-left: 2%;
+	margin-right: 3%;
+}

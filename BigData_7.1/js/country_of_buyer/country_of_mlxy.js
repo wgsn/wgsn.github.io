@@ -2,8 +2,151 @@
 //map
 $(function(){
 	var myChart = echarts.init(document.getElementById('main'));
+var data = [
+ {name: '加纳', value: 50},
+{name: '安道尔', value: 50},
+{name: '挪威', value: 50},
+{name: '老挝', value: 50},
+{name: '新加坡', value: 50},
+{name: '柬埔寨', value: 50},
+{name: '越南', value: 50},
+{name: '喀麦隆', value: 50},
+{name: '文莱', value: 50},
+{name: '丹麦', value: 50},
+{name: '菲律宾', value: 50},
+{name: '印度尼西亚', value: 50},
+{name: '奥地利', value: 50},
+{name: '利比亚', value: 50},
+{name: '安哥拉', value: 50},
+{name: '德国', value: 50},
+{name: '捷克', value: 50},
+{name: '马耳他', value: 50},
+{name: '乍得', value: 50},
+{name: '巴布亚新几内亚', value: 50},
+{name: '刚果', value: 50},
+{name: '克罗地亚', value: 50},
+{name: '新西兰', value: 50},
+{name: '斐济', value: 50},
+{name: '瑞典', value: 50},
+{name: '南非', value: 50},
+{name: '波兰', value: 50},
+{name: '匈牙利', value: 50},
+{name: '西班牙', value: 50},
+{name: '贝宁', value: 50},
+{name: '塞尔维亚', value: 50},
+{name: '马其顿', value: 50},
+{name: '保加利亚', value: 50},
+{name: '希腊', value: 50},
+{name: '立陶宛', value: 50},
+{name: '拉脱维亚', value: 50},
+{name: '爱沙尼亚', value: 50},
+{name: '芬兰', value:50},
+{name: '罗马尼亚', value: 50},
+{name: '白俄罗斯', value: 50},
+{name: '摩尔多瓦', value: 50},
+{name: '布隆迪', value: 50},
+{name: '阿尔及利亚', value: 50},
+{name: '乌克兰', value: 50},
+{name: '埃及', value: 50},
+{name: '苏丹', value: 50},
+{name: '土耳其', value: 50},
+{name: '塞浦路斯', value: 50},
+{name: '黎巴嫩', value: 50},
+{name: '约旦', value: 50},
+{name: '叙利亚', value: 50},
+{name: '肯尼亚', value: 50},
+{name: '埃塞俄比亚', value: 50},
+{name: '沙特阿拉伯', value: 50},
+{name: '坦桑尼亚', value: 50},
+{name: '比利时', value: 50},
+{name: '荷兰', value: 50},
+{name: '吉布提', value: 50},
+{name: '伊拉克', value: 50},
+{name: '也门', value: 50},
+{name: '马达加斯加', value: 50},
+{name: '科威特', value: 50},
+{name: '阿塞拜疆', value: 50},
+{name: '巴林', value: 50},
+{name: '卡塔尔', value: 50},
+{name: '伊朗', value: 50},
+{name: '阿联酋', value: 50},
+{name: '阿曼', value: 50},
+{name: '卢森堡', value: 50},
+{name: '塔吉克斯坦', value: 50},
+{name: '阿富汗', value: 50},
+{name: '尼日利亚', value: 50},
+{name: '摩纳哥', value: 50},
+{name: '瑞士', value: 50},
+{name: '巴基斯坦', value: 50},
+{name: '马尔代夫', value: 50},
+{name: '哈萨克斯坦', value: 50},
+{name: '斯里兰卡', value: 50},
+{name: '尼泊尔', value: 50},
+{name: '不丹', value: 50},
+{name: '意大利', value: 50},
+{name: '列支敦士登', value: 50},
+{name: '孟加拉国', value: 50},
+{name: '缅甸', value: 50},
+{name: '布基纳法索', value: 50},
+{name: '智利', value: 50},
+{name: '英国', value: 50},
+{name: '冰岛', value: 50},
+{name: '葡萄牙', value: 50},
+{name: '巴西', value: 50},
+{name: '苏里南', value: 50},
+{name: '加拿大', value: 50},
+{name: '阿根廷', value: 50},
+{name: '巴巴多斯', value: 50},
+{name: '爱尔兰', value: 50},
+{name: '法国', value: 50},
+{name: '法国', value: 50},
+{name: '格林纳达', value: 50},
+{name: '波多黎各', value: 50},
+{name: '委内瑞拉', value: 50},
+{name: '玻利维亚', value: 50},
+{name: '摩洛哥', value: 50},
+{name: '马里', value: 50},
+{name: '海地', value: 50},
+{name: '哥伦比亚', value: 50},
+{name: '牙买加', value: 50},
+{name: '秘鲁', value: 50},
+{name: '巴哈马', value: 50},
+{name: '巴拿马', value: 50},
+{name: '古巴', value: 50},
+{name: '哥斯达黎加', value: 50},
+{name: '厄瓜多尔', value: 50},
+{name: '危地马拉', value: 50},
+{name: '墨西哥', value: 50},
+{name: '阿拉斯加', value: 50},
+{name: '阿鲁巴', value: 50},
+{name: '安圭拉', value: 50},
+{name: '澳门', value: 50},
+{name: '巴勒斯坦', value: 50},
+{name: '百慕达', value: 50},
+{name: '多米尼加共和国', value: 50},
+{name: '格鲁吉亚', value: 50},
+{name: '吉尔吉斯斯坦', value: 50},
+{name: '开曼群岛', value: 50},
+{name: '萨摩亚', value: 50},
+{name: '圣马丁岛（荷兰）', value: 50},
+{name: '斯洛伐克', value: 50},
+{name: '特里尼达和多巴哥', value: 50},
+{name: '乌兹别克斯坦', value: 50},
+{name: '美国', value: 100},
+{name: '印度', value: 100},
+{name: '泰国', value: 100},
+{name: '韩国', value: 100},
+{name: '俄罗斯', value: 100},
+{name: '马来西亚', value: 500},
+{name: '澳大利亚', value: 100},
+{name: '日本', value: 100},
+{name: '香港', value: 100},
+{name: '中国台湾', value: 100},
+
+
+];
 var geoCoordMap = {
-	 '中国': [116.3002283764,39.9181370976],
+    '中国': [116.3002283764,39.9181370976],
 '印度': [78,27.09],
  '马来西亚': [101.42,5.08],
  '俄罗斯': [129.51,62.1],
@@ -16,295 +159,197 @@ var geoCoordMap = {
 '希腊': [23.44,38.02],
 '叙利亚': [36.19,33.3],
 '波兰': [18.38,54.22],
-'新加坡': [103.45,1.22],
 '罗马尼亚': [26.1,44.23],
-};
-//value  可控制光点大小
-var BJData = [
-    [{name:'中国'}, {name:'印度',value:90,itemStyle:{normal:{color:'#DACFCB'}}}],
-    [{name:'中国'}, {name:'马来西亚',value:90}],
-    [{name:'中国'}, {name:'俄罗斯',value:90}],
-    [{name:'中国'}, {name:'以色列',value:90}],
-    [{name:'中国'}, {name:'斯里兰卡',value:90}],
-    [{name:'中国'}, {name:'哈萨克斯坦',value:90}],
-    [{name:'中国'}, {name:'也门',value:90}],
-    [{name:'中国'}, {name:'土耳其',value:90}],
-    [{name:'中国'}, {name:'波兰',value:90}],
-    [{name:'中国'}, {name:'中国',value:90}],
-    [{name:'中国'}, {name:'罗马尼亚',value:90}],
-  ];
-var RBData = [
-    [{name:'印度'}, {name:'马来西亚',value:0}],
-    [{name:'印度'}, {name:'俄罗斯',value:0}],
-    [{name:'印度'}, {name:'以色列',value:0}],
-    [{name:'印度'}, {name:'斯里兰卡',value:0}],
-    [{name:'印度'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'印度'}, {name:'也门',value:0}],
-    [{name:'印度'}, {name:'土耳其',value:0}],
-    [{name:'印度'}, {name:'波兰',value:0}],
-    [{name:'印度'}, {name:'中国',value:0}],
-    [{name:'印度'}, {name:'新加坡',value:0}],
-    [{name:'印度'}, {name:'罗马尼亚',value:0}],
-];
-var YDData = [
-    [{name:'马来西亚'}, {name:'印度',value:0}],
-    [{name:'马来西亚'}, {name:'俄罗斯',value:0}],
-    [{name:'马来西亚'}, {name:'以色列',value:0}],
-    [{name:'马来西亚'}, {name:'斯里兰卡',value:0}],
-    [{name:'马来西亚'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'马来西亚'}, {name:'也门',value:0}],
-    [{name:'马来西亚'}, {name:'土耳其',value:0}],
-    [{name:'马来西亚'}, {name:'波兰',value:0}],
-    [{name:'马来西亚'}, {name:'罗马尼亚',value:0}],
-    [{name:'马来西亚'}, {name:'中国',value:0}],
+'加纳':[0.15,5.33],
+'安道尔':[1.31,42.3],
+'挪威':[10.41,59.56],
+'老挝':[102.48,18.1],
+'柬埔寨':[104.55,11.35],
+'越南':[105.53,21.1],
+'喀麦隆':[11.31,3.51],
+'文莱':[114.58,4.56],
+'丹麦':[12.34,55.43],
+'菲律宾':[123.54,10.17],
+'印度尼西亚':[128.1,4.5],
+'奥地利':[13.3,47.54],
+'利比亚':[13.12,32.58],
+'安哥拉':[13.2,8.5],
+'德国':[13.2,52.31],
+'捷克':[14.25,50.5],
+'马耳他':[14.31,35.53],
+'乍得':[14.59,12.1],
+'刚果':[15.14,4.14],
+'克罗地亚':[15.58,45.49],
+'瑞典':[18.,59.23],
+'南非':[18.27,33.55],
+'波兰':[18.38,54.22],
+'匈牙利':[19.15,47.26],
+'西班牙':[2.6,41.18],
+'贝宁':[2.47,6.3],
+'塞尔维亚':[20.28,44.49],
+'马其顿':[21.3,41.35],
+'保加利亚':[23.2,42.43],
+'希腊':[23.44,38.2],
+'立陶宛':[23.54,54.54],
+'拉脱维亚':[24.5,56.53],
+'爱沙尼亚':[24.48,59.22],
+'芬兰':[24.53,60.1],
+'罗马尼亚':[26.1,44.23],
+'白俄罗斯':[27.3,53.51],
+'摩尔多瓦':[28.5,47.],
+'布隆迪':[29.21,3.22],
+'阿尔及利亚':[3.13,36.42],
+'乌克兰':[30.29,50.28],
+'埃及':[31.12,30.1],
+'苏丹':[32.36,15.34],
+'土耳其':[32.54,40.2],
+'塞浦路斯':[33.23,35.11],
+'黎巴嫩':[35.3,33.52],
+'约旦':[35.56,31.57],
+'叙利亚':[36.19,33.3],
+'肯尼亚':[36.49,1.17],
+'埃塞俄比亚':[38.42,9.3],
+'沙特阿拉伯':[39.1,21.3],
+'坦桑尼亚':[39.18,6.51],
+'比利时':[4.21,50.51],
+'荷兰':[4.52,52.21],
+'吉布提':[42.5,12.],
+'伊拉克':[44.22,33.14],
+'也门':[45.,12.5],
+'马达加斯加':[47.31,18.55],
+'科威特':[48.,29.2],
+'阿塞拜疆':[49.53,40.22],
+'巴林':[50.36,26.12],
+'卡塔尔':[51.34,25.15],
+'伊朗':[51.4,32.42],
+'阿联酋':[54.23,24.27],
+'阿曼':[58.37,23.36],
+'卢森堡':[6.8,49.37],
+'塔吉克斯坦':[68.51,38.38],
+'阿富汗':[69.1,34.3],
+'尼日利亚':[7.11,9.12],
+'摩纳哥':[7.25,43.4],
+'瑞士':[7.36,47.34],
+'巴基斯坦':[73.9,31.25],
+'马尔代夫':[73.28,4.1],
+'哈萨克斯坦':[76.55,43.19],
+'斯里兰卡':[79.52,6.55],
+'尼泊尔':[85.19,27.42],
+'不丹':[89.4,27.29],
+'意大利':[9.1,45.28],
+'列支敦士登':[9.31,47.9],
+'孟加拉国':[91.48,22.2],
+'缅甸':[96.9,16.46],
+'布基纳法索':[1.4,12.2],
+'智利':[-71.2,-30.5],
+'英国':[130.5,25.4],
+'冰岛':[21.58,64.9],
+'葡萄牙':[28.,38.3],
+'巴西':[-60,-15.45],
+'苏里南':[-45,-9.52],
+'加拿大':[57.8,51.26],
+'阿根廷':[-63.3,-33.2],
+'爱尔兰':[6.15,53.26],
+'法国':[120.32,16.14],
+'格林纳达':[-59,15.4],
+'波多黎各':[66.8,18.29],
+'委内瑞拉':[-70,10.3],
+'玻利维亚':[-65,-20.3],
+'摩洛哥':[7.37,33.36],
+'马里':[7.59,12.4],
+'海地':[-72.2,18.32],
+'哥伦比亚':[-74.5,7.38],
+'牙买加':[-76.48,17.58],
+'秘鲁':[-75.55,-12.6],
+'巴哈马':[-76.2,25.3],
+'巴拿马':[79.3,8.57],
+'古巴':[-79,21.8],
+'哥斯达黎加':[-50.4,1.59],
+'厄瓜多尔':[89.36,0.54],
+'危地马拉':[90.22,14.38],
+'墨西哥':[99.56,16.51],
+'阿拉斯加':[-150,60.28],
+'阿鲁巴':[-77,35.18],
+'安圭拉':[63.04,18.13],
+'澳门':[115.07,21.33],
+'巴勒斯坦':[34.28,31.3],
+'百慕达':[-60,30.18],
+'多米尼加共和国':[-72,19.3],
+'格鲁吉亚':[44.48,41.43],
+'吉尔吉斯斯坦':[74.46,42.53],
+'开曼群岛':[-83,19.20],
+'圣马丁岛（荷兰）':[-75,-50.47],
+'斯洛伐克':[17.06,48.09],
+'特里尼达和多巴哥':[-61.32,10.39],
+'乌兹别克斯坦':[69.13,41.16],
+'美国':[-100,45.52],
+'印度':[78,27.09],
+'泰国':[100.29,13.5],
+'韩国':[126.38,37.3],
+'俄罗斯':[92.46,56.05],
+'马来西亚':[101.42,3.08],
+'澳大利亚':[121.51,-25.28],
+'日本':[135.45,35],
+'香港':[114.15,22.15],
+'中国台湾':[121,30],
+'加拿大':[-115,60.26],
+'墨西哥':[-102,25.51],
+'巴巴多斯':[-57.37,13.6],
 
-];
-var ADData = [
-    [{name:'俄罗斯'}, {name:'印度',value:0}],
-    [{name:'俄罗斯'}, {name:'马来西亚',value:0}],
-    [{name:'俄罗斯'}, {name:'以色列',value:0}],
-    [{name:'俄罗斯'}, {name:'斯里兰卡',value:0}],
-    [{name:'俄罗斯'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'俄罗斯'}, {name:'也门',value:0}],
-    [{name:'俄罗斯'}, {name:'土耳其',value:0}],
-    [{name:'俄罗斯'}, {name:'波兰',value:0}],
-    [{name:'俄罗斯'}, {name:'中国',value:0}],
-    [{name:'俄罗斯'}, {name:'罗马尼亚',value:0}],
-];
-var MLData = [
-    [{name:'以色列'}, {name:'印度',value:0}],
-    [{name:'以色列'}, {name:'马来西亚',value:0}],
-    [{name:'以色列'}, {name:'俄罗斯',value:0}],
-    [{name:'以色列'}, {name:'斯里兰卡',value:0}],
-    [{name:'以色列'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'以色列'}, {name:'也门',value:0}],
-    [{name:'以色列'}, {name:'罗马尼亚',value:0}],
-    [{name:'以色列'}, {name:'土耳其',value:0}],
-    [{name:'以色列'}, {name:'波兰',value:0}],
-    [{name:'以色列'}, {name:'中国',value:0}],
-];
-var ELSData = [
-    [{name:'斯里兰卡'}, {name:'印度',value:0}],
-    [{name:'斯里兰卡'}, {name:'马来西亚',value:0}],
-    [{name:'斯里兰卡'}, {name:'俄罗斯',value:0}],
-    [{name:'斯里兰卡'}, {name:'以色列',value:0}],
-    [{name:'斯里兰卡'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'斯里兰卡'}, {name:'也门',value:0}],
-    [{name:'斯里兰卡'}, {name:'罗马尼亚',value:0}],
-    [{name:'斯里兰卡'}, {name:'土耳其',value:0}],
-    [{name:'斯里兰卡'}, {name:'波兰',value:0}],
-    [{name:'斯里兰卡'}, {name:'中国',value:0}],
-];
-var MGData = [
-    [{name:'哈萨克斯坦'}, {name:'印度',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'马来西亚',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'罗马尼亚',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'俄罗斯',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'以色列',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'斯里兰卡',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'也门',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'土耳其',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'波兰',value:0}],
-    [{name:'哈萨克斯坦'}, {name:'中国',value:0}],
-];
-var BXData = [
-    [{name:'也门'}, {name:'印度',value:0}],
-    [{name:'也门'}, {name:'马来西亚',value:0}],
-    [{name:'也门'}, {name:'俄罗斯',value:0}],
-    [{name:'也门'}, {name:'以色列',value:0}],
-    [{name:'也门'}, {name:'斯里兰卡',value:0}],
-    [{name:'也门'}, {name:'罗马尼亚',value:0}],
-    [{name:'也门'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'也门'}, {name:'土耳其',value:0}],
-    [{name:'也门'}, {name:'波兰',value:0}],
-    [{name:'也门'}, {name:'中国',value:0}],
- ];
-var XBYData = [
-    [{name:'土耳其'}, {name:'印度',value:0}],
-    [{name:'土耳其'}, {name:'马来西亚',value:0}],
-    [{name:'土耳其'}, {name:'俄罗斯',value:0}],
-    [{name:'土耳其'}, {name:'罗马尼亚',value:0}],
-    [{name:'土耳其'}, {name:'以色列',value:0}],
-    [{name:'土耳其'}, {name:'斯里兰卡',value:0}],
-    [{name:'土耳其'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'土耳其'}, {name:'也门',value:0}],
-    [{name:'土耳其'}, {name:'波兰',value:0}],
-    [{name:'土耳其'}, {name:'中国',value:0}],
-];
-var YGData = [
-    [{name:'波兰'}, {name:'印度',value:0}],
-    [{name:'波兰'}, {name:'马来西亚',value:0}],
-    [{name:'波兰'}, {name:'罗马尼亚',value:0}],
-    [{name:'波兰'}, {name:'俄罗斯',value:0}],
-    [{name:'波兰'}, {name:'以色列',value:0}],
-    [{name:'波兰'}, {name:'斯里兰卡',value:0}],
-    [{name:'波兰'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'波兰'}, {name:'也门',value:0}],
-    [{name:'波兰'}, {name:'土耳其',value:0}],
-    [{name:'波兰'}, {name:'中国',value:0}],
-];
-/*var YDLData = [
-    [{name:'新加坡'}, {name:'印度',value:0}],
-    [{name:'新加坡'}, {name:'马来西亚',value:0}],
-    [{name:'新加坡'}, {name:'俄罗斯',value:0}],
-    [{name:'新加坡'}, {name:'以色列',value:0}],
-    [{name:'新加坡'}, {name:'斯里兰卡',value:0}],
-    [{name:'新加坡'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'新加坡'}, {name:'也门',value:0}],
-    [{name:'新加坡'}, {name:'土耳其',value:0}],
-    [{name:'新加坡'}, {name:'波兰',value:0}],
-    [{name:'新加坡'}, {name:'中国',value:0}],
-    [{name:'新加坡'}, {name:'罗马尼亚',value:0}],
-];*/
-var LMNYData = [
-    [{name:'罗马尼亚'}, {name:'印度',value:0}],
-    [{name:'罗马尼亚'}, {name:'马来西亚',value:0}],
-    [{name:'罗马尼亚'}, {name:'俄罗斯',value:0}],
-    [{name:'罗马尼亚'}, {name:'以色列',value:0}],
-    [{name:'罗马尼亚'}, {name:'斯里兰卡',value:0}],
-    [{name:'罗马尼亚'}, {name:'哈萨克斯坦',value:0}],
-    [{name:'罗马尼亚'}, {name:'也门',value:0}],
-    [{name:'罗马尼亚'}, {name:'土耳其',value:0}],
-    [{name:'罗马尼亚'}, {name:'波兰',value:0}],
-    [{name:'罗马尼亚'}, {name:'中国',value:0}],
-    [{name:'罗马尼亚'}, {name:'新加坡',value:0}],
-];
+
+
+};
+
 var convertData = function (data) {
     var res = [];
     for (var i = 0; i < data.length; i++) {
-        var dataItem = data[i];
-        var fromCoord = geoCoordMap[dataItem[0].name];
-        var toCoord = geoCoordMap[dataItem[1].name];
-        if (fromCoord && toCoord) {
+        var geoCoord = geoCoordMap[data[i].name];
+        if (geoCoord) {
             res.push({
-                fromName: dataItem[0].name,
-                toName: dataItem[1].name,
-                coords: [fromCoord, toCoord]
+                name: data[i].name,
+                value: geoCoord.concat(data[i].value)
             });
         }
     }
     return res;
 };
-var series = [];
-				[
-				['中国', BJData],
-				['日本', RBData],
-//				['意大利', YDLData],
-				['罗马尼亚',LMNYData],
-				['英国', YGData],
-				['印度', YDData],
-				['澳大利亚', ADData],
-				['西班牙', XBYData],
-				['马来西亚', MLData],
-				['俄罗斯', ELSData],
-				['美国', MGData],
-				['巴西', BXData]
-				].forEach(function (item, i) {
-    series.push({
-        name: '贸易' + ' Top15',
-        type: 'lines',
-        zlevel: 10,
-        //光标样式
-        effect: {
-                constantSpeed: 50,
-                show: true,
-                trailLength: 0.3,
-                symbolSize: 2.2,
-                color: '#fff',
-            },
-        
-        lineStyle: {
-            normal: {
-                color: '#fff',
-                width: 0,
-                curveness: 0,
-            }
-        },
-        data: convertData(item[1])
-    },
-    {
-        name:'',
-        type: 'lines',
-        zlevel: 2,  
-        symbolSize: 15,
-            //线样式
-        lineStyle: {
-            normal: {
-                color: '#fff',
-                width: 0.5,
-                opacity:0.5,
-            }
-        }, 
-        data: convertData(item[1])
-    },
-    {
-        name: '',
-        type: 'effectScatter',
-        coordinateSystem: 'geo',
-        zlevel: 2,
-        label: {
-            //地名
-            normal: {
-                show: true,
-                position: 'right',
-                formatter: '{b}',
-                 shadowBlur: 2,
-                 shadowColor: 'rgba(255, 255, 255, 0.8)',
-            }
-        },
-        symbolSize: function (val) {
-            return val[2] / 8;
-        },
-        itemStyle: {
-            normal: {
-                color: 'aqua',
-                shadowBlur: 10,
-                 shadowColor: 'rgba(255, 255, 255, 0.8)',
-            },
-         },
-        tooltip:{
-        	formatter:function(params){
-        		return params.name+":"+params.value[2]+"(亿美元)"
-        		
-        	}
-        },
-        data: item[1].map(function (dataItem) {
-            return {
-                name: dataItem[1].name,
-                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value])
-            };
-        })
-    });
-});
 
 option = {
-    backgroundColor: '',
-    title : {
-    	//标题
-        text: '',
+    backgroundColor: '#030c15',
+    title: {
+//      text: '量',
         subtext: '',
+        sublink: '',
         left: 'center',
-        textStyle : {
+        textStyle: {
             color: '#fff'
         }
     },
     tooltip : {
-        trigger: 'item'
+        trigger: 'item',
+        formatter:function(params){
+        		return params.name
+        		
+        	}
+
     },
-    //地图样式
+    legend: {
+        orient: 'vertical',
+        y: 'bottom',
+        x:'right',
+//      data:['pm2.5'],
+        textStyle: {
+            color: '#fff'
+        }
+    },
     geo: {
         map: 'world',
         label: {
             emphasis: {
-                show:false
+                show: false
             }
         },
-        //地图可否拖动
         roam: true,
-        scaleLimit:{
-        	'min':'1',
-        	'max':'3'
-        },
         itemStyle: {
             normal: {
                 //地图颜色
@@ -317,47 +362,105 @@ option = {
             }
         }
     },
-    series: series
+    series : [
+        {
+//          name: 'pm2.5',
+            type: 'scatter',
+            coordinateSystem: 'geo',
+            data: convertData(data),
+            symbolSize: function (val) {
+                return val[2] / 10;
+            },
+            label: {
+                normal: {
+                    formatter: '{b}',
+                    position: 'right',
+                    show: false
+                },
+                emphasis: {
+                    show: true
+                }
+            },
+            itemStyle: {
+                normal: {
+                    //100国家光点颜色
+                    color: '#ddb926'
+                }
+            }
+        },
+        {
+            name: 'Top 5',
+            type: 'effectScatter',
+            coordinateSystem: 'geo',
+            data: convertData(data.sort(function (a, b) {
+                return b.value - a.value;
+            }).slice(0, 10)),
+            symbolSize: function (val) {
+                return val[2] / 10;
+            },
+            showEffectOn: 'render',
+            rippleEffect: {
+                brushType: 'stroke'
+            },
+            hoverAnimation: true,
+            label: {
+                normal: {
+                    formatter: '{b}',
+                    position: 'right',
+                    show: true
+                }
+            },
+            itemStyle: {
+                //光点颜色
+                normal: {
+                    color: '#f4e925',
+                    shadowBlur: 10,
+                    shadowColor: '#333'
+                }
+            },
+            zlevel: 1
+        }
+    ]
 };
-  myChart.setOption(option);
-
+ myChart.setOption(option);
+ 
+ 
+ 
+ 
+ 
+ 
   myChart.on('click',function(params){
   	var city = params.name;
   	if(city =='印度'){
        window.location.href = 'country_of_yd.html';
   	}
-  	if(city =='斯里兰卡'){
-       window.location.href = 'country_of_sllk.html';
+  	if(city =='马来西亚'){
+       window.location.href = 'country_of_mlxy.html';
   	}
-  	if(city =='哈萨克斯坦'){
-       window.location.href = 'country_of_hskst.html';
+  	if(city =='香港'){
+       window.location.href = 'country_of_xg.html';
   	}
-  	if(city =='也门'){
-       window.location.href = 'country_of_ym.html';
+  	if(city =='中国台湾'){
+       window.location.href = 'country_of_tw.html';
   	}
-  	if(city =='土耳其'){
-       window.location.href = 'country_of_teq.html';
+  	if(city =='澳大利亚'){
+       window.location.href = 'country_of_adly.html';
   	}
-  	if(city =='波兰'){
-       window.location.href = 'country_of_bl.html';
+  	if(city =='泰国'){
+       window.location.href = 'country_of_tg.html';
   	}
-  	if(city =='以色列'){
-       window.location.href = 'country_of_ysl.html';
+  	if(city =='韩国'){
+       window.location.href = 'country_of_hg.html';
   	}
-  	if(city =='罗马尼亚'){
-       window.location.href = 'country_of_lmny.html';
+  	if(city =='美国'){
+       window.location.href = 'country_of_mg.html';
   	}
-  	if(city =='俄罗斯'){
+  	if(city =='日本'){
+       window.location.href = 'country_of_rb.html';
+  	}if(city =='俄罗斯'){
        window.location.href = 'country_of_buyer.html';
   	}
   })
- 
- 
- 
- 
- 
- 
- 
  
  
  
@@ -388,7 +491,7 @@ option = {
     width:'95%',
     height:'55%',
     title: {
-        text: '马来西亚采购量趋势图(单位:亿美金)',
+        text: '国家采购量趋势图(单位:亿美金)',
         textStyle: {
             fontWeight: 'normal',
             fontFamily:'宋体',
@@ -399,6 +502,11 @@ option = {
     },
     data:['采购量','同期环比曲线'],
     tooltip: {
+    	formatter:function(params){
+        		return params.name
+        		
+        },
+
         trigger: 'axis',
         axisPointer: {
             lineStyle: {
@@ -443,7 +551,7 @@ option = {
                          rotate:45,
                     },  
                     
-        data: ['俄罗斯',{value:'马来西亚',textStyle:{color:'red'}},'斯里兰卡','也门','以色列','土耳其','波兰','哈萨克斯坦','印度','罗马尼亚'],
+        data: ['俄罗斯','美国','日本','泰国','韩国','中国台湾','香港',{value:'马来西亚',textStyle:{color:'red'}},'印度','澳大利亚'],
     }],
     yAxis: [
      {
@@ -479,7 +587,7 @@ option = {
             name:'采购量',
             type:'bar',
             barWidth:'15',
-            data:[200, 490, 700, 232, 256, 767, 622, 640, 330,300],
+            data: [200, 490, 700, 232, 256, 767, 1356, 640, 330, 300],
              itemStyle: {
             normal: {
                 color: '#e94f2e',
@@ -587,7 +695,7 @@ option = {
     }],
     yAxis: [
      {
-    	min:0,max:1500,interval:500,
+    	min:0,max:15,interval:5,
         type: 'value',
         axisTick: {
             show: true
@@ -619,7 +727,7 @@ option = {
             name:'成交量',
             type:'bar',
             barWidth:'15',
-            data:[780, 560, 1100, 232, 786, 767, 356, 622, 926, 400, 870, 1430],
+            data:[11, 9,10, 11, 10,11, 11, 13, 15, 11, 10, 9],
              itemStyle: {
             normal: {
                 color: '#e94f2e',
@@ -657,7 +765,7 @@ option = {
                 color: 'rgb(128,171,204)',
             }
         },
-        data: [0.3,0.4,0.6,0.8,0.5,0.3,0.5,0.2,0.3,0.5,0.2,0.7]
+        data: [0.4,0.5,0.7,0.4,0.3,0.5,0.3,0.7,0.3,0.5,0.6,0.6]
     }, ]
    
 };
@@ -685,7 +793,7 @@ option = {
         x : 'right',
         y : 'center',
         height:'100',
-        data:['有色金属','航空航天','环保','食品','建筑','核能','能源','交通'],
+      data: ['电子及家电', '机械', '纺织服装,鞋', '建材', '五金工具', '日用消费品', '化工', '休闲用品',],
         textStyle:{
             color:'white'
         },
@@ -724,16 +832,31 @@ option = {
                         length2: 7//线条下一节的长度    
                     }    
                },
-            data:[
-                {value:10, name:'环保'},
-                {value:8, name:'食品'},
-                {value:15, name:'建筑'},
-                {value:25, name:'核能'},
-                {value:20, name:'能源'},
-                {value:35, name:'航空航天'},
-                {value:30, name:'有色金属'},
-                {value:30, name:'交通'}
-            ]
+            data: [{
+						value: 95,
+						name: '电子及家电'
+					}, {
+						value: 85,
+						name: '机械'
+					}, {
+						value: 80,
+						name: '纺织服装,鞋'
+					}, {
+						value: 90,
+						name: '建材'
+					}, {
+						value: 85,
+						name: '五金工具'
+					}, {
+						value: 90,
+						name: '日用消费品'
+					}, {
+						value: 85,
+						name: '化工'
+					}, {
+						value: 80,
+						name: '休闲用品'
+					}]
         },
         
     ]
@@ -801,7 +924,7 @@ option = {
                          interval:0,
                          rotate:20,
                     },  
-        data:['有色金属','航空航天','环保','食品','建筑','核能','能源','交通'],
+         data: ['电子及家电', '机械', '纺织服装,鞋', '建材', '五金工具', '日用消费品', '化工', '休闲用品',],
     }],
     yAxis: [
      {
@@ -837,7 +960,7 @@ option = {
             name:'满意度',
             type:'bar',
             barWidth:'20',
-            data:[20, 49, 70, 23, 25, 76, 80, 66],
+            data:[85, 90, 85, 80, 85, 90, 85, 85],
              itemStyle: {
             normal: {
                 color: function(params) {
@@ -978,7 +1101,7 @@ option = {
                 color: 'rgb(128,171,204)',
             }
         },
-        data: [0.5,0.6,0.4,0.5,0.7,0.7,0.8,0.1]
+        data: [0.5, 0.6, 0.5, 0.7, 0.6, 0.4, 0.6, 0.5]
     }, ]
    
 };
@@ -995,7 +1118,7 @@ option = {
 			height: '80%',
 			top: '10%',
 			title: {
-				text: '马来西亚采购量趋势图(单位:亿美金)',
+				text: '国家采购量趋势图(单位:亿美金)',
 				textStyle: {
 					fontWeight: 'normal',
 					fontFamily: '宋体',
@@ -1052,8 +1175,8 @@ option = {
 						fontSize: 16
 					}
 				},
-        data: ['俄罗斯','马来西亚','斯里兰卡','也门','以色列','土耳其','波兰','哈萨克斯坦','印度','罗马尼亚'],
-			}],
+        data: ['俄罗斯','美国','日本','泰国','韩国','中国台湾','香港',{value:'马来西亚',textStyle:{color:'red'}},'印度','澳大利亚'],
+    }],
 			yAxis: [{
 				min: 0,
 				max: 1500,
@@ -1206,8 +1329,8 @@ option = {
 			}],
 			yAxis: [{
 				min: 0,
-				max: 1500,
-				interval: 500,
+				max: 15,
+				interval: 5,
 				type: 'value',
 				axisTick: {
 					show: true
@@ -1239,7 +1362,7 @@ option = {
 				name: '成交量',
 				type: 'bar',
 				barWidth: '15',
-				data: [780, 560, 1100, 232, 786, 767, 356, 622, 926, 400, 870, 1430],
+				data:[11, 9,10, 11, 10,11, 11, 13, 15, 11, 10, 9],
 				itemStyle: {
 					normal: {
 						color: '#e94f2e',
@@ -1276,7 +1399,7 @@ option = {
 						color: 'rgb(128,171,204)',
 					}
 				},
-				data: [0.3, 0.4, 0.6, 0.8, 0.5, 0.3, 0.5, 0.2, 0.3, 0.5, 0.2, 0.7]
+				data: [0.4,0.5,0.7,0.4,0.3,0.5,0.3,0.7,0.3,0.5,0.6,0.6]
 			}, ]
 
 		};
@@ -1305,10 +1428,10 @@ option = {
 				orient: 'vertical',
 				x: 'right',
 				y: 'center',
-				height: '150',
+				height: '130',
 				itemWidth: 50,
 				itemHeight: 20,
-				data: ['有色金属', '航空航天', '环保', '食品', '建筑', '核能', '机械电子', '能源', '交通', '医药'],
+				data: ['电子及家电', '机械', '纺织服装,鞋', '建材', '五金工具', '日用消费品', '化工', '休闲用品',],
 				textStyle: {
 					color: 'white',
 					fontSize: '16'
@@ -1344,45 +1467,29 @@ option = {
 						}
 					},
 					data: [{
-						value: 10,
-						name: '环保'
+						value: 95,
+						name: '电子及家电'
 					}, {
-						value: 8,
-						name: '食品'
+						value: 85,
+						name: '机械'
 					}, {
-						value: 15,
-						name: '建筑'
+						value: 80,
+						name: '纺织服装,鞋'
 					}, {
-						value: 25,
-						name: '核能'
+						value: 90,
+						name: '建材'
 					}, {
-						value: 20,
-						name: '能源'
+						value: 85,
+						name: '五金工具'
 					}, {
-						value: 35,
-						name: '航空航天'
+						value: 90,
+						name: '日用消费品'
 					}, {
-						value: 30,
-						name: '有色金属'
+						value: 85,
+						name: '化工'
 					}, {
-						value: 30,
-						name: '交通'
-					}, {
-						value: 25,
-						name: '医药',
-						itemStyle: {
-					normal: {
-						color: '#B93C20'
-					}
-				}
-					}, {
-						value: 18,
-						name: '机械电子',
-						itemStyle: {
-					normal: {
-						color: '#E46606'
-					}
-				}
+						value: 80,
+						name: '休闲用品'
 					}]
 				},
 
@@ -1459,7 +1566,7 @@ option = {
 						fontSize: 16
 					}
 				},
-				data: ['有色金属', '航空航天', '环保', '食品', '建筑', '核能', '能源', '交通','医药','机械电子'],
+				data: ['电子及家电', '机械', '纺织服装,鞋', '建材', '五金工具', '日用消费品', '化工', '休闲用品',],
 			}],
 			yAxis: [{
 				min: 0,
@@ -1496,7 +1603,7 @@ option = {
 				name: '满意度',
 				type: 'bar',
 				barWidth: '20',
-				data: [20, 49, 70, 23, 25, 76, 80, 66,38,84],
+				data:[85, 90, 85, 80, 85, 90, 85, 85],
 				itemStyle: {
 					normal: {
 						color: function(params) {
@@ -1652,7 +1759,7 @@ option = {
 						color: 'rgb(128,171,204)',
 					}
 				},
-				data: [0.5, 0.6, 0.4, 0.5, 0.7, 0.7, 0.8, 0.1,0.3,0.5]
+				data: [0.5, 0.6, 0.5, 0.7, 0.6, 0.4, 0.6, 0.5]
 			}, ]
 
 		};
