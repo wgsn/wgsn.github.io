@@ -372,14 +372,20 @@ option[0] = {
                 series: [{
                     type: 'map',
                     map: 'guangdong',
-//                  zoom:10,
+					zoom:1.2,
                     label: {
-			            emphasis: {
-			                show: true,
+			            normal: {
+			                show: false,
 			                textStyle:{
-			                	color:'#345F93',
-			                	fontWeight:'bold',
+			                	color:'#000',
 			                	fontSize:16
+			                }
+			            },
+			            emphasis:{
+			            	textStyle:{
+			                	color:'#fff',
+			                	fontWeight:'bold',
+			                	fontSize:18
 			                }
 			            }
 			        },
@@ -391,9 +397,12 @@ option[0] = {
 			                
 			            },
 			            emphasis: {
-			            	areaColor:'#fff',
+			            	areaColor:'#FF8C00',
 			            }
-			        }
+			        },
+			        data:[ 
+                        {name: '广州市',selected:true},  
+				        ]
                 }]
             });
             chart_detail.on('click',function(params){
@@ -410,17 +419,24 @@ option[0] = {
         $.getJSON('../js/jiangxi.json', function (data) {
             echarts.registerMap('jiangxi', data);
             var chart_detail = echarts.init(oDetail_b);
-            chart_detail.setOption({
+           chart_detail.setOption({
                 series: [{
                     type: 'map',
                     map: 'jiangxi',
+					zoom:1.2,
                     label: {
-			            emphasis: {
-			                show: true,
+			            normal: {
+			                show: false,
 			                textStyle:{
-			                	color:'#345F93',
-			                	fontWeight:'bold',
+			                	color:'#000',
 			                	fontSize:16
+			                }
+			            },
+			            emphasis:{
+			            	textStyle:{
+			                	color:'#fff',
+			                	fontWeight:'bold',
+			                	fontSize:18
 			                }
 			            }
 			        },
@@ -432,7 +448,7 @@ option[0] = {
 			                
 			            },
 			            emphasis: {
-			            	areaColor:'#fff',
+			            	areaColor:'#FF8C00',
 			            }
 			        }
                 }]
@@ -588,7 +604,7 @@ option[0] = {
             option[2] = {
 					height:'40%',
 					title : {
-				    text: '主要地区供应量走势图（单位：单）',
+				    text: '广州市供应量走势图（单位：单）',
 				    left: '1%',
 				    top:'1%',
 				    
@@ -708,7 +724,7 @@ option[0] = {
             option[3] = {
             	
 			title : {
-				    text: '主要省份产品偏好程度（%）',
+				    text: '广州市产品偏好程度（%）',
 				    left: '1%',
 				    top:'1%',
 				    textStyle : {
@@ -740,7 +756,7 @@ option[0] = {
 		    calculable : true,
 		    series : 
 		        {
-		            name:'偏好度',
+		            name:'面积模式',
 		            type:'pie',
 		            radius : '70%',
 		            center : ['35%', '60%'],
@@ -894,7 +910,7 @@ option[0] = {
             option[4] = {
             	height:'30%',
 					title : {
-				    text: '主要省份产品满意度（%）',
+				    text: '广州市产品满意度（%）',
 				    left: '1%',
 				    top:'1%',
 				    textStyle : {
