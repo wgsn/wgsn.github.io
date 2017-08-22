@@ -1564,7 +1564,7 @@ window.onload = function() {
 	}
 	bottomline1.setOption({
 		title: {
-			text: 'IP访问量趋势图（单位：万封）',
+			text: 'IP访问量趋势图（单位：万次）',
 			x: '12%',
 			y: '1%',
 			textStyle: {
