@@ -1170,7 +1170,7 @@ window.onload = function() {
 		//地图样式
 		geo: {
 			map: 'world',
-			top: '10%',
+//			top: '10%',
 			label: {
 				emphasis: {
 					show: false
