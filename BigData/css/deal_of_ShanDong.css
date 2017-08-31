@@ -1,0 +1,935 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background: url(../img/9.jpg) no-repeat 0px 0px;
+	background-size: cover;
+}
+
+@media only screen and (min-width: 1920px) {
+	#Bo {
+		width: 100%;
+		heighT: 100%;
+		position: relative;
+	}
+	.Bo-Zhong {
+		width: 100%;
+		height: 90%;
+		position: relative;
+	}
+	.Bo-Zhong .Dian {
+		width: 60%;
+		height: 90%;
+		float: left;
+	}
+	.Bo-Zhong .Dian p {
+		color:#FFF;
+		bottom: 0;
+		text-align: center;
+		font-size: 30px;
+		margin-top: -5%;
+	}
+	.Bo-Zhong .Zhong-l {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan {
+		width: 30%;
+		height: 100%;
+		float: right;
+		margin-top:1%;
+		box-sizing:border-box ;
+		margin-right: 5%;
+	}
+	.Bo-Zhong .DIan .Yi {
+		width: 100%;
+		height: 17%;
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 1%;
+		background: #434141;
+	}
+	.DIan .Yi .TM,
+	.DIan .Si .TM {
+		opacity: 0;
+		transition: all 2s;
+	}
+	.DIan .Yi .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Yi .SASA {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		right: 1.5%;
+		cursor: pointer;
+	}
+	.DIan .Yi p {
+		color: #dfb050;
+		font-size: 16px;
+		font-weight: bold;
+		margin-left:1%;
+	}
+	.DIan .Yi .Yi-W {
+		height: 40%;
+		display: block;
+		padding-left: 10%;
+		line-height: 28px;
+	}
+	.Yi .Yi-W .GDp {
+		width: 35%;
+		text-align: center;
+		float: left;
+		color: #fff;
+		margin-right: 15%;
+	}
+	.Yi-W .GDp span {
+		font-size: 16px;
+	}
+	.Bo-Zhong .DIan .Er {
+		width: 100%;
+		height: 20%;
+		margin-bottom: 1%;
+		position: relative;
+		box-sizing: border-box;
+		background: #434141;
+	}
+	.DIan .Er .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Er .FD {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		right: 1.5%;
+		cursor: pointer;
+	}
+	.Bo-Zhong .DIan .Ming {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan .Sa {
+		margin-bottom: 1%;
+		height: 25%;
+		width: 100%;
+		position: relative;
+		background: #434141;
+	}
+	.DIan .Sa .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Sa .FD {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		right: 1.5%;
+	}
+	.Bo-Zhong .DIan .Zha {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan .Si {
+		height: 35%;
+		width: 100%;
+		position: relative;
+		background:#434141;
+	}
+	.DIan .Si p {
+		color: #dfb050;
+		font-size: 16px;
+		font-weight: bold;
+		margin-left:1%;
+		padding-top:1%;
+	}
+	.Si .BIaoge{
+		width:100%;
+		height:250px;
+		margin-top:2%;
+	}
+	.Si .BIaoge li{
+		list-style: none;
+		float:left;
+		width:33%;
+		color: #fff;
+		text-align: center;
+		height:35px;
+	}
+	.top {
+		text-align: center;
+		padding-top: 0.5%;
+		color:#fff;
+	}
+	.top p {
+		display: inline-block;
+	}
+	.top .left,
+	.top .right {
+		font-size: 25px;
+	}
+	.top .mid {
+		padding: 0 5%;
+		font-size: 30px;
+	}
+	.footer {
+		font-size: 20px;
+		margin-top: 1%;color:#fff;
+		text-align: center;
+	}
+	.footer span {
+		display: inline-block;
+		margin-left: 2%;
+		margin-right: 3%;
+	}
+	#Bo .II,
+	#Bo .DD,
+	#Bo .JJ {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: none;
+		top: 0;
+		background: rgba(0, 0, 0, 0.2);
+	}
+	#Bo .II .FA,
+	#Bo .DD .FC,
+	#Bo .JJ .FG {
+		width: 0;
+		height: 0;
+		background: #2F79BE;
+		position: absolute;
+		top: 10%;
+		z-index: 100;
+		right: 20%;
+	}
+	#Bo .II .So,
+	#Bo .DD .UU,
+	#Bo .JJ .YU {
+		position: absolute;
+		right: 0;
+		top: 3%;
+		right: 3%;
+		z-index: 9999999999;
+		cursor: pointer;
+	}
+	#Bo .II .MoMo,
+	#Bo .DD .GG,
+	#Bo .JJ .TU {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media only screen and (min-width: 1368px) and (max-width: 1919px) {
+	#Bo {
+		width: 100%;
+		heighT: 100%;
+		position: relative;
+	}
+	.Bo-Zhong {
+		width: 100%;
+		height: 90%;
+		position: relative;
+	}
+	.Bo-Zhong .Dian {
+		width: 60%;
+		height: 90%;
+		float: left;
+	}
+	.Bo-Zhong .Dian p {
+		bottom: 0;
+		color:#FFF;
+		text-align: center;
+		font-size: 30px;
+		margin-top: -5%;
+	}
+	.Bo-Zhong .Zhong-l {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan {
+		width: 30%;
+		height: 100%;
+		float: right;
+		box-sizing:border-box ;
+		margin-right: 5%;
+	}
+	.Bo-Zhong .DIan .Yi {
+		width: 100%;
+		height: 17%;
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 1%;
+		background: #434141;
+	}
+	.DIan .Yi .TM,
+	.DIan .Si .TM {
+		opacity: 0;
+		transition: all 3s;
+	}
+	.DIan .Yi .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Yi .SASA {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		right: 1.5%;
+		cursor: pointer;
+	}
+	.DIan .Yi p {
+		color: #dfb050;
+		font-size: 16px;
+		font-weight: bold;
+		margin-left:1%;
+	}
+	.DIan .Yi .Yi-W {
+		height: 40%;
+		display: block;
+		padding-left: 10%;
+		line-height: 24px;
+	}
+	.Yi .Yi-W .GDp {
+		width: 42%;
+		text-align: center;
+		float: left;
+		color: #fff;
+		margin-right: 8%;
+	}
+	.Yi-W .GDp span {
+		font-size: 16px;
+	}
+	.Bo-Zhong .DIan .Er {
+		width: 100%;
+		height: 25%;
+		margin-bottom: 1%;
+		position: relative;
+		box-sizing: border-box;
+		background: #434141;
+	}
+	.DIan .Er .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Er .FD {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		right: 1.5%;
+		cursor: pointer;
+	}
+	.Bo-Zhong .DIan .Ming {
+		height: 100%;
+		width:100%;
+	}
+	.Bo-Zhong .DIan .Sa {
+		margin-bottom: 1%;
+		height: 27%;
+		width: 100%;
+		position: relative;
+		background: #434141;
+	}
+	.DIan .Sa .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Sa .FD {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		right: 1.5%;
+	}
+	.Bo-Zhong .DIan .Zha {
+		width:105%;
+		height: 100%;
+	}
+	.Bo-Zhong .DIan .Si {
+		height: 28%;
+		width: 100%;
+		position: relative;
+		background:#434141;
+	}
+	.DIan .Si .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.Si .BIaoge{
+		width:100%;
+		height:187px;
+		margin-top:2%;
+	}
+	.Si .BIaoge li{
+		list-style: none;
+		float:left;
+		width:33%;
+		font-size: 15px;
+		color: #fff;
+		text-align: center;
+		height:22px;
+	}
+	.DIan .Si p {
+		color: #dfb050;
+		font-size: 16px;
+		font-weight: bold;
+		margin-left:1%;
+	}
+	.top {
+		text-align: center;
+		padding-top: 0.5%;
+		color:#fff;
+	}
+	.top p {
+		display: inline-block;
+	}
+	.top .left,
+	.top .right {
+		font-size: 15px;
+	}
+	.top .mid {
+		padding: 0 8%;
+		font-size: 23px;
+	}
+	.footer {
+		font-size: 20px;
+		margin-top: 0%;color:#fff;
+		text-align: center;
+	}
+	.footer span {
+		display: inline-block;
+		margin-left: 2%;
+		margin-right: 3%;
+	}
+	#Bo .II,
+	#Bo .DD,
+	#Bo .JJ {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: none;
+		top: 0;
+		background: rgba(0, 0, 0, 0.2);
+	}
+	#Bo .II .FA,
+	#Bo .DD .FC,
+	#Bo .JJ .FG {
+		width: 0;
+		height: 0;
+		background: #2F79BE;
+		position: absolute;
+		top: 10%;
+		z-index: 100;
+		right: 20%;
+	}
+	#Bo .II .So,
+	#Bo .DD .UU,
+	#Bo .JJ .YU {
+		position: absolute;
+		right: 0;
+		top: 3%;
+		right: 3%;
+		z-index: 9999999999;
+		cursor: pointer;
+	}
+	#Bo .II .MoMo,
+	#Bo .DD .GG,
+	#Bo .JJ .TU {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media only screen and (min-width: 1250px) and (max-width: 1367px) {
+	#Bo {
+		width: 100%;
+		heighT: 100%;
+		position: relative;
+	}
+	.Bo-Zhong {
+		width: 100%;
+		height: 90%;
+		position: relative;
+	}
+	.Bo-Zhong .Dian {
+		width: 60%;
+		height: 90%;
+		float: left;
+	}
+	.Bo-Zhong .Dian p {
+		bottom: 0;
+		color:#FFF;
+		text-align: center;
+		font-size: 20px;
+		margin-top: -5%;
+	}
+	.Bo-Zhong .Zhong-l {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan {
+		width: 30%;
+		height: 100%;
+		box-sizing: border-box;
+		float: right;
+		margin-right: 5%;
+	}
+	.Bo-Zhong .DIan .Yi {
+		width: 100%;
+		height: 16%;
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 1%;
+		background: #434141;
+	}
+	.DIan .Yi .TM,
+	.DIan .Si .TM {
+		opacity: 0;
+		transition: all 3s;
+	}
+	.DIan .Yi .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Yi .SASA {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		right: 1.5%;
+		cursor: pointer;
+	}
+	.DIan .Yi p {
+		color: #dfb050;
+		font-size: 15px;
+		font-weight: bold;
+		margin-left:1%;
+	}
+	.DIan .Yi .Yi-W {
+		height: 40%;
+		display: block;
+		padding-left: 10%;
+		line-height: 17px;
+	}
+	.Yi .Yi-W .GDp {
+		width: 42%;
+		text-align: center;
+		float: left;
+		color: #fff;
+		margin-right: 7%;
+	}
+	.Yi-W .GDp span {
+		font-size: 13px;
+	}
+	.Bo-Zhong .DIan .Er {
+		width: 100%;
+		height: 28%;
+		margin-bottom: 1%;
+		position: relative;
+		box-sizing: border-box;
+		background: #434141;
+	}
+	.DIan .Er .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Er .FD {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		right: 1.5%;
+		cursor: pointer;
+	}
+	.Bo-Zhong .DIan .Ming {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan .Sa {
+		margin-bottom: 1%;
+		height: 30%;
+		width: 100%;
+		position: relative;
+		background:#434141;
+	}
+	.DIan .Sa .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Sa .FD {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		right: 1.5%;
+	}
+	.Bo-Zhong .DIan .Zha {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan .Si {
+		height: 23%;
+		width: 100%;
+		padding-bottom: 5px;
+		position: relative;
+		background: #434141;
+	}
+	.DIan .Si .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Si p {
+		color: #dfb050;
+		font-size: 15px;
+		font-weight: bold;
+	}
+	.Si .BIaoge{
+		width:100%;
+		height:109px;
+	}
+	.Si .BIaoge li{
+		list-style: none;
+		float:left;
+		width:33%;
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+		height:16px;
+	}
+	.top {
+		text-align: center;
+		padding-top: 0.5%;
+		color:#FFF;
+	}
+	.top p {
+		display: inline-block;
+	}
+	.top .left,
+	.top .right {
+		font-size: 14px;
+	}
+	.top .mid {
+		padding: 0 8%;
+		font-size: 23px;
+	}
+	.footer {
+		font-size: 13px;color:#fff;
+		text-align: center;
+	}
+	.footer span {
+		display: inline-block;
+		margin-left: 2%;
+		margin-right: 3%;
+	}
+	#Bo .II,
+	#Bo .DD,
+	#Bo .JJ {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: none;
+		top: 0;
+		background: rgba(0, 0, 0, 0.2);
+	}
+	#Bo .II .FA,
+	#Bo .DD .FC,
+	#Bo .JJ .FG {
+		width: 0;
+		height: 0;
+		background: #2F79BE;
+		position: absolute;
+		top: 10%;
+		z-index: 100;
+		right: 20%;
+	}
+	#Bo .II .So,
+	#Bo .DD .UU,
+	#Bo .JJ .YU {
+		position: absolute;
+		right: 0;
+		top: 3%;
+		right: 3%;
+		z-index: 9999999999;
+		cursor: pointer;
+	}
+	#Bo .II .MoMo,
+	#Bo .DD .GG,
+	#Bo .JJ .TU {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	#Bo {
+		width: 100%;
+		heighT: 100%;
+		position: relative;
+	}
+	.Bo-Zhong {
+		width: 100%;
+		height: 90%;
+		position: relative;
+	}
+	.Bo-Zhong .Dian {
+		width: 60%;
+		height: 90%;
+		float: left;
+	}
+	.Bo-Zhong .Dian p {
+		color:#FFF;
+		bottom: 0;
+		text-align: center;
+		font-size: 30px;
+		margin-top: -5%;
+	}
+	.Bo-Zhong .Zhong-l {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan {
+		width: 30%;
+		height: 90%;
+		float: right;
+		margin-top: 1%;
+		margin-right: 5%;
+	}
+	.Bo-Zhong .DIan .Yi {
+		width: 100%;
+		height: 19%;
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 1%;
+		background: #434141;
+	}
+	.DIan .Yi .TM,
+	.DIan .Si .TM {
+		opacity: 0;
+		transition: all 3s;
+	}
+	.DIan .Yi .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Yi .SASA {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		right: 1.5%;
+		cursor: pointer;
+	}
+	.DIan .Yi p {
+		color: #dfb050;
+		font-size: 15px;
+		font-weight: bold;
+	}
+	.DIan .Yi .Yi-W {
+		height: 40%;
+		display: block;
+		padding-left: 10%;
+		line-height: 15px;
+	}
+	.Yi .Yi-W .GDp {
+		width: 35%;
+		text-align: center;
+		float: left;
+		color: #fff;
+		margin-right: 15%;
+	}
+	.Yi-W .GDp span {
+		font-size: 12px;
+	}
+	.Bo-Zhong .DIan .Er {
+		width: 100%;
+		height: 26%;
+		margin-bottom: 1%;
+		position: relative;
+		box-sizing: border-box;
+		background: #434141;
+	}
+	.DIan .Er .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Er .FD {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		right: 1.5%;
+		cursor: pointer;
+	}
+	.Bo-Zhong .DIan .Ming {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan .Sa {
+		margin-bottom: 1%;
+		height: 30%;
+		width: 100%;
+		position: relative;
+		background: #434141;
+	}
+	.DIan .Sa .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Sa .FD {
+		position: absolute;
+		top: 3.5%;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		right: 1.5%;
+	}
+	.Bo-Zhong .DIan .Zha {
+		height: 100%;
+	}
+	.Bo-Zhong .DIan .Si {
+		height: 24%;
+		width: 100%;
+		padding-bottom: 5px;
+		position: relative;
+		background: #434141;
+	}
+	.DIan .Si .BIao {
+		position: absolute;
+		top: 20px;
+		width: 46px;
+		height: 30px;
+		left: -10px;
+	}
+	.DIan .Si p {
+		color: #dfb050;
+		font-size: 16px;
+		font-weight: bold;
+		padding: 10px 0 0 55px;
+	}
+	.Si .BIaoge{
+		width:100%;
+		height:109px;
+	}
+	.Si .BIaoge li{
+		list-style: none;
+		float:left;
+		width:33%;
+		font-size: 12px;
+		color: #fff;
+		text-align: center;
+		height:16px;
+	}
+	.top {
+		text-align: center;
+		padding-top: 5.5%;
+		color:#FFF;
+	}
+	.top p {
+		display: inline-block;
+	}
+	.top .left,
+	.top .right {
+		font-size: 12px;
+	}
+	.top .mid {
+		padding: 0 6%;
+		font-size: 14px;
+	}
+	.footer {
+		font-size: 12px;
+		margin-top: 0%;
+		color:#fff;
+		text-align: center;
+	}
+	.footer span {
+		display: inline-block;
+		margin-left: 2%;
+		margin-right: 3%;
+	}
+	#Bo .II,
+	#Bo .DD,
+	#Bo .JJ {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: none;
+		top: 0;
+		background: rgba(0, 0, 0, 0.2);
+	}
+	#Bo .II .FA,
+	#Bo .DD .FC,
+	#Bo .JJ .FG {
+		width: 0;
+		height: 0;
+		background: #2F79BE;
+		position: absolute;
+		top: 10%;
+		z-index: 100;
+		right: 20%;
+	}
+	#Bo .II .So,
+	#Bo .DD .UU,
+	#Bo .JJ .YU {
+		position: absolute;
+		right: 0;
+		top: 3%;
+		right: 3%;
+		z-index: 9999999999;
+		cursor: pointer;
+	}
+	#Bo .II .MoMo,
+	#Bo .DD .GG,
+	#Bo .JJ .TU {
+		width: 100%;
+		height: 100%;
+	}
+}

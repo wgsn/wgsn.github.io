@@ -39,7 +39,7 @@ header>div {
 display: inline-block;
 	line-height: 50%;
 	flex:1;
-	font-size: 14px;
+	font-size: 18px;
 	text-align: center;
 }
 header>div.pmid{
@@ -47,7 +47,7 @@ header>div.pmid{
 }
 header>div:nth-child(2) {
 	width: 35%;
-	font-size: 0.2rem;
+	font-size: 28px;
 	/*padding-left: 3%;
 	padding-right: 3%;*/
 }

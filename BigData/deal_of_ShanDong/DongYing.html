@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/deal_of_ShanDong.css"/>
+		<style type="text/css">
+			body{
+				position: relative;
+				
+			}
+			.ok{
+				 position: absolute;
+				 left:-64px;
+				 top:20px;
+				 transition: all 1s; 
+			}
+			.ok:hover{
+				position: absolute;
+				 left:-20px;
+				 top:20px;
+			}
+			</style>
+	</head>
+	<body>
+		<div id="Bo">
+			<div class="top">
+			   <p class="left">
+				   <span class="span1"></span>
+				   <span class="span2"></span>
+		  		   <span class="span3"></span>
+			  </p>
+			   <p class="mid">北方跨境电商大数据中心</p>
+			   <p class="right">系统通知：服务器维护，时间 08/01 00:00—03:00</p>
+		   </div>
+
+		    <div class="Bo-Zhong">
+		    	<div class="Dian">
+		    	  <div class="Zhong-l"></div>
+		    	  <p>2017年东营市采购趋势图</p>
+		    	</div>
+		    	<div class="DIan">
+		    		<div class="Yi">
+		    				<img src="../img/big.gif" class="SASA"/>
+		    			<div class="TM">
+		    			<p>2017山东基本数据：</p>
+		    			
+		    				<div class="Yi-W">
+		    				<div class="GDp">
+		    					<span>生产总值:</span>
+		    				    <span>2141.1(亿元)</span><br/>
+		    				    <span>同比：8.1%</span>
+		    				</div>
+		    				<div class="GDp">
+		    					<span>进出口额:</span>
+		    				    <span>318.1亿元</span><br/>
+		    				    <span>同比：22.3%</span>
+		    				</div>
+		    			  </div>
+		    			<div class="Yi-W">
+		    				<div class="GDp">
+		    					<span>出口:</span>
+		    				    <span>219.1亿元</span><br/>
+		    				    <span>同比：+25.8%</span>
+		    				</div>
+		    				<div class="GDp">
+		    					<span>进口:</span>
+		    				    <span>99.0亿元</span><br/>
+		    				    <span>同比：15.2%</span>
+		    				</div>
+		    			</div>
+		    			
+		    			</div>
+		    		</div>
+		    		<div class="Er">
+		    			   <div class="Ming"></div>
+		    			<img src="../img/big.gif" class="FD  DADA"/>
+		    		</div>
+		    		<div class="Sa">
+		    			<div class="Zha"></div>
+		    			<img  src="../img/big.gif" class="FD  SXSX"/>
+		    		</div>
+		    		<div class="Si">
+		    			<div class="TM">
+		    			<p>2017山东各市日成交量排行榜</p>
+		    			 <div class="BIaoge">
+		    			   	<li></li>
+		    			   	<li>潍坊市</li>
+		    			   	<li>临沂市</li>
+		    			   	<li>日成交量</li>
+		    			   	<li class="HE">3</li>
+		    			   	<li class="HE1">4</li>
+		    			   	<li>建筑</li>
+		    			   	<li class="JIA">12</li>
+		    			   	<li class="JIA1">12</li>
+		    			   	<li>能源</li>
+		    			   	<li class="JIA">34</li>
+		    			   	<li class="JIA1">46</li>
+		    			   	<li>有色金属</li>
+		    			   	<li class="JIA">54</li>
+		    			   	<li class="JIA1">43</li>
+		    			   	<li>食品</li>
+		    			   	<li class="JIA">13</li>
+		    			   	<li class="JIA1">14</li>
+		    			   	<li>核能</li>
+		    			   	<li class="JIA">34</li>
+		    			   	<li class="JIA1">45</li>
+		    			   </div>
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+		<div class="footer">
+			<span>鲁公网安备 11000002000088号</span>|
+			<span>鲁ICP证070359号|互联网药品信息服务资格证编号（鲁）-经营性-2014-0008</span>|
+			<span>新出发鲁零字第大120007号</span>
+		</div>
+        <div class="II">
+		    	<div class="FA">
+		    		<img src="../img/small.gif" class="So"/>
+		    	</div>
+		    </div>
+		    <div class="DD">
+		    	<div class="FC">
+		    		<img src="../img/small.gif" class="UU"/>
+		    	</div>
+		    </div>
+		     <div class="JJ">
+		    	<div class="FG">
+		    		<img src="../img/small.gif" class="YU"/>
+		    	</div>
+		    </div>
+		</div>
+		<div class="ok"><a href="../index.html"><img src="../img/yy.png"/></a></div>
+		 
+
+	</body>
+	<script type="text/javascript" src="../js/echarts.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="../js/deal_of_ShanDong/DongYing.js"></script>
+	<script type="text/javascript" src="../js/top.js"></script>
+	<script type="text/javascript">
+		
+	
+		
+	$(window).load(function(){
+		$('.TM').css('opacity','1');
+	})
+	/*$(function() {
+			//多行应用
+			var _wrap = $('.ZHuan'); //定义滚动区域
+			var _interval = 2000; //定义滚动间隙时间
+			var _moving; //需要清除的动画
+			_wrap.hover(function() {
+				clearInterval(_moving); //当鼠标在滚动区域中时,停止滚动
+			}, function() {
+				_moving = setInterval(function() {
+					var _field = _wrap.find('.Si-Yi:first'); //此变量不可放置于函数起始处,li:first取值是变化的
+					var _h = _field.height(); //取得每次滚动高度
+					_field.animate({
+						marginTop: -_h + 'px'
+					}, 600, function() { //通过取负margin值,隐藏第一行
+						_field.css('marginTop', '2%').appendTo(_wrap); //隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+					})
+				}, _interval) //滚动间隔时间取决于_interval
+			}).trigger('mouseleave'); //函数载入时,模拟执行mouseleave,即自动滚动
+		});
+	*/
+	
+	</script>
+	<script src="http://api.map.baidu.com/telematics/v3/weather?location=上海&output=json&ak=KdhEeXIswBzw5fOPwTbg4huHXSFQ34pR&callback=getD"></script>
+</html>

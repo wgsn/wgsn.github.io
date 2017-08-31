@@ -20,3 +20,6 @@ img { -ms-interpolation-mode: bicubic; }
 .wordwrap { word-break: break-all; word-wrap: break-word; }
 /*单行文字超出显示省略号*/
 .omg{overflow: hidden; text-overflow: ellipsis; white-space:nowrap;}
+.top p.mid{
+	font-size:28px;
+}

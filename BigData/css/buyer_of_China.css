@@ -1,0 +1,152 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	color:white;
+}
+body{
+	background:#030c15;
+}
+.top{
+	position: absolute;
+	text-align: center;
+	top: 1.5%;
+	/*color: #1A1A1A;*/
+	width: 100%;
+}
+.top p{
+	display: inline-block;
+}
+.top  .left,.top .right{
+	font-size: 14px;
+}
+.top .mid{
+	padding: 0 8%;
+	font-size: 23px;
+}
+
+.footer{
+	font-size:14px;
+	text-align: center;
+	position: absolute;
+	bottom: 2%;
+	width: 100%;
+	/*color: #1A1A1A;*/
+}
+.footer span{
+	display: inline-block;
+	margin-left: 2%;
+	margin-right: 3%;
+}
+.map{
+	width: 73%;
+	height: 83%;
+	top: 10%;
+	position: relative;
+}
+.China_map{
+	width: 100%;
+	height: 100%;
+	/*margin-left: 5%;*/
+	z-index: 10;
+}
+.China_map_detail_a,.China_map_detail_b{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: -11;
+}
+/*.China_map_detail_b{
+	z-index: -12;
+}*/
+.China_map_detail_change{
+	opacity: 1;
+	z-index: 12;
+}
+.China_map_change{
+	opacity: 0;
+	z-index: -10;
+}
+.map_reduce{
+	position: absolute;
+	right: 20%;
+	top: 0;
+	display: none;
+}
+.map_reduce_change{
+	display: block;
+	z-index: 100;
+	cursor: pointer;
+}
+div.right{
+	width: 33%;
+	height: 90%;
+	position: absolute;
+	right: 1%;
+	top: 6%;
+}
+.right section{
+	width: 100%;
+	height: 24%;
+	margin-bottom: 1%;
+}
+.right .enlarge img{
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	cursor: pointer;
+}
+.right .enlarge img:nth-child(2){
+	top:26% ;
+}
+.right .enlarge img:nth-child(3){
+	top:50.5% ;
+}
+.right .enlarge img:nth-child(4){
+	top:75% ;
+}
+.shade{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.4);
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index:100;
+}
+.shade_inner{
+	position: absolute;
+	background: #2f79be;
+	opacity: 0;
+}
+.shade .box{
+	width: 100%;
+	height: 100%;
+}
+.reduce{
+	position: absolute;
+	left: 82%;
+	top: 22%;
+	cursor: pointer;
+}
+.hide{
+	display: none;
+}
+@keyframes move{
+	to{
+		width: 70%;
+		height: 60%;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		opacity: 1;
+	}
+}
+.shade_inner_animate{
+	animation: move 0.5s linear 0s 1 forwards;
+}
+.hidden{
+	display: none;
+}

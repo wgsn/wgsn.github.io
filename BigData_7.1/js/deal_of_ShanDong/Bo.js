@@ -27,7 +27,7 @@ $.getJSON('../js/shandong.json', function(data) {
 			map: 'shandong',
 			roam: true, //滚轮缩放
 			scaleLimit: {
-				min: 1,
+				min: 0.1,
 				max: 1.5,
 			},
 			itemStyle: {
