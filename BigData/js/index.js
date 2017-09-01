@@ -129,567 +129,567 @@ window.onload = function() {
 
 	var mapData = [{
 			name: 'Afghanistan',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Angola',
-			value: 195.124
+			value: 1.4
 		}, {
 			name: 'Albania',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'United Arab Emirates',
-			value: 441.537
+			value: 0
 		}, {
 			name: 'Argentina',
-			value: 403.224
+			value: 2.4
 		}, {
 			name: 'Armenia',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'French Southern and Antarctic Lands',
-			value: 268.065
+			value: 0
 		}, {
 			name: 'Australia',
-			value: 224.488
+			value: 2.2
 		}, {
 			name: 'Austria',
-			value: 401.924
+			value: 0.9
 		}, {
 			name: 'Azerbaijan',
-			value: 0.3
+			value: 0
 		}, {
 			name: 'Burundi',
-			value: 232.753
+			value: 2
 		}, {
 			name: 'Belgium',
-			value: 101.288
+			value: 1.6
 		}, {
 			name: 'Benin',
-			value: 509.798
+			value: 1.2
 		}, {
 			name: 'Burkina Faso',
-			value: 150.284
+			value: 1.4
 		}, {
 			name: 'Bangladesh',
-			value: 151.475
+			value: 0
 		}, {
 			name: 'Bulgaria',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'The Bahamas',
-			value: 402.316
+			value: 1.8
 		}, {
 			name: 'Bosnia and Herzegovina',
-			value: 0.2
+			value: 0
 		}, {
 			name: 'Belarus',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Belize',
-			value: 308.595
+			value: 0
 		}, {
 			name: 'Bermuda',
-			value: 64.951
+			value: 1.7
 		}, {
 			name: 'Bolivia',
-			value: 716.939
+			value: 1.9
 		}, {
 			name: 'Brazil',
-			value: 210.154
+			value: 2.1
 		}, {
 			name: 'Brunei',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Bhutan',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Botswana',
-			value: 196.341
+			value: 0
 		}, {
 			name: 'Central African Republic',
-			value: 349.921
+			value: 0
 		}, {
 			name: 'Canada',
-			value: 126.24
+			value: 2.4
 		}, {
 			name: 'Switzerland',
-			value: 730.534
+			value: 1.4
 		}, {
 			name: 'Chile',
-			value: 170.76
+			value: 1.5
 		}, {
 			name: 'China',
-			value: 1
+			value: 0
 		}, {
 			name: 'Ivory Coast',
-			value: 5
+			value: 0
 		}, {
 			name: 'Cameroon',
-			value: 624.343
+			value: 1.2
 		}, {
 			name: 'Democratic Republic of the Congo',
-			value: 191.161
+			value: 1.3
 		}, {
 			name: 'Republic of the Congo',
-			value: 373.024
+			value: 0
 		}, {
 			name: 'Colombia',
-			value: 444.798
+			value: 1.9
 		}, {
 			name: 'Costa Rica',
-			value: 469.685
+			value: 1.2
 		}, {
 			name: 'Cuba',
-			value: 112.768
+			value: 1.9
 		}, {
 			name: 'Northern Cyprus',
-			value: 1.468
+			value: 0
 		}, {
 			name: 'Cyprus',
-			value: 103.685
+			value: 1.9
 		}, {
 			name: 'Czech Republic',
-			value: 4
+			value: 0
 		}, {
 			name: 'Germany',
-			value: 317.404
+			value: 1.9
 		}, {
 			name: 'Djibouti',
-			value: 34.036
+			value: 1.4
 		}, {
 			name: 'Denmark',
-			value: 550.959
+			value: 1.2
 		}, {
 			name: 'Dominican Republic',
-			value: 10016.797
+			value: 0
 		}, {
 			name: 'Algeria',
-			value: 62.82
+			value: 2.1
 		}, {
 			name: 'Ecuador',
-			value: 151.072
+			value: 0.9
 		}, {
 			name: 'Egypt',
-			value: 2
+			value: 0
 		}, {
 			name: 'Eritrea',
-			value: 541.159
+			value: 0
 		}, {
 			name: 'Spain',
-			value: 462.038
+			value: 1.2
 		}, {
 			name: 'Estonia',
-			value: 0.4
+			value: 0
 		}, {
 			name: 'Ethiopia',
-			value: 95.281
+			value: 1.9
 		}, {
 			name: 'Finland',
-			value: 367.693
+			value: 1.6
 		}, {
 			name: 'Fiji',
-			value: 860.559
+			value: 1.5
 		}, {
 			name: 'Falkland Islands',
-			value: 49.581
+			value: 0
 		}, {
 			name: 'France',
-			value: 230.866
+			value: 1.7
 		}, {
 			name: 'Gabon',
-			value: 156.222
+			value: 0
 		}, {
 			name: 'United Kingdom',
-			value: 666.35
+			value: 2.1
 		}, {
 			name: 'Georgia',
-			value: 0.2
+			value: 1.5
 		}, {
 			name: 'Ghana',
-			value: 242.901
+			value: 1.8
 		}, {
 			name: 'Guinea',
-			value: 106.033
+			value: 0
 		}, {
 			name: 'Gambia',
-			value: 160.64
+			value: 0
 		}, {
 			name: 'Guinea Bissau',
-			value: 176.033
+			value: 0
 		}, {
 			name: 'Equatorial Guinea',
-			value: 696.167
+			value: 0
 		}, {
 			name: 'Greece',
-			value: 109.999
+			value: 1.1
 		}, {
 			name: 'Greenland',
-			value: 56.546
+			value: 0
 		}, {
 			name: 'Guatemala',
-			value: 141.576
+			value: 1.2
 		}, {
 			name: 'French Guiana',
-			value: 231.169
+			value: 0
 		}, {
 			name: 'Guyana',
-			value: 786.126
+			value: 0
 		}, {
 			name: 'Honduras',
-			value: 721.204
+			value: 0
 		}, {
 			name: 'Croatia',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Haiti',
-			value: 96.4
+			value: 1.3
 		}, {
 			name: 'Hungary',
-			value: 3
+			value: 0
 		}, {
 			name: 'Indonesia',
-			value: 4
+			value: 0
 		}, {
 			name: 'India',
-			value: 10
+			value: 0
 		}, {
 			name: 'Ireland',
-			value: 447.561
+			value: 1.4
 		}, {
 			name: 'Iran',
-			value: 1
+			value: 0
 		}, {
 			name: 'Iraq',
-			value: 1
+			value: 0
 		}, {
 			name: 'Iceland',
-			value: 318.042
+			value: 1.3
 		}, {
 			name: 'Israel',
-			value: 2
+			value: 0
 		}, {
 			name: 'Italy',
-			value: 608.978
+			value: 1.7
 		}, {
 			name: 'Jamaica',
-			value: 241.485
+			value: 2.1
 		}, {
 			name: 'Jordan',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Japan',
-			value: 152.833
+			value: 1.5
 		}, {
 			name: 'Kazakhstan',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Kenya',
-			value: 409.194
+			value: 2.1
 		}, {
 			name: 'Kyrgyzstan',
-			value: 0.1
+			value: 0.8
 		}, {
 			name: 'Cambodia',
-			value: 0.4
+			value: 0
 		}, {
 			name: 'South Korea',
-			value: 142.352
+			value: 2
 		}, {
 			name: 'Kosovo',
-			value: 97.743
+			value: 0
 		}, {
 			name: 'Kuwait',
-			value: 1
+			value: 0
 		}, {
 			name: 'Laos',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Lebanon',
-			value: 0.4
+			value: 0
 		}, {
 			name: 'Liberia',
-			value: 397.99
+			value: 0
 		}, {
 			name: 'Libya',
-			value: 40.612
+			value: 0
 		}, {
 			name: 'Sri Lanka',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Lesotho',
-			value: 208.921
+			value: 0
 		}, {
 			name: 'Lithuania',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Luxembourg',
-			value: 507.885
+			value: 0.8
 		}, {
 			name: 'Latvia',
-			value: 0.3
+			value: 0
 		}, {
 			name: 'Morocco',
-			value: 316.36
+			value: 1.4
 		}, {
 			name: 'Moldova',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Madagascar',
-			value: 219.532
+			value: 2.2
 		}, {
 			name: 'Mexico',
-			value: 186.404
+			value: 2.4
 		}, {
 			name: 'Macedonia',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Mali',
-			value: 135.961
+			value: 1.6
 		}, {
 			name: 'Myanmar',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Montenegro',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Mongolia',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Mozambique',
-			value: 267.265
+			value: 0
 		}, {
 			name: 'Mauritania',
-			value: 369.42
+			value: 0
 		}, {
 			name: 'Malawi',
-			value: 113.694
+			value: 0
 		}, {
 			name: 'Malaysia',
-			value: 5
+			value: 0
 		}, {
 			name: 'Namibia',
-			value: 217.967
+			value: 0
 		}, {
 			name: 'New Caledonia',
-			value: 246.379
+			value: 0
 		}, {
 			name: 'Niger',
-			value: 1593.746
+			value: 0
 		}, {
 			name: 'Nigeria',
-			value: 177.78
+			value: 1.3
 		}, {
 			name: 'Nicaragua',
-			value: 522.209
+			value: 0
 		}, {
 			name: 'Netherlands',
-			value: 615.243
+			value: 1.4
 		}, {
 			name: 'Norway',
-			value: 491.251
+			value: 1.7
 		}, {
 			name: 'Nepal',
-			value: 0.2
+			value: 0
 		}, {
 			name: 'New Zealand',
-			value: 438.136
+			value: 2.1
 		}, {
 			name: 'Oman',
-			value: 1
+			value: 0
 		}, {
 			name: 'Pakistan',
-			value: 1
+			value: 0
 		}, {
 			name: 'Panama',
-			value: 368.128
+			value: 2.2
 		}, {
 			name: 'Peru',
-			value: 292.83
+			value: 1.4
 		}, {
 			name: 'Philippines',
-			value: 944.322
+			value: 0
 		}, {
 			name: 'Papua New Guinea',
-			value: 858.945
+			value: 1.2
 		}, {
 			name: 'Poland',
-			value: 5
+			value: 0
 		}, {
 			name: 'Puerto Rico',
-			value: 370.671
+			value: 1.2
 		}, {
 			name: 'North Korea',
-			value: 1.468
+			value: 0
 		}, {
 			name: 'Portugal',
-			value: 189.792
+			value: 1.3
 		}, {
 			name: 'Paraguay',
-			value: 69.721
+			value: 0
 		}, {
 			name: 'Qatar',
-			value: 1
+			value: 0
 		}, {
 			name: 'Romania',
-			value: 2
+			value: 0
 		}, {
 			name: 'Russia',
-			value: 5
+			value: 0
 		}, {
 			name: 'Rwanda',
-			value: 136.732
+			value: 0
 		}, {
 			name: 'Western Sahara',
-			value: 514.648
+			value: 0
 		}, {
 			name: 'Saudi Arabia',
-			value: 5
+			value: 0
 		}, {
 			name: 'Sudan',
-			value: 352.002
+			value: 0
 		}, {
 			name: 'South Sudan',
-			value: 940.929
+			value: 0
 		}, {
 			name: 'Senegal',
-			value: 150.564
+			value: 0
 		}, {
 			name: 'Solomon Islands',
-			value: 526.447
+			value: 0
 		}, {
 			name: 'Sierra Leone',
-			value: 551.976
+			value: 0
 		}, {
 			name: 'El Salvador',
-			value: 618.195
+			value: 0
 		}, {
 			name: 'Somaliland',
-			value: 636.173
+			value: 0
 		}, {
 			name: 'Somalia',
-			value: 936.173
+			value: 0
 		}, {
 			name: 'Republic of Serbia',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Suriname',
-			value: 524.96
+			value: 0.9
 		}, {
 			name: 'Slovakia',
-			value: 2
+			value: 0
 		}, {
 			name: 'Slovenia',
-			value: 0.5
+			value: 0
 		}, {
 			name: 'Sweden',
-			value: 82.297
+			value: 1.8
 		}, {
 			name: 'Swaziland',
-			value: 1193.148
+			value: 0
 		}, {
 			name: 'Syria',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Chad',
-			value: 120.781
+			value: 1.3
 		}, {
 			name: 'Togo',
-			value: 66.014
+			value: 0
 		}, {
 			name: 'Thailand',
-			value: 5
+			value: 0
 		}, {
 			name: 'Tajikistan',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'Turkmenistan',
-			value: 541.995
+			value: 0
 		}, {
 			name: 'East Timor',
-			value: 116.797
+			value: 0
 		}, {
 			name: 'Trinidad and Tobago',
-			value: 128.095
+			value: 1.5
 		}, {
 			name: 'Tunisia',
-			value: 131
+			value: 0
 		}, {
 			name: 'Turkey',
-			value: 6
+			value: 1.8
 		}, {
 			name: 'United Republic of Tanzania',
-			value: 473.33
+			value: 0
 		}, {
 			name: 'Uganda',
-			value: 387.213
+			value: 0
 		}, {
 			name: 'Ukraine',
-			value: 1
+			value: 0
 		}, {
 			name: 'Uruguay',
-			value: 371.982
+			value: 0
 		}, {
 			name: 'United States of America',
-			value: 127.116
+			value: 2.6
 		}, {
 			name: 'Uzbekistan',
-			value: 0.3
+			value: 0
 		}, {
 			name: 'Venezuela',
-			value: 236.299
+			value: 1.3
 		}, {
 			name: 'Vietnam',
-			value: 5
+			value: 2.2
 		}, {
 			name: 'Vanuatu',
-			value: 236.299
+			value: 0
 		}, {
 			name: 'West Bank',
-			value: 13.565
+			value: 0
 		}, {
 			name: 'Yemen',
-			value: 0.2
+			value: 0
 		}, {
 			name: 'South Africa',
-			value: 51452.352
+			value: 0
 		}, {
 			name: 'Zambia',
-			value: 216.985
+			value: 0
 		}, {
 			name: 'Zimbabwe',
-			value: 3076.978
+			value: 0
 		},
 		//里面没有的
 		{
 			name: 'The United Arab Emirates',
-			value: 6
+			value: 0
 		},
 		{
 			name: 'Palestine',
-			value: 0.1
+			value: 0
 		},
 		{
 			name: 'Bahrain',
-			value: 0.4
+			value: 1.6
 		},
 		{
 			name: 'Timor-Leste',
-			value: 0.1
+			value: 0
 		}, {
 			name: 'The Philippines',
-			value: 0.3
+			value: 0
 		}, {
 			name: 'Maldives',
-			value: 0.1
+			value: 0
 		}, {
 			name: "The People's Republic of Bangladesh",
-			value: 1
+			value: 0
 		}, {
 			name: 'Turkmenistan',
-			value: 0.1
+			value: 0
 		}, {
 			name: "Singapore",
-			value: 8
+			value: 0
 		},
 	];
 
@@ -756,7 +756,7 @@ window.onload = function() {
 		'Estonia': '爱沙尼亚',
 		'Ethiopia': '埃塞俄比亚',
 		'Finland': '芬兰',
-		'Fiji': '斐',
+		'Fiji': '斐济',
 		'Falkland Islands': '福克兰群岛',
 		'France': '法国',
 		'Gabon': '加蓬',
@@ -1023,7 +1023,111 @@ window.onload = function() {
 		},
 		series: series
 	};
-	chart.setOption(option);
+
+	var option111 = {
+		title: {
+			text: '全球采购商分布图',
+			x: '5%',
+			y: '80%',
+			textStyle: {
+				color: 'white',
+				fontSize: 14,
+				fontWeight: 100,
+				fontFamily: '宋体'
+			},
+		},
+		tooltip: {
+			trigger: 'item',
+			formatter: function(params) {
+				return nameMap[params.name] + '<br/>' + '采购商' + ':' + params.data.value + '万';
+			},
+		},
+		//		toolbox: {
+		//			show: true,
+		//			orient: 'vertical',
+		//			left: 'right',
+		//			top: 'center',
+		//			feature: {
+		//				dataView: {
+		//					readOnly: false
+		//				},
+		//				restore: {},
+		//				saveAsImage: {}
+		//			}
+		//		},
+		visualMap: {
+			min: 0,
+			max: 3,
+			text: ['High', 'Low'],
+			realtime: false,
+			calculable: true,
+			inRange: {
+				color: ['skyblue', 'lightgreen', '#f66']
+			}
+		},
+		series: [{
+				name: '贸易' + ' Top15',
+				type: 'effectScatter',
+				coordinateSystem: 'geo',
+				zlevel: 2,
+				rippleEffect: {
+					brushType: 'stroke',
+					scale: 6,
+					color: 'red'
+				},
+				tooltip: {
+					show: false
+				},
+				label: {
+					//地名
+					normal: {
+						show: false,
+						position: 'right',
+						formatter: '{b}',
+						shadowBlur: 2,
+						shadowColor: 'rgba(255, 255, 255, 0.8)',
+					}
+				},
+				symbolSize: function(val) {
+					return val[2] / 10;
+				},
+				itemStyle: {
+					normal: {
+						color: 'yellow',
+						shadowBlur: 100,
+						shadowColor: 'rgba(255, 255, 255, 0.8)',
+					}
+				}
+//				,
+//				data: item[1].map(function(dataItem) {
+//					return {
+//						name: dataItem[1].name,
+//						value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
+//						//value:geoCoordMap[dataItem[1].name]
+//
+//					};
+//
+//				})
+			}
+
+			, {
+				name: 'World Population (2010)',
+				type: 'map',
+				mapType: 'world',
+				roam: true,
+				itemStyle: {
+					emphasis: {
+						label: {
+							show: false
+						}
+					}
+				},
+				data: mapData
+			}
+		]
+	};
+
+	chart.setOption(option111);
 	//点击地图跳转
 	chart.on('click', function(params) {
 		var country = params.name;
@@ -1701,14 +1805,14 @@ window.onload = function() {
 		var step2 = 0;
 
 		function fn() {
-//			if(step1 == -282)(step1 = 0);
+			//			if(step1 == -282)(step1 = 0);
 			if(step1 == -292)(step1 = 0);
 			step1 -= 1;
 			tb1.style.top = step1 + 'px';
 		}
 
 		function fn2() {
-//			if(step2 == -282)(step2 = 0);
+			//			if(step2 == -282)(step2 = 0);
 			if(step2 == -292)(step2 = 0);
 			step2 -= 1;
 			tb2.style.top = step2 + 'px';
@@ -1719,20 +1823,20 @@ window.onload = function() {
 		var tr1 = document.querySelectorAll('.tble-left tr');
 		var tr2 = document.querySelectorAll('.tble-right tr');
 
-//		function ff(obj, num, count) {
-//			for(var i = 0; i < obj.length; i++) {
-//				for(var j = 0; j < i; j++) {
-//					obj[i].onmouseover = function() {
-//						clearInterval(num);
-//					}
-//					obj[j].onmouseleave = function() {
-//						num = setInterval(count, 50);
-//					}
-//				}
-//			}
-//		}
-//		ff(tr1, t1, fn);
-//		ff(tr2, t2, fn2);
+		//		function ff(obj, num, count) {
+		//			for(var i = 0; i < obj.length; i++) {
+		//				for(var j = 0; j < i; j++) {
+		//					obj[i].onmouseover = function() {
+		//						clearInterval(num);
+		//					}
+		//					obj[j].onmouseleave = function() {
+		//						num = setInterval(count, 50);
+		//					}
+		//				}
+		//			}
+		//		}
+		//		ff(tr1, t1, fn);
+		//		ff(tr2, t2, fn2);
 	})
 
 	//各个图表的点击跳转
@@ -1750,12 +1854,12 @@ window.onload = function() {
 		window.location.href = "buyer_of_China/buyer_of_China.html";
 	}
 
-//	//font-change
-//		$(window).resize(function() {
-//			var x = $(window).innerWidth();
-//			var px = (100 * x) / 2400;
-//			$("html").css("font-size", px + 'px')
-//		});
+	//	//font-change
+	//		$(window).resize(function() {
+	//			var x = $(window).innerWidth();
+	//			var px = (100 * x) / 2400;
+	//			$("html").css("font-size", px + 'px')
+	//		});
 
 }
 
@@ -1772,7 +1876,7 @@ function jh(data) {
 
 //
 var atop = 0;
-var jinritimer = setInterval(jinri,150)
+var jinritimer = setInterval(jinri, 150)
 
 function jinri() {
 	if(atop < -170) {
@@ -1783,10 +1887,10 @@ function jinri() {
 
 }
 $('.jinriwaihui ul li').hover(function() {
-//	clearInterval(jinritimer);
+	//	clearInterval(jinritimer);
 	console.log($(this).index('.jinriwaihui ul li'))
 	$('.jinriwaihui ul li').eq($(this).index('.jinriwaihui ul li')).css('color', 'orange')
 }, function() {
-//	jinritimer = setInterval(jinri, 90)
+	//	jinritimer = setInterval(jinri, 90)
 	$('.jinriwaihui ul li').css("color", "white")
 })

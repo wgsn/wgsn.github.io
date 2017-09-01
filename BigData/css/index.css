@@ -860,7 +860,7 @@ tbody{
 .trade_icon {
 	position: absolute;
 	top: 0;
-	left: 2%;
+	left: 1%;
 	width: 10%;
 	height: 10%px;
 	text-align: center;
@@ -885,8 +885,8 @@ tbody{
 .right_trade>div {
 	float: left;
 	width: 47.5%;
-	height: 46%;
-	margin-bottom: 3%;
+	height: 48%;
+	margin-bottom: 2%;
 	background: #4C5864;
 	border-radius: 4px;
 	float: left;
@@ -894,6 +894,15 @@ tbody{
 	font-size: 0.12rem;
 	position: relative;
 }
+.right_trade>.boxes p{
+	padding-left: 5% ;
+	margin-bottom: 0.03rem;
+}
+.right_trade>.boxes p:nth-of-type(1){
+	padding-left: 0 ;
+	margin-bottom: 0.02rem;
+}
+
 
 .right_trade>div:nth-child(1) {
 	margin-right: 4%;
@@ -913,11 +922,15 @@ tbody{
 }
 
 .right_trade>div p:nth-child(1) {
-	font-size: 0.12rem;
-	width: 94%;
-	text-indent: 8%;
-	border-bottom: 1px solid white;
-	margin-bottom: 3%;
+	font-size: 0.13rem;
+	height: 0.22rem;
+	line-height: 0.22rem;
+    width: 94%;
+    /* text-indent: 8%; */
+    /*text-align: center;*/
+    border-bottom: 1px solid white;
+    margin-bottom: 3%;
+    margin-left: 5%;
 }
 
 .map,.chart_top,.left_pie,.center_chart_left,.center_chart_right,.right_trade>div{
@@ -946,6 +959,7 @@ tbody{
 	width:100%;
 }
 .jinriwaihui ul{
+	padding-left: 5%;
 	margin-top: 10px;
 }
 /***********************footer*********************************/
