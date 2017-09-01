@@ -33,7 +33,7 @@ function fn (){
 	 
 
 	  
-//	    document.querySelectorAll('.span1')[0].innerHTML = str1;
+	    $('.span1').html(str1);
 //	
 
              var arrq=[b,mm];
@@ -41,14 +41,6 @@ function fn (){
 	
 }
 var fn1=fn();
-
-//var oFooter = document.querySelectorAll(".footer")[0];
-//oFooter.innerHTML = ""
-//var oSpan = oFooter.querySelectorAll("span");
-//console.log(oSpan)
-//for (var i = 0; i < oSpan.length; i++) {
-//	oSpan[i].innerHTML =""
-//}
 
 
 	
