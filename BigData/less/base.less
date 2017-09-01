@@ -1,0 +1,88 @@
+@charset "utf-8";
+//一些兼容性的处理
+@baseColor: rgba(255,255,255,1);
+@fontColor: rgba(0,0,0,1);
+@commonColor: orange;
+.border(@x:1px, @style:solid, @color:#000) {
+    border: @arguments;
+}
+
+
+
+
+
+.displayflex() {
+    display: -webkit-flex;
+    display: flex;
+}
+.displaybox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: box;
+}
+
+.flex(@pecent:1) {
+    -webkit-flex: @pecent;
+    -moz-flex: @pecent;
+    -ms-flex: @pecent;
+    -o-flex: @pecent;
+    flex: @pecent;
+}
+.border-radius (@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+.transform(@perspective:perspective(0px), @translate:translate3d(0, 0, 0), @rotate:rotate3d(0, 0, 0), @scale:scale(1)) {
+    -webkit-transform: @arguments;
+    -moz-transform: @arguments;
+    -ms-transform: @arguments;
+    -o-transform: @arguments;
+    transform: @arguments;
+}
+
+
+
+.animation(@name, @duration, @timing-function:ease, @delay:0, @count:1, @direction:normal, @state:running, @fill-mode:both) {
+    -webkit-animation: @arguments;
+    -moz-animation: @arguments;
+    -o-animation: @arguments;
+    animation: @arguments;
+}
+.transform-style() {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.perspective(@x) {
+    -webkit-perspective: @x;
+    -moz-perspective: @x;
+    -ms-perspective: @x;
+    perspective: @x;
+}
+/*万能清除浮动1*/
+.clearfix:after {
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+/*万能清除浮动2*/
+.fix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.fix {
+    zoom: 1;
+}

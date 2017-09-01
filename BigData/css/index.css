@@ -483,6 +483,9 @@ footer ul li {
 }
 
 }
+
+
+
 /******************************************************************************/
 @media only screen and (min-width: 1025px) and (max-width: 1599px) {
 	
@@ -748,9 +751,9 @@ header>div:nth-child(2) {
 }
 
 .tbletitle{
-	width: 90%;
+	width: 95%;
 	height: 12%;
-	border-left: 7px solid #AAABAB;
+	/*border-left: 7px solid #AAABAB;*/
 	margin-bottom: 1%;
 	margin: 0 auto;
 }
@@ -766,7 +769,7 @@ header>div:nth-child(2) {
 }
 .tbletitle>p:nth-child(1) {
 	background: #71A5BD;
-	width: 33%;
+	width: 35%;
 	text-align: center;
 	
 }
@@ -778,12 +781,12 @@ header>div:nth-child(2) {
 
 .tbletitle>p:nth-child(3) {
 	background: #B54C7D;
-	width:18%;
+	width:17%;
 }
 
 .tbletitle>p:nth-child(4) {
 	background: #B54C7D;
-	width: 18%;
+	width: 17%;
 	border-left: 1px solid gainsboro;
 }
 .tble-wrap{
@@ -794,13 +797,14 @@ header>div:nth-child(2) {
 	
 }
 .tble{
-	width: 90%;
+	width: 95%;
 	height: 100%;
 	border-collapse: collapse;
-	padding-left: 2px;
+	/*padding-left: 2px;*/
+	/*margin: 0 auto;*/
 	position: absolute;
 	top:1%;
-	left: 5%;
+	left: 3%;
 	z-index: 1000;
 	
 }
@@ -810,7 +814,7 @@ tbody{
 
 
 .tble_red{
-	border-left: 6px solid #E23A0F!important;
+	/*border-left: 6px solid #E23A0F!important;*/
 }
 .tble tr td:nth-child(1) {
 	margin-left: 2px;
@@ -821,7 +825,7 @@ tbody{
 	font-size: 0.12rem;
 	margin: 9px 0;
 	display: block;
-	border-left: 6px solid #AAABAB;
+	/*border-left: 6px solid #AAABAB;*/
 	
 }
 
@@ -856,7 +860,7 @@ tbody{
 .trade_icon {
 	position: absolute;
 	top: 0;
-	left: 8%;
+	left: 2%;
 	width: 10%;
 	height: 10%px;
 	text-align: center;
@@ -886,7 +890,7 @@ tbody{
 	background: #4C5864;
 	border-radius: 4px;
 	float: left;
-	padding: 5px 0 5px 40px;
+	padding: 0.05rem 0 0.05rem 0.12rem;
 	font-size: 0.12rem;
 	position: relative;
 }
@@ -909,8 +913,8 @@ tbody{
 }
 
 .right_trade>div p:nth-child(1) {
-	font-size: 0.14rem;
-	width: 89%;
+	font-size: 0.12rem;
+	width: 94%;
 	text-indent: 8%;
 	border-bottom: 1px solid white;
 	margin-bottom: 3%;

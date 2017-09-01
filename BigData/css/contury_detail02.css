@@ -86,10 +86,10 @@ body{
 	margin-right:10%;
 	transition:all 2s;
 }
-.national_flag:hover{
+/*.national_flag:hover{
 	cursor:pointer;
 	transform:translateX(-20px);
-}
+}*/
 .national_flag span{
 	width:100%;
 	height:23%;

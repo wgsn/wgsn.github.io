@@ -436,15 +436,22 @@
 
 
 //			
-			_wrap.hover(function() {
+			/*_wrap.hover(function() {
 
 				
-				clearInterval(_moving); //当鼠标在滚动区域中时,停止滚动
+//				clearInterval(_moving); //当鼠标在滚动区域中时,停止滚动
 			
 			    clearInterval(lol);
 				
 			}, function() {
-				_moving = setInterval(function() {
+				
+				
+
+			
+			}).trigger('mouseleave'); //函数载入时,模拟执行mouseleave,即自动滚动*/
+			
+			
+			_moving = setInterval(function() {
 					var _field = _wrap.find('.Si-Yi:first'); //此变量不可放置于函数起始处,li:first取值是变化的
 					var _h = _field.height(); //取得每次滚动高度
 					_field.animate({
@@ -454,20 +461,9 @@
 					})
 
 				}, _interval); //滚动间隔时间取决于_interval
-				
-
-			
-			}).trigger('mouseleave'); //函数载入时,模拟执行mouseleave,即自动滚动
 			
 			
-
 			
-			
-			_wrapp.hover(function() {
-				clearInterval(_movingg); //当鼠标在滚动区域中时,停止滚动
-				clearInterval(loll);
-			}, function() {
-				
 			_movingg = setInterval(function() {
 		        	var _fieldd = _wrapp.find('.Si-Yi:first'); //此变量不可放置于函数起始处,li:first取值是变化的
 					var _h = _fieldd.height(); //取得每次滚动高度
@@ -478,10 +474,19 @@
 						_fieldd.css('marginTop', '6px').appendTo(_wrapp); //隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
 					})
 					}, _interval); //滚动间隔时间取决于_interval
+			
+			
+			
+			/*_wrapp.hover(function() {
+//				clearInterval(_movingg); //当鼠标在滚动区域中时,停止滚动
+				clearInterval(loll);
+			}, function() {
+				
+			
 					
 
 			
-			}).trigger('mouseleave'); //函数载入时,模拟执行mouseleave,即自动滚动	
+			}).trigger('mouseleave'); //函数载入时,模拟执行mouseleave,即自动滚动	*/
 			
 })
 	</script>
