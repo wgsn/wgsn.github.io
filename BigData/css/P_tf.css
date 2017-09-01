@@ -1,0 +1,39 @@
+    .top{
+    	text-align: center;
+		color:#FFF;
+		height: 8%;
+		line-height: 0.48rem;
+		position: relative;
+    }
+    .top p {
+		display: inline-block;
+
+	}
+	.top .right {
+		font-size: 0.12rem;
+		position: absolute;
+		top: 0;
+		right: 20%;
+	}
+	.top .mid {
+		padding: 0 6%;
+		font-size: 0.24rem;
+		
+	}
+	.footer {
+		font-size: 0.12rem;
+		color:#fff;
+		text-align: center;
+		height: 0.3rem;
+        line-height: 0.3rem;
+
+	}
+	.footer span {
+		margin-left: 2%;
+		margin-right: 3%;
+	}
+  @media screen and (max-width:1024px){
+  	.top{
+  		line-height: 0.55rem;
+  	}
+  }

@@ -400,6 +400,7 @@ option = {
         axisPointer: {
             type: 'shadow'
         },
+        formatter: '{b}<br />{a}: {c}%'
        
     },
     legend: {
@@ -409,7 +410,9 @@ option = {
         left: '3%',
         right: '4%',
         bottom: '3%',
-        containLabel: true
+        containLabel: true,
+        height:'75%'
+        
     },
    
     xAxis: {
@@ -449,7 +452,7 @@ option = {
     ],
     series: [
         {
-            name: '2011年',
+            name: '2017年',
             type: 'bar',
             data: [2, 8, 20, 30,39,]
         },
