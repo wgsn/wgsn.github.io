@@ -1713,8 +1713,8 @@ window.onload = function() {
 			step2 -= 1;
 			tb2.style.top = step2 + 'px';
 		}
-		var t1 = setInterval(fn, 5);
-		var t2 = setInterval(fn2, 5);
+		var t1 = setInterval(fn, 50);
+		var t2 = setInterval(fn2, 50);
 
 		var tr1 = document.querySelectorAll('.tble-left tr');
 		var tr2 = document.querySelectorAll('.tble-right tr');
