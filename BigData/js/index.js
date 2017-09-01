@@ -1307,7 +1307,8 @@ window.onload = function() {
 				},
 				formatter: function(params, ticket, callback) {
 
-					for(var i = 0, l = params.length; i < l; i++) {
+					console.log(countryData[i]);
+					for(var i = 0; i < params.length; i++) {
 						res = '本月询盘数量top3国家：' + '<br/>' + countryData[i] + params[i].seriesName + ' : ' + params[i].value;
 					}
 					setTimeout(function() {
@@ -1359,7 +1360,7 @@ window.onload = function() {
 					type: 'bar',
 					stack: '总量',
 					barWidth: '30%',
-					data: [1580, 1550, 1560, 1650, 1580, 1520, 1480, 1450, 1710, 1680, 1520, 1450]
+					data: [1580, 1550, 1560, 1650, 1580, 1520, 1480, 1450, 0, 0, 0, 0]
 				},
 				{
 					name: '同期环比',

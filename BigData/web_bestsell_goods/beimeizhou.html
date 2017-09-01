@@ -1045,7 +1045,7 @@ mapdivhe2world .setOption(option);
 			height: '65%',
 			title: {
 				text: '北美洲热销产品采购量趋势图',
-				subtext: '        产品定价                      ',
+//				subtext: '        产品定价                      ',
 				subtextStyle: {
 					fontWeight: 'normal',
 					fontFamily: '宋体',
@@ -1310,6 +1310,8 @@ mapdivhe2world .setOption(option);
 				},
 				data: [280,280,280,280,280,280,380,280,0,0,0,0]
 			}, ]
+		
+		
 		};
 		mapzhexian3.setOption(option);
 
@@ -1322,7 +1324,7 @@ mapdivhe2world .setOption(option);
 				height: '65%',
 				title: {
 					text: '北美洲热销产品采购量趋势图',
-					subtext: '     产品定价                            ',
+//					subtext: '     产品定价                            ',
 					subtextStyle: {
 						fontWeight: 'normal',
 						fontFamily: '宋体',
@@ -1393,7 +1395,7 @@ mapdivhe2world .setOption(option);
 				yAxis: [{
 					min: 0,
 					max: 450,
-					interval: 500,
+					interval: 100,
 					type: 'value',
 					axisTick: {
 						show: true,
@@ -1419,9 +1421,9 @@ mapdivhe2world .setOption(option);
 				}, {
 					type: 'value',
 
-					max: 10.0,
-					min: -10.0,
-					interval: 5.0,
+					max: 450,
+					min: 0,
+					interval: 100,
 					splitLine: {
 						show: false
 					},
@@ -1586,6 +1588,8 @@ mapdivhe2world .setOption(option);
 					},
 					data: [280,280,280,280,280,280,380,280,0,0,0,0]
 				}, ]
+			
+			
 			};
 			mapdivhe3.setOption(option);
 		}

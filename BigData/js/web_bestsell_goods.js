@@ -721,7 +721,7 @@ mapdivhe2world .setOption(option);
 			height: '65%',
 			title: {
 				text: '产品定价分析',
-				subtext: '        产品定价                      ',
+//				subtext: '        产品定价                      ',
 				subtextStyle: {
 					fontWeight: 'normal',
 					fontFamily: '宋体',
@@ -996,7 +996,7 @@ mapdivhe2world .setOption(option);
 				height: '65%',
 				title: {
 					text: '产品定价分析',
-					subtext: '     产品定价                            ',
+//					subtext: '     产品定价                            ',
 					subtextStyle: {
 						fontWeight: 'normal',
 						fontFamily: '宋体',

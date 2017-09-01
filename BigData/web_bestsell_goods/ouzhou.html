@@ -1047,7 +1047,7 @@ mapdivhe2world .setOption(option);
 			height: '65%',
 			title: {
 				text: '欧洲热销产品采购量趋势图',
-				subtext: '        产品定价                      ',
+//				subtext: '        产品定价                      ',
 				subtextStyle: {
 					fontWeight: 'normal',
 					fontFamily: '宋体',
@@ -1114,9 +1114,9 @@ mapdivhe2world .setOption(option);
 				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月', '9月','10月', '11月', '12月']
 			}],
 			yAxis: [{
-				min: -5,
-				max: 15,
-				interval: 5,
+				min: 0,
+				max: 450,
+				interval: 100,
 				type: 'value',
 				axisTick: {
 					show: true,
@@ -1142,9 +1142,9 @@ mapdivhe2world .setOption(option);
 			}, {
 				type: 'value',
 
-				max: 10.0,
-				min: -10.0,
-				interval: 5.0,
+				max: 450,
+				min: 0,
+				interval: 100,
 				splitLine: {
 					lineStyle: {
 						color: '#515e6d',
@@ -1198,7 +1198,7 @@ mapdivhe2world .setOption(option);
 						color: 'rgb(137,189,27)'
 					}
 				},
-				data: [3.2, 3.67, 3.88, 5.38, 3.08,2.99, 3.75,4.08,5.45,3.08,3.23,3.77]
+				data: [270,200,270,240,270,290,140,150,0,0,0,0]
 			}, {
 				name: '大型机械',
 				type: 'line',
@@ -1226,7 +1226,7 @@ mapdivhe2world .setOption(option);
 						color: 'rgb(0,136,212)'
 					}
 				},
-				data: [3.25, 3.6 ,2.8, 3.04, 4.15, 3.65 ,2.6, 2.84, 3.33 ,4.15, 3.23]
+				data: [250,350,250,280,250,350,280,350,0,0,0,0]
 			}, {
 				name: '家电',
 				type: 'line',
@@ -1254,7 +1254,7 @@ mapdivhe2world .setOption(option);
 						color: 'rgb(219,50,251)'
 					}
 				},
-				data: [4.98, 4.49, 3.06, 3.26, 4.98, 4.08, 4.23, 4.96,4.43]
+				data: [290,290,290,290,290,390,390,290,0,0,0,0]
 			}, {
 				name: '轻工业',
 				type: 'line',
@@ -1282,7 +1282,7 @@ mapdivhe2world .setOption(option);
 						color: 'rgb(243,140,61)'
 					}
 				},
-				data: [4.31,5.12, 5.05, 4.16,4.81, 6.11, 5.05, 4.69, 4.59, 4.81, 4.29, 5.01]
+				data: [160,220,160,360,260,360,360,220,0,0,0,0]
 			}, {
 				name: '纺织服装',
 				type: 'line',
@@ -1310,7 +1310,7 @@ mapdivhe2world .setOption(option);
 						color: 'rgb(128,171,204)'
 					}
 				},
-				data: [3.62, 4.69, 4.89, 5.13, 5.06, 5.36, 4.89, 5.28, 5.29, 5.06, 3.62, 4.59]
+				data: [220,220,220,220,320,320,320,320,200,0,0,0,0]
 			}, ]
 		};
 		mapzhexian3.setOption(option);
@@ -1324,7 +1324,7 @@ mapdivhe2world .setOption(option);
 				height: '65%',
 				title: {
 					text: '欧洲热销产品采购量趋势图',
-					subtext: '     产品定价                            ',
+//					subtext: '     产品定价                            ',
 					subtextStyle: {
 						fontWeight: 'normal',
 						fontFamily: '宋体',
@@ -1394,8 +1394,8 @@ mapdivhe2world .setOption(option);
 			}],
 				yAxis: [{
 					min: 0,
-					max: 2000,
-					interval: 500,
+					max: 450,
+					interval: 100,
 					type: 'value',
 					axisTick: {
 						show: true,
@@ -1421,9 +1421,9 @@ mapdivhe2world .setOption(option);
 				}, {
 					type: 'value',
 
-					max: 10.0,
-					min: -10.0,
-					interval: 5.0,
+					max: 450,
+					min: 0,
+					interval: 100,
 					splitLine: {
 						show: false
 					},
@@ -1474,7 +1474,7 @@ mapdivhe2world .setOption(option);
 							color: 'rgb(137,189,27)'
 						}
 					},
-					data: [960.3, 960.4, 907.5, 905.6, 980.1, 940.8, 890.6, 940.1, 800.1, 520.4, 750.8, 940.7]
+					data: [270,200,270,240,270,290,140,150,0,0,0,0]
 				}, {
 					name: '大型机械',
 					type: 'line',
@@ -1502,7 +1502,7 @@ mapdivhe2world .setOption(option);
 							color: 'rgb(0,136,212)'
 						}
 					},
-					data: [970.3, 909.2, 909.3, 1000.0, 990.6, 900.6, 800.0, 910.5, 690.8, 670.5, 900.4, 840.9]
+					data: [250,350,250,280,250,350,280,350,0,0,0,0]
 				}, {
 					name: '家电',
 					type: 'line',
@@ -1530,7 +1530,7 @@ mapdivhe2world .setOption(option);
 							color: 'rgb(219,50,251)'
 						}
 					},
-					data: [840.2, 801.0, 607.5, 702.1, 430.7, 808.5, 901.9, 101.8, 790.7, 870.6, 920.9, 0]
+					data: [290,290,290,290,290,390,390,290,0,0,0,0]
 				}, {
 					name: '轻工业',
 					type: 'line',
@@ -1558,7 +1558,7 @@ mapdivhe2world .setOption(option);
 							color: 'rgb(243,140,61)'
 						}
 					},
-					data: [840.2, 810.0, 607.5, 702.1, 403.7, 880.5, 901.9, 101.8, 709.7, 807.6, 902.9, 0]
+					data: [160,220,160,360,260,360,360,220,0,0,0,0]
 				}, {
 					name: '纺织服装',
 					type: 'line',
@@ -1586,7 +1586,7 @@ mapdivhe2world .setOption(option);
 							color: 'rgb(128,171,204)'
 						}
 					},
-					data: [804.2, 801.0, 607.5, 700.1, 403.7, 808.5, 901.9, 101.8, 790.7, 807.6, 902.9, 0]
+					data: [220,220,220,220,320,320,320,320,200,0,0,0,0]
 				}, ]
 			};
 			mapdivhe3.setOption(option);

@@ -1,28 +1,7 @@
-
+     var yM  = 'http://dsj.lzxqxx.com/';
 	 var str1="";
  
-//
-//	function getD(data){
-//			 console.log(data)
-//		 var d=data.results[0];
-//		
-//		  var str2="";
-//		   var str3="";
-//		   var bb="";
-//		 var w=d.weather_data;
-//
-//	   	str2=" 温度："+w[0].temperature;
-//		 	str3="天气："+w[0].weather;
-//          $('.span2').html(str2);
-//          $('.span3').html(str3);
-//          
-// 
-//		  		
-//		  
-//
-//	}
-//	
-//	
+
 
 	
 	setInterval(fn,1000)
@@ -54,8 +33,7 @@ function fn (){
 	 
 
 	  
-	    $('.span1').html(str1);
-	    $(".riqi").html(yy+"年"+mm+"月"+tiant+"日");
+	    document.querySelectorAll('.span1')[0].innerHTML = str1;
 //	
 
              var arrq=[b,mm];
@@ -63,6 +41,14 @@ function fn (){
 	
 }
 var fn1=fn();
+
+var oFooter = document.querySelectorAll(".footer")[0];
+oFooter.innerHTML = ""
+//var oSpan = oFooter.querySelectorAll("span");
+//console.log(oSpan)
+//for (var i = 0; i < oSpan.length; i++) {
+//	oSpan[i].innerHTML =""
+//}
 
 
 	

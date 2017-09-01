@@ -727,7 +727,7 @@ option = {
             name:'成交量',
             type:'bar',
             barWidth:'15',
-            data:[9, 13,11, 10, 12, 9, 11, 12, 13, 12, 10, 9],
+            data:[9, 13,11, 10, 12, 9, 11, 12,,0,0,0,0],
              itemStyle: {
             normal: {
                 color: '#e94f2e',
@@ -765,7 +765,7 @@ option = {
                 color: 'rgb(128,171,204)',
             }
         },
-        data: [0.4,0.5,0.7,0.5,0.6,0.5,0.4,0.7,0.6,0.5,0.4,0.6]
+        data: [0.4,0.5,0.7,0.5,0.6,0.5,0.4,0.7,0,0,0,0]
     }, ]
    
 };
@@ -776,7 +776,7 @@ option = {
 			var myChart = echarts.init(document.getElementById('box3'));
 	option = {
     title : {
-        text: '澳大利亚产品偏好程度(%)',
+        text: '澳大利亚采购产品占比(%)',
         textStyle:{
             color:'white',
             fontSize:'10'
@@ -1369,7 +1369,7 @@ option = {
 				name: '成交量',
 				type: 'bar',
 				barWidth: '15',
-				data:[9, 13,11, 10, 12, 9, 11, 12, 13, 12, 10, 9],
+				data:[9, 13,11, 10, 12, 9, 11, 12,0,0,0,0],
 				itemStyle: {
 					normal: {
 						color: '#e94f2e',
@@ -1406,7 +1406,7 @@ option = {
 						color: 'rgb(128,171,204)',
 					}
 				},
-				data: [0.4,0.5,0.7,0.5,0.6,0.5,0.4,0.7,0.6,0.5,0.4,0.6]
+				data: [0.4,0.5,0.7,0.5,0.6,0.5,0.4,0.7,0,0,0,0]
 			}, ]
 
 		};
@@ -1419,7 +1419,7 @@ option = {
 		var myChart = echarts.init(document.getElementById('box3_big'));
 		option = {
 			title: {
-				text: '澳大利亚产品偏好程度(%)',
+				text: '澳大利亚采购产品占比(%)',
 				textStyle: {
 					color: 'white',
 					fontSize: '30'

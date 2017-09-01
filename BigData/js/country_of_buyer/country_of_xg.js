@@ -725,7 +725,7 @@ option = {
             name:'成交量',
             type:'bar',
             barWidth:'15',
-            data:[12, 11,12, 15, 11, 11, 12, 14, 15, 13, 12, 11],
+            data:[12, 11,12, 15, 11, 11, 12, 14, 0,0,0,0],
              itemStyle: {
             normal: {
                 color: '#e94f2e',
@@ -763,7 +763,7 @@ option = {
                 color: 'rgb(128,171,204)',
             }
         },
-        data: [0.4,0.5,0.6,0.4,0.3,0.6,0.4,0.2,0.1,0.6,0.8,0.4]
+        data: [0.4,0.5,0.6,0.4,0.3,0.6,0.4,0.2,0,0,0,0]
     }, ]
    
 };
@@ -774,7 +774,7 @@ option = {
 			var myChart = echarts.init(document.getElementById('box3'));
 	option = {
     title : {
-        text: '香港产品偏好程度(%)',
+        text: '香港采购产品占比(%)',
         textStyle:{
             color:'white',
             fontSize:'10'
@@ -1367,7 +1367,7 @@ option = {
 				name: '成交量',
 				type: 'bar',
 				barWidth: '15',
-				data:[12, 11,12, 15, 11, 11, 12, 14, 15, 13, 12, 11],
+				data:[12, 11,12, 15, 11, 11, 12, 14, 0,0,0,0],
 				itemStyle: {
 					normal: {
 						color: '#e94f2e',
@@ -1404,7 +1404,7 @@ option = {
 						color: 'rgb(128,171,204)',
 					}
 				},
-				data: [0.4,0.5,0.6,0.4,0.3,0.6,0.4,0.2,0.1,0.6,0.8,0.4]
+				data: [0.4,0.5,0.6,0.4,0.3,0.6,0.4,0.2,0,0,0,0]
 			}, ]
 
 		};
@@ -1417,7 +1417,7 @@ option = {
 		var myChart = echarts.init(document.getElementById('box3_big'));
 		option = {
 			title: {
-				text: '香港产品偏好程度(%)',
+				text: '香港采购产品占比(%)',
 				textStyle: {
 					color: 'white',
 					fontSize: '30'

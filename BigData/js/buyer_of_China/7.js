@@ -473,7 +473,7 @@ option[0] = {
 			option[1] = {
     backgroundColor: '#3d3734',
 //  width:'100%',
-    height:'40%',
+    height:'35%',
     title: {
         text: 'top10供应商上线走势图(单位:家)',
         textStyle: {
@@ -696,7 +696,7 @@ option[0] = {
 								}
 							},
                             barWidth:'26%',
-                            data:[581, 872, 782, 2561, 2235, 1859, 1785, 1633, 2011, 3054, 3199, 852]
+                            data:[581, 872, 782, 2561, 2235, 1859, 1785, 1633, 0,0,0,0]
                         },
                         {
                             name:'同期环比曲线',
@@ -715,7 +715,7 @@ option[0] = {
 					            }
 					        },
                             yAxisIndex: 1,
-                            data:[0.5,0.6,0.4,0.5,0.7,0.7,0.8,0.8,0.5,0.6,0.4,0.5]
+                            data:[0.5,0.6,0.4,0.5,0.7,0.7,0.8,0.8,0,0,0,0]
                         }
                     ]
           }; 
@@ -744,7 +744,7 @@ option[0] = {
 		        width: '8%',
 		        height: '70%',
 		        align:'left',
-		        right:'15%',
+		        right:'0%',
 		        top:'20%',
 		        orient:'vertical',
 		        data:['电子及家电','纺织服装、鞋','办公箱包','化工','休闲用品','其他'],
@@ -758,10 +758,10 @@ option[0] = {
 		    calculable : true,
 		    series : 
 		        {
-		            name:'面积模式',
+		            name:'热销产品占比',
 		            type:'pie',
 		            radius : '70%',
-		            center : ['35%', '60%'],
+		            center : ['26%', '60%'],
 		            roseType : 'area',
 		              label: {
 		                normal: {
