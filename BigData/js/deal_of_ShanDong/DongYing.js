@@ -83,57 +83,57 @@ $.getJSON('../js/shandong.json', function(data) {
 			Liang.setOption(option);
 			Liang.on('click',function(params){
             var city = params.name;
-            if( city == '威海市'){
-            	window.location.href = 'HaiWei.html';
-            }
-            if(city == '烟台市'){
-            	window.location.href = 'YanTai.html';
-            }
-            if(city == '东营市'){
-            	window.location.href = 'DongYing.html';
-            }
-            if(city == '滨州市'){
-            	window.location.href = 'BingZhou.html';
-            }
-            if(city == '德州市'){
-            	window.location.href = 'DeZho.html';
-            }
-            if(city == '济南市'){
-            	window.location.href = 'JiNan.html';
-            }
-            if(city == '聊城市'){
-            	window.location.href = 'LiaoCheng.html';
-            }
-            if(city == '淄博市'){
-            	window.location.href = 'ZIBo.html';
-            }
+           //          if( city == '威海市'){
+//          	window.location.href = 'HaiWei.html';
+//          }
+//          if(city == '烟台市'){
+//          	window.location.href = 'YanTai.html';
+//          }
+//          if(city == '东营市'){
+//          	window.location.href = 'DongYing.html';
+//          }
+//          if(city == '滨州市'){
+//          	window.location.href = 'BingZhou.html';
+//          }
+//          if(city == '德州市'){
+//          	window.location.href = 'DeZho.html';
+//          }
+//          if(city == '济南市'){
+//          	window.location.href = 'JiNan.html';
+//          }
+//          if(city == '聊城市'){
+//          	window.location.href = 'LiaoCheng.html';
+//          }
+//          if(city == '淄博市'){
+//          	window.location.href = 'ZIBo.html';
+//          }
             if(city == '潍坊市'){
             	window.location.href = 'WeiFang.html';
             }
-            if(city == '青岛市'){
-            	window.location.href = 'QingTAo.html';
-            }
-            if(city == '泰安市'){
-            	window.location.href = 'TaiAn.html';
-            }
-            if(city == '莱芜市'){
-            	window.location.href = 'LaiWu.html';
-            }
-            if(city == '日照市'){
-            	window.location.href = 'RiZhao.html';
-            }
+//          if(city == '青岛市'){
+//          	window.location.href = 'QingTAo.html';
+//          }
+//          if(city == '泰安市'){
+//          	window.location.href = 'TaiAn.html';
+//          }
+//          if(city == '莱芜市'){
+//          	window.location.href = 'LaiWu.html';
+//          }
+//          if(city == '日照市'){
+//          	window.location.href = 'RiZhao.html';
+//          }
             if(city == '临沂市'){
             	window.location.href = 'LinYi.html';
             }
-            if(city == '菏泽市'){
-            	window.location.href = 'HeZi.html';
-            }
-            if(city == '枣庄市'){
-            	window.location.href = 'ZaoZhuang.html';
-            } 
-            if(city == '济宁市'){
-            	window.location.href = 'jiNing.html';
-            }
+//          if(city == '菏泽市'){
+//          	window.location.href = 'HeZi.html';
+//          }
+//          if(city == '枣庄市'){
+//          	window.location.href = 'ZaoZhuang.html';
+//          } 
+//          if(city == '济宁市'){
+//          	window.location.href = 'jiNing.html';
+//          }
 			})
 
 
