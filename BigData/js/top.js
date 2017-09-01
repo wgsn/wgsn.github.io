@@ -42,5 +42,8 @@ function fn (){
 }
 var fn1=fn();
 
+console.log(document.querySelectorAll(".footer")[0]);
+document.querySelectorAll(".footer")[0].innerHTML = "";
+
 
 	
