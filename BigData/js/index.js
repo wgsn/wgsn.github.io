@@ -1283,8 +1283,7 @@ window.onload = function() {
 			'香港<br/>美国<br/>日本<br/>',
 			'美国<br/>香港<br/>日本<br/>',
 			'香港<br/>日本<br/>美国<br/>',
-			'美国<br/>日本<br/>香港<br/>',
-
+			'美国<br/>日本<br/>香港<br/>'
 		]
 		var topbar = echarts.init(document.querySelector('.top_bar'));
 		topbar.setOption({
@@ -1350,11 +1349,11 @@ window.onload = function() {
 				}
 			}],
 			series: [
-				//		{
-				//			name: '国家',
-				//			type: 'bar',
-				//			data: countryData,
-				//		}, 
+//						{
+//							name: '国家',
+//							type: 'bar',
+//							data: countryData,
+//						}, 
 				{
 					name: '峰值IP',
 					type: 'bar',
@@ -1366,7 +1365,7 @@ window.onload = function() {
 					name: '同期环比',
 					type: 'line',
 					stack: '总量',
-					data: [550, 412, 501, 354, 290, 330, 210, 590, 530, 520, 233, 344, 349, 588],
+					data: ["2.50%","-1.10%","1,60%","5.80%","3.20%","2.40%","-1.30%","1.60%","4.20%","3.60%","2.80%","2.70%"],
 					symbol: 'none', //拐点样式
 					//symbolSize: 10,//拐点大小
 					itemStyle: {
@@ -1415,8 +1414,8 @@ window.onload = function() {
 			},
 			xAxis: [{
 				type: 'category',
-				data: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13',
-					'14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'
+				data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13',
+					'14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24','25','26','27','28','29','30','31'
 				],
 				axisLabel: {
 					textStyle: {
@@ -1441,7 +1440,7 @@ window.onload = function() {
 			series: [{
 					name: 'xxx',
 					type: 'line',
-					data: [120, 95, 150, 90, 82, 85, 95, 100, 85, 70, 78, 85, 95, 100, 130, 100, 120, 95, 85, 100, 120, 93, 90, 100],
+					data: [120, 95, 150, 90, 82, 85, 95, 100, 85, 70, 78, 85, 95, 100, 130, 100, 120, 95, 85, 100, 120, 93, 90, 100,98,95,102,99,105,96,88],
 					symbol: 'none', //拐点样式
 					//symbolSize: 10,//拐点大小
 					itemStyle: {
@@ -1453,41 +1452,7 @@ window.onload = function() {
 						}
 					},
 				},
-				//{
-				//				name: 'xxx',
-				//				type: 'line',
-				//				data: [20, 32, 101, 134, 190, 130,
-				//				210,118,255,222,144,155,
-				//				133,234,156,155,177,199,
-				//				156,166,355,144,123,190],
-				//				symbol: 'none', //拐点样式
-				//				//symbolSize: 10,//拐点大小
-				//				itemStyle: {
-				//					normal: {
-				//						lineStyle: {
-				//							width: 1, //折线宽度
-				//							color: "white" //折线颜色
-				//						}
-				//					}
-				//				},
-				//			}, {
-				//				name: 'xxx',
-				//				type: 'line',
-				//				data: [120, 232, 101, 234, 90, 230,
-				//				210,118,255,122,144,255,
-				//				133,234,156,155,177,199,
-				//				156,166,255,144,223,190],
-				//				symbol: 'none', //拐点样式
-				//				//symbolSize: 10,//拐点大小
-				//				itemStyle: {
-				//					normal: {
-				//						lineStyle: {
-				//							width: 1, //折线宽度
-				//							color: "#ED6F0E" //折线颜色
-				//						}
-				//					}
-				//				},
-				//			},
+				
 
 			]
 		});
@@ -1534,9 +1499,10 @@ window.onload = function() {
 			xAxis: [{
 				type: 'category',
 
-				data: ['2016.11', '2016.12', '2017.1', '2017.2', '2017.3', '2017.4', '2017.5', '2017.6', '2017.7',
-					'2017.8', '2017.9', '2017.1'
-				],
+//				data: ['2016.11', '2016.12', '2017.1', '2017.2', '2017.3', '2017.4', '2017.5', '2017.6', '2017.7',
+//					'2017.8', '2017.9', '2017.1'
+//				],
+				data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
 				axisLabel: {
 					textStyle: {
 						color: 'white', //坐标值得具体的颜色
@@ -1561,7 +1527,7 @@ window.onload = function() {
 			series: [{
 					name: 'xxx',
 					type: 'line',
-					data: [3200, 1700, 1500, 1900, 2200, 2500, 2800, 3200, 3700, 4000, 3300, 3500],
+					data: [1500, 1900, 2200, 2500, 2800, 3200, 3700, 4000, 0, 0, 0, 0],
 					symbol: 'none', //拐点样式
 					//symbolSize: 10,//拐点大小
 					itemStyle: {
@@ -1608,8 +1574,8 @@ window.onload = function() {
 			},
 			xAxis: [{
 				type: 'category',
-				data: ['2017', '2016', '2015', '2014',
-					'2013', '2012', '2011', '2010'
+				data: ['2010', '2011', '2012', '2013',
+					'2014', '2015', '2016', '2017'
 				],
 				axisLabel: {
 					textStyle: {
@@ -1633,7 +1599,7 @@ window.onload = function() {
 			series: [{
 					name: 'xxx',
 					type: 'line',
-					data: [17800, 35000, 33000, 31500, 30000, 28500, 28000, 27500],
+					data: [27500, 28000, 28500, 30000, 31500, 33000, 35000, 17800],
 					symbol: 'none', //拐点样式
 					//symbolSize: 10,//拐点大小
 					itemStyle: {
@@ -1681,6 +1647,7 @@ window.onload = function() {
 		//点击事件
 		$(".chart-btn").click(function() {
 			var btn = $(this).index();
+			$(this).addClass("active").siblings().removeClass("active")
 			console.log(btn)
 			$(".cline").css('visibility', 'hidden').eq(btn).css('visibility', 'visible')
 		})

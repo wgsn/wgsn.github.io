@@ -643,6 +643,12 @@ header>div:nth-child(2) {
 .chart_title>a:nth-child(3) {
 	background: white;
 }
+.chart_title>a{
+	opacity: 0.3;
+}
+.chart_title>a.active{
+	opacity: 1;
+}
 
 .bottom_line {
 	width: 95%;
