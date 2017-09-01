@@ -1,73 +1,24 @@
-$.ajax({
-	url:yM + "index.php/Home/Api/get_sd_info",
-	data:{key:'shandong'},
-	success:function(data){
-       var d = JSON.parse(data);
-       console.log(d)
-            $('.describe').html(d.info);
-            $('.Cucheng p').html(d.city+'促成意向订单总额');
-            $('.Yi p').html(d.city+'本年度(2017年1—6月份)累计进出口');
-            $('.TMspan').eq(0).html('进出口金额:'+ d.out_in_money +'亿元');
-            $('.TMspan').eq(1).html('同比:'+ d.out_in_rate +'%');
-            $('.TMspan').eq(2).html('进口金额:'+ d.in_money +'亿元');
-            $('.TMspan').eq(3).html('同比:'+ d.in_rate +'%');
-            $('.TMspan').eq(4).html('出口金额:'+d.out_money +'亿元');
-            $('.TMspan').eq(5).html('同比:'+ d.out_rate +'%');
-            $('.TMspan').eq(6).html('占比:'+ d.out_rate_in +'%');
-	}
-})
-$('.top').load('../top.html');
-$('.footer').load('../footer.html');
-//加载前十位出口市场
-$.ajax({
-	url:yM + "index.php/Home/Api/get_sd_out_top",
-	success:function(data){
-       var d = JSON.parse(data);
-       for(var i = 0;i< d.length;i++){
-          	var Tab_str = '<tr><td>'+(i+1)+'</td><td>'+d[i].name +'</td><td>'+d[i].money+ '</td><td>'+d[i].rate+'%</td><td>'+d[i].rate_in+'%</td></tr>'
-       	   $('.dTab:eq(0) tbody')[0].innerHTML+=Tab_str;
-       }
-       
-	}
-})
-//山东省二十大类出口商品
-$.ajax({
-	url:yM + "index.php/Home/Api/get_sd_product_out",
-	success:function(data){
-       var d = JSON.parse(data);
-       console.log(d)
-       for(var i = 0 ; i< (d.length/2);i++){
-       	    var ai= i+1;
-            var Tab_str = '<tr><td>'+d[i].name +'</td><td>'+ parseInt(d[i].money)+ '</td><td>'+d[i].rate+'%</td><td>'+d[ai].name +'</td><td>'+parseInt(d[ai].money)+ '</td><td>'+d[ai].rate+'%</td></tr>'
-       	    $('.dTab:eq(1) tbody')[0].innerHTML+=Tab_str;
-       	    i++;
-       }
-
-       for(var i = 0 ; i< d.length;i++){
-       	    var ai= i+1;
-            var Tab_str = '<tr><td>'+d[i].name +'</td><td>'+ parseInt(d[i].money)+ '</td><td>'+d[i].rate+'%</td><td>'+d[ai].name +'</td><td>'+parseInt(d[ai].money)+ '</td><td>'+d[ai].rate+'%</td></tr>'
-       	    $('.bigdTab:eq(0) tbody')[0].innerHTML+=Tab_str;
-       	    i++;
-       }
-       
-	}
-})
-
-//加载地图
 $.getJSON('../js/shandong.json', function(data) {
 	echarts.registerMap('shandong', data);
 	var Liang = echarts.init(document.querySelector('.Zhong-l'));
 	option = {
 		title: {
 			x: 'center',
+			//					link:'http://www.baidu.com',  
+			//					subtext:'假的',
+			//					itemGap:60
 		},
 		textStyle: {
+
 			color: '#fff',
 		},
 
 		tooltip: {
 			trigger: 'item',
-			formatter: '{b}'
+			formatter: function(params) {
+						var value = params.value + '万美元 ' ;
+						return params.seriesName + '<br/>' + params.name + ' : ' + value;
+					}
 		},
 		legend: {},
 		series: [{
@@ -98,93 +49,377 @@ $.getJSON('../js/shandong.json', function(data) {
 					label: {
 						show: true,
 						textStyle: {
-							color: '#ddd',
+							color: '#FFA500',
 							fontWeight: 'bold',
 							fontSize: 15,
 						}
 					},
 				},
 			},
-			
+			data: [{
+					name: '威海市',
+					value: /*Math.round(Math.random() * 1000)*/0
+				},
+				{
+					name: '烟台市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '东营市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '滨州市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '德州市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '济南市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '聊城市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '淄博市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '潍坊市',
+					value: 3142.797
+				},
+				{
+					name: '青岛市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '泰安市',
+					value:Math.round(Math.random() * 1000)				},
+				{
+					name: '莱芜市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '日照市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '临沂市',
+					value: 7828.76
+				},
+				{
+					name: '菏泽市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '枣庄市',
+					value: Math.round(Math.random() * 1000)				},
+				{
+					name: '济宁市',
+					value: Math.round(Math.random() * 1000)				},
+			]
 		}],
 	}
-   
- 	Liang.setOption(option);
+	Liang.setOption(option);
 	Liang.on('click', function(params) {
 		var city = params.name;
-		location.reload()
 		if(city == '威海市') {
-			window.location.href = 'deal_of_SDcity.html#weihai';
+			window.location.href = 'HaiWei.html';
 		}
 		if(city == '烟台市') {
-			window.location.href = 'deal_of_SDcity.html#yantai';
+			window.location.href = 'YanTai.html';
 		}
 		if(city == '东营市') {
-			window.location.href = 'deal_of_SDcity.html#dongying';
+			window.location.href = 'DongYing.html';
 		}
 		if(city == '滨州市') {
-			window.location.href = 'deal_of_SDcity.html#binzhou';
+			window.location.href = 'BingZhou.html';
 		}
 		if(city == '德州市') {
-			window.location.href = 'deal_of_SDcity.html#dezhou';
+			window.location.href = 'DeZho.html';
 		}
 		if(city == '济南市') {
-			window.location.href = 'deal_of_SDcity.html#jinan';
+			window.location.href = 'JiNan.html';
 		}
 		if(city == '聊城市') {
-			window.location.href = 'deal_of_SDcity.html#liaocheng';
+			window.location.href = 'LiaoCheng.html';
 		}
 		if(city == '淄博市') {
-			window.location.href = 'deal_of_SDcity.html#zibo';
+			window.location.href = 'ZIBo.html';
 		}
 		if(city == '潍坊市') {
-			window.location.href = 'deal_of_SDcity.html#weifang';
+			window.location.href = 'WeiFang.html';
 		}
 		if(city == '青岛市') {
-			window.location.href = 'deal_of_SDcity.html#qingdao';
+			window.location.href = 'QingTAo.html';
 		}
 		if(city == '泰安市') {
-			window.location.href = 'deal_of_SDcity.html#taian';
+			window.location.href = 'TaiAn.html';
 		}
 		if(city == '莱芜市') {
-			window.location.href = 'deal_of_SDcity.html#laiwu';
+			window.location.href = 'LaiWu.html';
 		}
 		if(city == '日照市') {
-			window.location.href = 'deal_of_SDcity.html#rizhao';
+			window.location.href = 'RiZhao.html';
 		}
 		if(city == '临沂市') {
-			window.location.href = 'deal_of_SDcity.html#linyi';
+			window.location.href = 'LinYi.html';
 		}
 		if(city == '菏泽市') {
-			window.location.href = 'deal_of_SDcity.html#heze';
+			window.location.href = 'HeZi.html';
 		}
 		if(city == '枣庄市') {
-			window.location.href = 'deal_of_SDcity.html#zaozhuang';
+			window.location.href = 'ZaoZhuang.html';
 		}
 		if(city == '济宁市') {
-			window.location.href = 'deal_of_SDcity.html#jining';
+			window.location.href = 'jiNing.html';
 		}
 	})
 
-  })
-//模态框
-    $('.SASA').on('click', function(e) {
-		$('.II').css('display', 'block')
+	var Ming = echarts.init(document.querySelector('.Ming'));
+	optionC = {
+		textStyle: {
+			color: '#fff',
+			fontSize: "15",
+		},
+		title: {
+			x: 'top',
+			text: '2017年山东省IP访问量趋势图 (/次)',
+			textStyle: {
+				color: '#dfb050',
+				fontSize: 15,
+			}
+		},
+		tooltip: {
+			trigger: 'axis',
+		},
+		legend: {
+			data: ['山东省IP访问量'],
+			right: '8%',
+			top: '9%',
+			textStyle: {
+				fontSize: 12,
+				color: '#fff',
+			}
+		},
+		xAxis: [{
+			type: 'category',
+			data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+		}],
+		yAxis: [{
+			type: 'value',
+			min: 5000,
+			max: 22000,
+			interval: 6000,
+		}],
+		series: [{
+			name: '山东省IP访问量',
+			type: 'line',
+			lineStyle: {
+				normal: {
+					width: 2,
+					type: 'dashed'
+				}
+			},
+			itemStyle: {
+				normal: {
+					color: '#FF5632',
+					label: {
+						show: false,
+						position: 'top'
+					}
+				}
+			},
+			data: [5112,6973,16132,21135,20310,19663,17312,18145,15137,10000,10000,10000]
+		}]
+	};
+	Ming.setOption(optionC);
 
-    	console.log(window.innerHeight-e.clientY)
-		$('.FA').css({'right':(window.innerWidth-e.clientX)+'px',top:(e.clientY)+'px'})
+	var Zha = echarts.init(document.querySelector('.Zha'));
+	optionQ = {
+		textStyle: {
+			color: '#fff',
+			fontSize: "15",
+		},
+		title: {
+			text: '2017山东省成交量趋势图(/单)',
+			textStyle: {
+				color: '#dfb050',
+				fontSize: 15,
+				left: "25%",
+			}
+		},
+		tooltip: {
+			trigger: 'axis'
+		},
+		legend: {
+			data: ['用户总数量', '成交总数量'],
+			right: '10%',
+			top: '9%',
+			textStyle: {
+				fontSize: 12,
+				color: '#fff',
+			}
+		},
+		xAxis: [{
+			type: 'category',
+			data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+		}],
+		yAxis: [{
+			min: 0,
+			max: 100,
+			interval: 20
+		}],
+		series: [{
+				type: 'bar',
+				name: '用户总数量',
+				itemStyle: {
+					normal: {
+						color: '#FF5632',
+						label: {
+							show: false,
+							position: 'top',
+						}
+					},
+				},
+				barWidth: 15,
+				data: [15, 21, 26, 59, 52, 41, 47, 41, 42, 50, 50, 50]
+			},
+			{
+				type: 'line',
+				name: '成交总数量',
+				lineStyle: {
+					normal: {
+						width: 2,
+						type: 'dashed'
+					}
+				},
+				itemStyle: {
+					normal: {
+						color: "#3CD3FF"
+					}
+				},
+				data: [15, 21, 26, 59, 52, 41, 47, 41, 42, 50, 50, 50]
+			}
+
+		]
+	}
+	Zha.setOption(optionQ);
+
+	var optionA = {
+		title:{
+ 		text:'2017山东基本数据',
+ 		top:'2%',
+ 		left:'2%',
+ 		textStyle:{
+ 			color:'#dfb050',
+ 			fontSize:20,
+ 		     }
+ 	        },
+ 	        tooltip : {
+		        trigger: 'item',
+		        formatter: "{a} <br/>{b} : {c} ({d}%)"
+		    },
+		    legend: {
+		        align:'left',
+		        left:'20%',
+		        top:'30%',
+		        orient:'vertical',
+		        data:['GDP','成交量    ','供货量   ','供货量'],
+		         textStyle:{
+		        	color:'rgb(255,145,0)',
+		        	fontSize:20,
+		        },
+		        tooltip: {
+			        show: true
+			    }
+		    },
+		    calculable : true,
+		    series : 
+		        {
+		            name:'亿美元',
+		            type:'pie',
+		            radius : '70%',
+		            center : ['70%', '50%'],
+		            roseType : 'area',
+		              label: {
+		                normal: {
+		                    show:true,
+		                    textStyle:{
+		                    	color:'rgb(255,145,0)',
+		                    	fontSize:20,
+		                    }
+		                },
+		                emphasis: {
+		                    show: true
+		                }
+		            },
+		            labelLine: {
+		                normal: {
+		                    show: false,
+		                    length:4,
+		                },
+		                emphasis: {
+		                    show: true
+		                }
+		            },
+		            
+		            itemStyle: {
+                                normal: {
+							        color: function(params) {
+                                        // build a color map as your need.
+                                        var colorList=[{
+									    type: 'linear',
+									    colorStops: [{
+									        offset: 0,
+									        color: '#FDBC16' // 0% 处的颜色
+									    }, {
+									        offset: 1, 
+									        color: '#879560' // 100% 处的颜色
+									    }],
+									},{
+									    type: 'linear',
+									    colorStops: [{
+									        offset: 0, color: 'green' // 0% 处的颜色
+									    }, {
+									        offset: 1, color: 'yellow' // 100% 处的颜色
+									    }],
+									},{
+									    type: 'linear',
+									    colorStops: [{
+									        offset: 0, color: 'silver' // 0% 处的颜色
+									    }, {
+									        offset: 1, color: 'aqua' // 100% 处的颜色
+									    }],
+									},{
+									    colorStops: [{
+									        offset: 0, color: '#005789' // 0% 处的颜色
+									    }, {
+									        offset: 1, color: '#399cb8' // 100% 处的颜色
+									    }],
+									}];
+                                        return colorList[params.dataIndex]
+                                    }
+                               },
+                            },
+		            data:[
+		                {value:10, name:'GDP'},
+		                {value:5, name:'成交量    '},
+		                {value:15, name:'供货量   '},
+		                {value:25, name:'供货量'},
+		            ]
+		        }
+	}
+	
+
+	$('.SASA').on('click', function() {
+		$('<div class="MoMo"></div>').appendTo('.FA');
 		$('.FA').animate({
 			'width': '70%',
-			'height': '50%',
+			'height': '60%',
 			'background': '#2F79BE',
 			'right': '15%',
 			'position': 'absolute',
 			'top': '25%',
 			'z-index': '9999999999'
 		}, 300, function() {
-			
-			
+			var MoMo = echarts.init(document.querySelector('.MoMo'));
+			MoMo.setOption(optionA);
 		})
+		$('.II').css('display', 'block')
 	});
 	$('.So').on('click', function() {
 		$('.MoMo').remove();
@@ -192,5 +427,69 @@ $.getJSON('../js/shandong.json', function(data) {
 		$('.FA').css('height', '0');
 		$('.II').css('display', 'none')
 	})
+})
 
+$('.DADA').on('click', function() {
+	$('<div class="GG"></div>').appendTo('.FC');
+	$('.FC').animate({
+		'width': '70%',
+		'height': '60%',
+		'background': '#2F79BE',
+		'right': '15%',
+		'position': 'absolute',
+		'top': '25%',
+		'z-index': '9999999999'
+	}, 300, function() {
+		var Gb = echarts.init(document.querySelector('.GG'));
+		Gb.setOption(optionC);
+	})
+	$('.DD').css('display', 'block')
+})
+$('.UU').on('click', function() {
+	$('.GG').remove();
+	$('.FC').css('width', '0');
+	$('.FC').css('height', '0');
+	$('.DD').css('display', 'none')
+});
 
+$('.SXSX').on('click', function() {
+	$('<div class="TU"></div>').appendTo('.FG');
+	$('.FG').animate({
+		'width': '70%',
+		'height': '60%',
+		'background': '#2F79BE',
+		'right': '15%',
+		'position': 'absolute',
+		'top': '25%',
+		'z-index': '9999999999'
+	}, 300, function() {
+		var Yi = echarts.init(document.querySelector('.TU'));
+		Yi.setOption(optionQ);
+	})
+	$('.JJ').css('display', 'block')
+})
+$('.YU').on('click', function() {
+	$('.TU').remove();
+	$('.FG').css('width', '0');
+	$('.FG').css('height', '0');
+	$('.JJ').css('display', 'none')
+})
+
+function su(){
+	var Yi=0;
+	var Er=0;
+	var Jia = document.querySelectorAll('.JIA');
+	var Jie = document.querySelectorAll('.JIA1');
+	for(var i=0;i<Jia.length;i++){
+		for(var i=0;i<Jie.length;i++){
+		   Er +=parseInt(Jie[i].innerHTML);
+		   Yi +=parseInt(Jia[i].innerHTML);
+	    }
+	}
+	var he = document.querySelector('.HE');
+	var he1 = document.querySelector('.HE1');
+	he.innerHTML=Yi;
+	he1.innerHTML=Er;
+}
+
+su();
