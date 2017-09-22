@@ -1,0 +1,29 @@
+@charset "utf-8";
+*{padding: 0; margin: 0;}
+body{
+	background-color: #000;
+	overflow: hidden;
+}
+
+.stage{
+	width: 133px;
+	height: 200px;
+	margin: 278px auto;
+	position: relative;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: perspective(800px) rotateX(-30deg);
+	-moz-transform: perspective(800px) rotateX(-30deg);
+	-ms-transform: perspective(800px) rotateX(-30deg);
+	-o-transform: perspective(800px) rotateX(-30deg);
+	transform: perspective(800px) rotateX(-30deg);
+}
+.stage img{
+	width: 133px;
+	height: 200px;
+	position: absolute;
+	-webkit-box-reflect:below 10px -webkit-linear-gradient(top,rgba(0,0,0,0) 50%,rgba(0,0,0,0.7) 100%);
+
+}
